@@ -1,2 +1,0 @@
-# cv
-# rossbrannigan.github.io
