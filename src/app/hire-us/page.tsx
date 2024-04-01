@@ -1,5 +1,6 @@
 // pages/hire-us/HireUsPage.tsx
 
+import React from 'react';
 import Image from "next/image";
 import Head from 'next/head';
 
@@ -49,7 +50,10 @@ const HireUsPage: React.FC = () => {
 
         {/* Stripe Pricing Table */}
         <section className="mb-8" id="stripe-pricing-table">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg" dangerouslySetInnerHTML={{ __html: '<script async src="https://js.stripe.com/v3/pricing-table.js"></script>' }} />
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1P0TaV2KKbBgfCwq4A907cBj" publishable-key="pk_live_51OzdDN2KKbBgfCwqKoIShIjFkusasFpbP2ZlynP3gNyQ15fO5jXfwcFBlsoCK6gFfRn6Q2qtYyFBYK0pGdfoLE7y00bLcnNS4J"></stripe-pricing-table>
+          </div>
         </section>
       </main>
 
