@@ -40,7 +40,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4">
             <h1 className="text-3xl font-semibold text-purple-800 mb-4">Welcome to Alpha Digital Group - Industries We Serve</h1>
             <p className="text-purple-800">
-              At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in today's dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
+              At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in today&apos;s dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
             </p>
           </div>
         </section>
@@ -100,7 +100,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">Consumer Internet</h2>
             <p className="text-purple-800">
-              The consumer internet sector is characterized by fierce competition and rapidly changing consumer preferences. At Alpha Digital Group, we help companies navigate this dynamic landscape with strategic insights and actionable recommendations. Whether it's developing scalable business models, optimizing user experiences, or leveraging data analytics, we empower consumer internet companies to thrive in the digital age.
+              The consumer internet sector is characterized by fierce competition and rapidly changing consumer preferences. At Alpha Digital Group, we help companies navigate this dynamic landscape with strategic insights and actionable recommendations. Whether it&apos;s developing scalable business models, optimizing user experiences, or leveraging data analytics, we empower consumer internet companies to thrive in the digital age.
             </p>
           </div>
         </section>
