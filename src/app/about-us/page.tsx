@@ -10,19 +10,7 @@ const AboutPage: React.FC = () => {
         <title>About Ross Brannigan | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-        {/* Google Analytics Tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
 
-              gtag('config', 'G-25Y0G3QQE6');
-            `,
-          }}
-        />
       </Head>
 
       {/* Header */}
