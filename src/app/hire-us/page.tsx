@@ -45,7 +45,7 @@ const HireUsPage: React.FC = () => {
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">Consultancy as a Service</h2>
             <p className="text-gray-700">
-              Introducing our innovative "Consultancy as a Service" model, one of the first subscription consultancy as a service models in the world. We offer services on demand, interim leadership, and subscription models for all industries and capabilities. Whether you need strategic guidance, digital transformation expertise, or interim leadership, our flexible subscription models provide the support you need, when you need it.
+              Introducing our innovative &quotConsultancy as a Service&quot model, one of the first subscription consultancy as a service models in the world. We offer services on demand, interim leadership, and subscription models for all industries and capabilities. Whether you need strategic guidance, digital transformation expertise, or interim leadership, our flexible subscription models provide the support you need, when you need it.
             </p>
           </div>
         </section>
