@@ -1,14 +1,16 @@
 // pages/hire-us/HireUsPage.tsx
 
-import React from 'react';
+import React from "react";
 import Image from "next/image";
-import Head from 'next/head';
+import Head from "next/head";
 
 const HireUsPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
+      {/* Title */}
       <Head>
-        <title>Hire Us | Alpha Digital Group</title>
+        {" "}
+        <title>{"Hire Us | Alpha Digital Group"}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
