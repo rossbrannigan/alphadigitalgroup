@@ -80,7 +80,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">Aviation</h2>
             <p className="text-purple-800">
-              In the fast-paced world of aviation, staying ahead requires strategic vision and meticulous planning. Alpha Digital Group offers specialized consulting services to airlines, airports, and aviation service providers. Whether it's streamlining operations, implementing cutting-edge technologies, or enhancing safety protocols, we empower aviation stakeholders to thrive in a rapidly evolving environment.
+              In the fast-paced world of aviation, staying ahead requires strategic vision and meticulous planning. Alpha Digital Group offers specialized consulting services to airlines, airports, and aviation service providers. Whether it&apos;s streamlining operations, implementing cutting-edge technologies, or enhancing safety protocols, we empower aviation stakeholders to thrive in a rapidly evolving environment.
             </p>
           </div>
         </section>
