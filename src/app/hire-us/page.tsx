@@ -4,12 +4,20 @@ import React from "react";
 import Image from "next/image";
 import Head from "next/head";
 
+// Declare JSX namespace for custom elements
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'stripe-pricing-table': any;
+    }
+  }
+}
+
 const HireUsPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Title */}
       <Head>
-        {" "}
         <title>{"Hire Us | Alpha Digital Group"}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
@@ -31,7 +39,6 @@ const HireUsPage: React.FC = () => {
               <li><a href="locations" className="text-purple-800 hover:text-black transition-colors duration-300">Locations</a></li>
               <li><a href="about-us" className="text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
               <li><a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-purple-800 hover:text-black transition-colors duration-300">Alpha Digital Blog</a></li>
-              {/* Changed text color to white */}
               <li><a href="/hire-us" className="text-white bg-purple-600 py-2 px-4 rounded-full hover:bg-black hover:text-yellow-400 transition-colors duration-300">Get Started</a></li>
             </ul>
           </nav>
@@ -77,37 +84,32 @@ const HireUsPage: React.FC = () => {
               <div className="text-left">
                 <h3 className="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
                 <ul className="text-gray-300">
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a href="industries" className="hover:text-white text-xs">
                       Industries
                     </a>
                   </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a href="capabilities" className="hover:text-white text-xs">
                       Capabilities
                     </a>
                   </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a href="featured-insights" className="hover:text-white text-xs">
                       Featured Insights
                     </a>
                   </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a href="locations" className="hover:text-white text-xs">
                       Locations
                     </a>
                   </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a href="hire-us" className="hover:text-white text-xs">
                       Hire Us
                     </a>
                   </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="about-us" className="hover:text-white text-xs">
-                      About Us
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                  <li className="mb-0.5">
                     <a
                       href="https://www.linkedin.com/company/alphadigitalgroup"
                       target="_blank"
@@ -177,7 +179,6 @@ const HireUsPage: React.FC = () => {
           Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
         </p>
       </footer>
-
     </div>
   );
 };
