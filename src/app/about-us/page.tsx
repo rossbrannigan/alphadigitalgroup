@@ -1,5 +1,3 @@
-// pages/about/AboutPage.tsx
-
 import Image from "next/image";
 import Head from 'next/head';
 
@@ -10,7 +8,6 @@ const AboutPage: React.FC = () => {
         <title>About Ross Brannigan | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-
       </Head>
 
       {/* Header */}
@@ -61,7 +58,7 @@ const AboutPage: React.FC = () => {
               <br />
               ✉️ Email: <a href="mailto:rossbrannigan@gmail.com" className="text-purple-800">rossbrannigan@gmail.com</a>
               <br />
-              🌐 LinkedIn: <a href="https://www.linkedin.com/in/ross-brannigan/" target="_blank" rel="noopener noreferrer" className="text-purple-800">Ross Brannigan's LinkedIn Profile</a>
+              🌐 LinkedIn: <a href="https://www.linkedin.com/in/ross-brannigan/" target="_blank" rel="noopener noreferrer" className="text-purple-800">Ross Brannigan&apos;s LinkedIn Profile</a>
             </p>
           </div>
         </section>
