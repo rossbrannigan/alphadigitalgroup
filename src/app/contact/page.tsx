@@ -41,7 +41,7 @@ export default function Home() {
 
   {/* Form Section */}
   <div className="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
     <form name="contact" method="POST" data-netlify="true" class="space-y-4">
       <div>
         <label for="name" class="block text-gray-700">Your Name: </label>
