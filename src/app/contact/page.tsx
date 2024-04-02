@@ -73,9 +73,9 @@ export default function Home() {
   </div>
 
   {/* Encouragement Text Section */}
-  <div class="max-w-md bg-white shadow-md rounded-md p-8 border-2" style={{ borderColor: '#bdff03' }}>
-    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Write to Us!</h2>
-    <p class="text-gray-700">
+  <div className="max-w-md bg-white shadow-md rounded-md p-8 border-2" style={{ borderColor: '#bdff03' }}>
+    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Write to Us!</h2>
+    <p className="text-gray-700">
       We would love to hear from you! Whether you have questions, comments, or feedback, feel free to reach out to us using the form on the left. Our team is here to assist you.
     </p>
   </div>
