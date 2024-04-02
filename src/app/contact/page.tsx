@@ -53,7 +53,7 @@ export default function Home() {
       </div>
       <div>
         <label htmlFor="role" className="block text-gray-700">Your Role: </label>
-        <select id="role" name="role[]" multiple class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
+        <select id="role" name="role[]" multiple className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
           <option value="leader">Senior Management / Leadership</option>
           <option value="investor">Investor</option>
           <option value="customer">Potential Customer</option>
