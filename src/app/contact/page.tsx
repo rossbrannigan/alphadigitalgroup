@@ -42,17 +42,17 @@ export default function Home() {
   {/* Form Section */}
   <div className="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
-    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+    <form name="contact" method="POST" data-netlify="true" className="space-y-4">
       <div>
-        <label for="name" class="block text-gray-700">Your Name: </label>
-        <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
+        <label for="name" className="block text-gray-700">Your Name: </label>
+        <input type="text" id="name" name="name" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label for="email" class="block text-gray-700">Your Email: </label>
-        <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
+        <label for="email" className="block text-gray-700">Your Email: </label>
+        <input type="email" id="email" name="email" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label for="role" class="block text-gray-700">Your Role: </label>
+        <label for="role" className="block text-gray-700">Your Role: </label>
         <select id="role" name="role[]" multiple class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
           <option value="leader">Senior Management / Leadership</option>
           <option value="investor">Investor</option>
@@ -61,11 +61,11 @@ export default function Home() {
         </select>
       </div>
       <div>
-        <label for="message" class="block text-gray-700">Message: </label>
-        <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50"></textarea>
+        <label for="message" className="block text-gray-700">Message: </label>
+        <textarea id="message" name="message" rows="4" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50"></textarea>
       </div>
       <div>
-        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-opacity-50 transition-colors duration-300" style={{ backgroundColor: '#bdff03' }}>
+        <button type="submit" className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-opacity-50 transition-colors duration-300" style={{ backgroundColor: '#bdff03' }}>
           Send
         </button>
       </div>
