@@ -61,7 +61,7 @@ export default function Home() {
         </select>
       </div>
       <div>
-        <label for="message" className="block text-gray-700">Message: </label>
+        <label htmlFor="message" className="block text-gray-700">Message: </label>
         <textarea id="message" name="message" rows="4" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50"></textarea>
       </div>
       <div>
