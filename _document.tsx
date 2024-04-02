@@ -1,4 +1,4 @@
-import { GA_TRACKING_ID } from '../lib/gtag'
+import { GA_TRACKING_ID } from '../lib/gtag.js'
 // other imports
 
 export default class MyDocument extends NextDocument {
