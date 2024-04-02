@@ -154,7 +154,13 @@ export default function Home() {
                   <li className="mb-0.5 flex items-center">
                     ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
                   </li>
-                  <li className="mb-2">
+<li className="mb-0.5 flex items-center">
+  📝 
+  <a href="contact" className="ml-2 text-xs hover:text-white">
+    Contact Us Form
+  </a>
+</li>
+                                    <li className="mb-2">
                     <a
                       href="https://www.linkedin.com/company/alphadigitalgroup"
                       target="_blank"

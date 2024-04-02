@@ -1,16 +1,17 @@
-// pages/capabilities/CapabilitiesPage.tsx
-
 import Image from "next/image";
 import Head from 'next/head';
 
-const CapabilitiesPage: React.FC = () => {
+export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
+
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
+
       </Head>
+      
 
       {/* Header */}
       <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
@@ -35,44 +36,58 @@ const CapabilitiesPage: React.FC = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="container mx-auto py-8">
-        {/* Introductory Text */}
-        <section className="mb-8" id="intro">
-          <div className="px-4">
-            <h1 className="text-3xl font-semibold text-purple-800 mb-4">Our Capabilities</h1>
-            <p className="text-purple-800">
-              At Alpha Digital Group, we possess a diverse set of capabilities to address the unique needs and challenges of our clients. With our expertise and innovative approach, we deliver solutions that drive business growth and success. Explore our key capabilities below:
-            </p>
-          </div>
-        </section>
+{/* Main Content - Submission Form */}
+<main class="container mx-auto py-8 flex flex-col lg:flex-row items-stretch justify-between">
 
-        {/* Capabilities Section */}
-        <section className="mb-8" id="capabilities">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Capabilities</h2>
-            <ul className="list-disc pl-6 mt-4">
-              <li className="text-purple-800">Strategic Planning</li>
-              <li className="text-purple-800">Digital Transformation</li>
-              <li className="text-purple-800">Data Analytics</li>
-              <li className="text-purple-800">Market Research</li>
-              <li className="text-purple-800">Financial Modeling</li>
-              <li className="text-purple-800">Full-time Leadership</li>
-              <li className="text-purple-800">Interim Leadership</li>
-              <li className="text-purple-800">Digital Product Strategy</li>
-              <li className="text-purple-800">Digital Marketing Strategy</li>
-              <li className="text-purple-800">Coaching and Mentoring</li>
-              <li className="text-purple-800">Guest Lecturing</li>
-              <li className="text-purple-800">Airline Commercial Strategy Development</li>
-              <li className="text-purple-800">Strategic Communications</li>
-              <li className="text-purple-800">Global Strategy</li>
-            </ul>
-            <p className="text-purple-800 mt-4">
-              Our team of experts is dedicated to helping our clients unlock their full potential through strategic planning, innovative technologies, and data-driven insights.
-            </p>
-          </div>
-        </section>
-      </main>
+  {/* Form Section */}
+  <div class="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+      <div>
+        <label for="name" class="block text-gray-700">Your Name: </label>
+        <input type="text" id="name" name="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
+      </div>
+      <div>
+        <label for="email" class="block text-gray-700">Your Email: </label>
+        <input type="email" id="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
+      </div>
+      <div>
+        <label for="role" class="block text-gray-700">Your Role: </label>
+        <select id="role" name="role[]" multiple class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
+          <option value="leader">Senior Management / Leadership</option>
+          <option value="investor">Investor</option>
+          <option value="customer">Potential Customer</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="message" class="block text-gray-700">Message: </label>
+        <textarea id="message" name="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-opacity-50 transition-colors duration-300" style={{ backgroundColor: '#bdff03' }}>
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+
+  {/* Encouragement Text Section */}
+  <div class="max-w-md bg-white shadow-md rounded-md p-8 border-2" style={{ borderColor: '#bdff03' }}>
+    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Write to Us!</h2>
+    <p class="text-gray-700">
+      We would love to hear from you! Whether you have questions, comments, or feedback, feel free to reach out to us using the form on the left. Our team is here to assist you.
+    </p>
+  </div>
+
+</main>
+
+
+
+
+
+
+
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
@@ -200,8 +215,7 @@ const CapabilitiesPage: React.FC = () => {
           Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
         </p>
       </footer>
+
     </div>
   );
-};
-
-export default CapabilitiesPage;
+}

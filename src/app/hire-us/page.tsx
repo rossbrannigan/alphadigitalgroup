@@ -84,32 +84,37 @@ const HireUsPage: React.FC = () => {
               <div className="text-left">
                 <h3 className="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
                 <ul className="text-gray-300">
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a href="industries" className="hover:text-white text-xs">
                       Industries
                     </a>
                   </li>
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a href="capabilities" className="hover:text-white text-xs">
                       Capabilities
                     </a>
                   </li>
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a href="featured-insights" className="hover:text-white text-xs">
                       Featured Insights
                     </a>
                   </li>
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a href="locations" className="hover:text-white text-xs">
                       Locations
                     </a>
                   </li>
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a href="hire-us" className="hover:text-white text-xs">
                       Hire Us
                     </a>
                   </li>
-                  <li className="mb-0.5">
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
+                    <a href="about-us" className="hover:text-white text-xs">
+                      About Us
+                    </a>
+                  </li>
+                  <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a
                       href="https://www.linkedin.com/company/alphadigitalgroup"
                       target="_blank"
@@ -130,7 +135,13 @@ const HireUsPage: React.FC = () => {
                   <li className="mb-0.5 flex items-center">
                     ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
                   </li>
-                  <li className="mb-2">
+<li className="mb-0.5 flex items-center">
+  📝 
+  <a href="contact" className="ml-2 text-xs hover:text-white">
+    Contact Us Form
+  </a>
+</li>
+                                    <li className="mb-2">
                     <a
                       href="https://www.linkedin.com/company/alphadigitalgroup"
                       target="_blank"
@@ -168,6 +179,8 @@ const HireUsPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+
         {/* Divider */}
         <hr className="border-t border-gray-600 w-full my-8" />
         {/* Copyright text */}

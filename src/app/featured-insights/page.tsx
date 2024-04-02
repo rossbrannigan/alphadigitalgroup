@@ -122,7 +122,13 @@ const FeaturedInsightsPage: React.FC = () => {
                   <li className="mb-0.5 flex items-center">
                     ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
                   </li>
-                  <li className="mb-2">
+<li className="mb-0.5 flex items-center">
+  📝 
+  <a href="contact" className="ml-2 text-xs hover:text-white">
+    Contact Us Form
+  </a>
+</li>
+                                    <li className="mb-2">
                     <a
                       href="https://www.linkedin.com/company/alphadigitalgroup"
                       target="_blank"
@@ -160,6 +166,8 @@ const FeaturedInsightsPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+
         {/* Divider */}
         <hr className="border-t border-gray-600 w-full my-8" />
         {/* Copyright text */}
@@ -171,7 +179,6 @@ const FeaturedInsightsPage: React.FC = () => {
           Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
         </p>
       </footer>
-
     </div>
   );
 };
