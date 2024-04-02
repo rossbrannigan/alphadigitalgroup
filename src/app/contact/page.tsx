@@ -48,11 +48,11 @@ export default function Home() {
         <input type="text" id="name" name="name" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label htmlfor="email" className="block text-gray-700">Your Email: </label>
+        <label htmlFor="email" className="block text-gray-700">Your Email: </label>
         <input type="email" id="email" name="email" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label htmlfor="role" className="block text-gray-700">Your Role: </label>
+        <label htmlFor="role" className="block text-gray-700">Your Role: </label>
         <select id="role" name="role[]" multiple class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
           <option value="leader">Senior Management / Leadership</option>
           <option value="investor">Investor</option>
