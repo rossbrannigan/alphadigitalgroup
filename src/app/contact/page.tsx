@@ -5,7 +5,6 @@ export default function ContactPage() {
     <form
       method="POST"
       name="contact-form"
-      action="/success"
       data-netlify="true"
     >
       <input type="hidden" name="form-name" value="contact-form" />
