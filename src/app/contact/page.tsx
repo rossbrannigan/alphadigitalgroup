@@ -43,6 +43,7 @@ export default function Home() {
   <div className="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
     <form name="contact" method="POST" data-netlify="true" className="space-y-4">
+    <input type="hidden" name="form-name" value="contact" />
       <div>
         <label htmlFor="name" className="block text-gray-700">Your Name: </label>
         <input type="text" id="name" name="name" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
