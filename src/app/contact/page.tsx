@@ -37,7 +37,7 @@ export default function Home() {
       </header>
 
 {/* Main Content - Submission Form */}
-<main class="container mx-auto py-8 flex flex-col lg:flex-row items-stretch justify-between">
+<main className="container mx-auto py-8 flex flex-col lg:flex-row items-stretch justify-between">
 
   {/* Form Section */}
   <div class="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
