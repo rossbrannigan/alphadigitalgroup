@@ -40,7 +40,7 @@ export default function Home() {
 <main className="container mx-auto py-8 flex flex-col lg:flex-row items-stretch justify-between">
 
   {/* Form Section */}
-  <div class="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
+  <div className="flex-grow bg-white shadow-md rounded-md p-8 mb-8 lg:mb-0 lg:mr-4 border-2" style={{ borderColor: '#bdff03' }}>
     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
     <form name="contact" method="POST" data-netlify="true" class="space-y-4">
       <div>
