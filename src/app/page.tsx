@@ -174,11 +174,11 @@ export default function Home() {
               <h2 className="text-2xl font-semibold text-gray-800 mb-4">
                 Subscribe to Our Newsletter
               </h2>
-              <form>
+              <form data-netlify="true">
                 <div className="flex items-center">
                   <input
                     type="email"
-                    className="bg-gray-100 border-2 border-gray-300 rounded-l-md py-2 px-4 w-full"
+                    className="bg-gray-100 border-2 border-gray-300 rounded-l-md py-2 px-4 w-full text-black" 
                     placeholder="Your email address"
                   />
                   <button
@@ -192,6 +192,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+
         {/* Divider */}
         <hr className="border-t border-gray-600 w-full my-8" />
         {/* Copyright text */}
