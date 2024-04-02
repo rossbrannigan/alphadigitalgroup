@@ -44,15 +44,15 @@ export default function Home() {
     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
     <form name="contact" method="POST" data-netlify="true" className="space-y-4">
       <div>
-        <label for="name" className="block text-gray-700">Your Name: </label>
+        <label htmlFor="name" className="block text-gray-700">Your Name: </label>
         <input type="text" id="name" name="name" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label for="email" className="block text-gray-700">Your Email: </label>
+        <label htmlfor="email" className="block text-gray-700">Your Email: </label>
         <input type="email" id="email" name="email" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50" />
       </div>
       <div>
-        <label for="role" className="block text-gray-700">Your Role: </label>
+        <label htmlfor="role" className="block text-gray-700">Your Role: </label>
         <select id="role" name="role[]" multiple class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-yellow-400 focus:ring focus:ring-yellow-400 focus:ring-opacity-50">
           <option value="leader">Senior Management / Leadership</option>
           <option value="investor">Investor</option>
