@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.4",
     "@types/google.analytics": "^0.0.46",
-    "next": "14.1.4",
+    "next": "^14.1.4",
     "react": "^18",
     "react-dom": "^18",
     "react-ga": "^3.3.1",
