@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Head from 'next/head';
 import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
+      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
 
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
