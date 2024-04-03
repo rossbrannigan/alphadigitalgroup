@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
+import { GoogleMapsEmbed } from '@next/third-parties/google'
 
 const LocationsPage: React.FC = () => {
   return (
@@ -60,6 +61,15 @@ const LocationsPage: React.FC = () => {
             </p>
           </div>
         </section>
+
+            <GoogleMapsEmbed
+      apiKey="XYZ"
+      height={200}
+      width="100%"
+      mode="place"
+      q="Brooklyn+Bridge,New+York,NY"
+    />
+
       </main>
 
       {/* Footer */}
