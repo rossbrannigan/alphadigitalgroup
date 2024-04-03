@@ -8,6 +8,7 @@ export default function Home() {
     <div className="bg-gray-100 min-h-screen">
       <Head>
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+      <GoogleTagManager gtmId="G-25Y0G3QQE6" /> {/* Add GoogleTagManager component */}
 
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
@@ -15,7 +16,7 @@ export default function Home() {
 
       </Head>
 
-      <GoogleTagManager gtmId="G-25Y0G3QQE6" /> {/* Add GoogleTagManager component */}
+      
 
 
       {/* Header */}
