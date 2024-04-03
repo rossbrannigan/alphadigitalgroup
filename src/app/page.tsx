@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 export default function Home() {
   return (
@@ -11,7 +12,9 @@ export default function Home() {
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
 
       </Head>
-      
+
+      <GoogleTagManager gtmId="G-25Y0G3QQE6" /> {/* Add GoogleTagManager component */}
+
 
       {/* Header */}
       <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
