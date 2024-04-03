@@ -63,7 +63,7 @@ const LocationsPage: React.FC = () => {
         </section>
 
             <GoogleMapsEmbed
-      apiKey="XYZ"
+      apiKey="AIzaSyCoYiZhK-bLa8taz2lUaQQJj-WRjC0omYM"
       height={200}
       width="100%"
       mode="place"
