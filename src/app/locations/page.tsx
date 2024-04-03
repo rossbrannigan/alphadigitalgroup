@@ -67,7 +67,7 @@ const LocationsPage: React.FC = () => {
       height={200}
       width="100%"
       mode="place"
-      q="Brooklyn+Bridge,New+York,NY"
+      q="Dubai"
     />
 
       </main>
