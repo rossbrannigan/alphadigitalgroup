@@ -141,9 +141,7 @@ export default function Home() {
                   </li>
                   <li className="mb-0.5"> {/* Reduced bottom margin */}
                     <a
-                      href="https://www.linkedin.com/company/alphadigitalgroup"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="blog"
                       className="hover:text-white text-xs"
                     >
                       Alpha Digital Blog
