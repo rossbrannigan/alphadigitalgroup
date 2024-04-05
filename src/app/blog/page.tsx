@@ -63,7 +63,7 @@ const BlogPage: React.FC = () => {
       {/* Introduction */}
       <h4 className="text-lg font-semibold mb-2">Introduction</h4>
       <p>
-        As the airline industry continues to evolve, airlines are increasingly relying on advanced technologies to enhance their web applications and deliver superior customer experiences. One such technology is the New Distribution Capability (NDC), a standard developed by IATA to modernize airline distribution and enable richer, more personalized content and services. In this article, we'll explore how airlines can optimize their web applications for enterprise APIs, specifically through NDC, to improve performance, scalability, and customer satisfaction.
+        As the airline industry continues to evolve, airlines are increasingly relying on advanced technologies to enhance their web applications and deliver superior customer experiences. One such technology is the New Distribution Capability (NDC), a standard developed by IATA to modernize airline distribution and enable richer, more personalized content and services. In this article, we will explore how airlines can optimize their web applications for enterprise APIs, specifically through NDC, to improve performance, scalability, and customer satisfaction.
       </p>
       {/* Include image for NDC explained */}
       <div>
