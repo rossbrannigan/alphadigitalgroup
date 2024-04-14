@@ -36,7 +36,7 @@ export default function Home() {
               <li><a href="about-us" className="text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
               <li><a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-purple-800 hover:text-black transition-colors duration-300">Alpha Digital Blog</a></li>
               {/* Changed text color to white */}
-              <li><a href="/hire-us" className="text-white bg-purple-600 py-2 px-4 rounded-full hover:bg-black hover:text-yellow-400 transition-colors duration-300">Get Started</a></li>
+              <li><a href="/marketplace" className="text-white bg-purple-600 py-2 px-4 rounded-full hover:bg-black hover:text-yellow-400 transition-colors duration-300">Get Started</a></li>
             </ul>
           </nav>
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
             <p className="text-lg md:text-xl">Unlock boundless possibilities with Alpha Digital Group.</p>
-            <a href="/hire-us">
+            <a href="/marketplace">
               <button className="bg-white text-purple-600 font-bold px-6 py-3 rounded-full mt-8 hover:bg-purple-100 transition duration-300 ease-in-out" style={{ border: '2px solid #BDFF03' }}>Get Started</button>
             </a>
           </div>
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="text-center">
               <h2 className="text-4xl font-semibold text-purple-600 mb-2">Join Us Today</h2>
               <p className="text-lg text-purple-600 mb-4">Unlock your potential with our services.</p>
-              <a href="/hire-us">
+              <a href="/marketplace">
                 <button className="bg-purple-600 text-white font-bold px-8 py-3 rounded-full hover:bg-purple-700 transition duration-300 ease-in-out">Get Started</button>
               </a>
             </div>
@@ -130,8 +130,8 @@ export default function Home() {
                     </a>
                   </li>
                   <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="hire-us" className="hover:text-white text-xs">
-                      Hire Us
+                    <a href="marketplace" className="hover:text-white text-xs">
+                      Marketplace
                     </a>
                   </li>
                   <li className="mb-0.5"> {/* Reduced bottom margin */}

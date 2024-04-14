@@ -14,14 +14,14 @@ declare global {
   }
 }
 
-const HireUsPage: React.FC = () => {
+const MarketplacePage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Title */}
       <Head>
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
         <GoogleTagManager gtmId="G-25Y0G3QQE6" /> 
-        <title>{"Hire Us | Alpha Digital Group"}</title>
+        <title>{"Marketplace | Alpha Digital Group"}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
@@ -55,6 +55,10 @@ const HireUsPage: React.FC = () => {
             {/* Services Links */}
             <div className="text-xs text-white flex items-center space-x-6">
               <h2 className="mr-4 text-xs text-white font-bold">Services Marketplace:</h2>
+              <a href="#airline-consulting-services" className="hover:text-brand-green transition-colors duration-300">Airline Services</a>
+              <span>|</span>
+              <a href="#hotel-consulting-services" className="hover:text-brand-green transition-colors duration-300">Hotel Services</a>
+              <span>|</span>
               <a href="#consultant-as-a-service" className="hover:text-brand-green transition-colors duration-300">Consultancy as a Service</a>
               <span>|</span>
               <a href="#web3-services" className="hover:text-brand-green transition-colors duration-300">Web3</a>
@@ -65,6 +69,42 @@ const HireUsPage: React.FC = () => {
 
       {/* Main Content */}
       <main className="container mx-auto py-8">
+        {/* Airline Consulting Services Section */}
+        <section className="mb-8" id="airline-consulting-services">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Airline Consulting Services</h2>
+            <p className="text-gray-700">
+              Welcome to our specialized Airline Consulting Services. As industry leaders, we offer tailored consultancy services exclusively for the aviation sector. Whether you're a start-up airline looking to establish operations efficiently, an established carrier aiming to optimize routes and streamline operations, or a cargo airline seeking to enhance logistics, we provide comprehensive solutions to meet your unique needs. Our team of seasoned aviation professionals brings expertise in areas including fleet optimization, route planning, revenue management, regulatory compliance, and customer experience enhancement. Partner with us to elevate your airline's performance and achieve sustainable growth in today's dynamic aviation landscape.
+            </p>
+          </div>
+        </section>
+
+        {/* Stripe Airline Pricing Table */}
+        <section className="mb-8" id="stripe-pricing-table">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1P5PMq2KKbBgfCwqPDvnx774" publishable-key="pk_live_51OzdDN2KKbBgfCwqKoIShIjFkusasFpbP2ZlynP3gNyQ15fO5jXfwcFBlsoCK6gFfRn6Q2qtYyFBYK0pGdfoLE7y00bLcnNS4J"></stripe-pricing-table>
+          </div>
+        </section>
+
+        {/* Hotel Consulting Services Section */}
+        <section className="mb-8" id="hotel-consulting-services">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Hotel Consulting Services</h2>
+            <p className="text-gray-700">
+              Explore our comprehensive Hotel Consulting Services tailored to the hospitality industry. Whether you're a boutique hotel, a luxury resort, or a chain of properties, our team of seasoned consultants is dedicated to optimizing your operations and enhancing guest experiences. From strategic planning to operational efficiency, revenue management, branding, and marketing strategies, we provide customized solutions to address the specific challenges and opportunities of your property. With a focus on innovation and industry best practices, we collaborate with you to elevate your hotel's performance, drive profitability, and exceed guest expectations in today's competitive hospitality market.
+            </p>
+          </div>
+        </section>
+
+        {/* Stripe Hotel Pricing Table */}
+        <section className="mb-8" id="stripe-pricing-table">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1P5PJu2KKbBgfCwq5ZwursHt" publishable-key="pk_live_51OzdDN2KKbBgfCwqKoIShIjFkusasFpbP2ZlynP3gNyQ15fO5jXfwcFBlsoCK6gFfRn6Q2qtYyFBYK0pGdfoLE7y00bLcnNS4J"></stripe-pricing-table>
+          </div>
+        </section>
+
         {/* Web3 Services Section */}
         <section className="mb-8" id="web3-services">
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
@@ -96,7 +136,7 @@ const HireUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stripe Pricing Table */}
+        {/* Stripe Consultancy As A Service Pricing Table */}
         <section className="mb-8" id="stripe-pricing-table">
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
@@ -206,4 +246,4 @@ const HireUsPage: React.FC = () => {
   );
 };
 
-export default HireUsPage;
+export default MarketplacePage;
