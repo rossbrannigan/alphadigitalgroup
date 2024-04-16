@@ -81,6 +81,9 @@ const MarketplacePage: React.FC = () => {
         </nav>
       </header>
 
+      {/* Google Analytics - https://nextjs.org/docs/messages/next-script-for-ga */}
+      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+
       {/* Main Content */}
       <main className="container mx-auto py-8">
         {/* Airline Consulting Services Section */}
