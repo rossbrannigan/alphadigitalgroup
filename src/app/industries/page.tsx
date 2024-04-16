@@ -7,7 +7,7 @@ const IndustriesPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-                               {/* Add Google Analytics tracking tag */}
+        {/* Add Google Analytics tracking tag */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -18,8 +18,12 @@ const IndustriesPage: React.FC = () => {
               gtag('config', 'G-25Y0G3QQE6');
             `,
           }}
-      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-      <GoogleTagManager gtmId="G-25Y0G3QQE6" />
+        ></script>
+        {/* Google Analytics and Google Tag Manager components */}
+        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
+        
+        {/* Page title, icon, and meta description */}
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
