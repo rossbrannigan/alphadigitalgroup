@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
-import { GoogleTagManager } from '@next/third-parties/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google"
 
 
 // Declare JSX namespace for custom elements
