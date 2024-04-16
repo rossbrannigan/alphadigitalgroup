@@ -6,8 +6,8 @@ import { GoogleAnalytics } from "@next/third-parties/google"
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Head>
-                         {/* Add Google Analytics tracking tag */}
+       <Head>
+        {/* Add Google Analytics tracking tag */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -15,16 +15,17 @@ export default function Home() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-R17NJV1L4N');
+              gtag('config', 'G-25Y0G3QQE6');
             `,
           }}
-      <GoogleAnalytics gaId="G-25Y0G3QQE6"/>
-      <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
-
+        ></script>
+        {/* Google Analytics and Google Tag Manager components */}
+        <GoogleAnalytics gaId="G-25Y0G3QQE6"/>
+        <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
+        {/* Page title, icon, and meta description */}
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-
       </Head>
 
       
