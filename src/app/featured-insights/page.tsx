@@ -8,8 +8,8 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 const FeaturedInsightsPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Head>
-                                     {/* Add Google Analytics tracking tag */}
+<Head>
+        {/* Add Google Analytics tracking tag */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -17,15 +17,18 @@ const FeaturedInsightsPage: React.FC = () => {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-25Y0G3QQE6);
+              gtag('config', 'G-25Y0G3QQE6');
             `,
           }}
-            <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-      <GoogleTagManager gtmId="G-25Y0G3QQE6" />
+        />
+        {/* Google Analytics and Google Tag Manager components */}
+        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
+        
+        {/* Page title, icon, and meta description */}
         <title>Featured Insights | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-
       </Head>
 
       {/* Header */}
