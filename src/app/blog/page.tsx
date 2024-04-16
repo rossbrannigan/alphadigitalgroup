@@ -23,6 +23,17 @@ const BlogPage: React.FC = () => {
     <div className="bg-gray-100 min-h-screen">
       {/* Title */}
       <Head>
+                                     {/* Add Google Analytics tracking tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-25Y0G3QQE6);
+            `,
+          }}
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
         <GoogleTagManager gtmId="G-25Y0G3QQE6" /> 
         <title>{"Web3 Consulting & Services | Alpha Digital Group"}</title>
