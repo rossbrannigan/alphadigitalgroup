@@ -1,17 +1,49 @@
 import Image from "next/image";
 import Head from "next/head";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google"
+
+// Declare JSX namespace for custom elements
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'stripe-pricing-table': any;
+    }
+  }
+}
 
 const WebDevelopmentPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
+                {/* Add Google Analytics tracking tag */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-25Y0G3QQE6');
+            `,
+          }}
+        ></script>
+        {/* Google Analytics and Google Tag Manager components */}
+        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
         <title>Travel Web Development | Alpha Digital Group</title>
         <meta name="description" content="Supercharge bookings & brand awareness with a cutting-edge travel website developed by Alpha Digital Group." />
       </Head>
+
+            {/* Google Analytics - https://nextjs.org/docs/messages/next-script-for-ga */}
+            <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+
+
 {/* Hero Section */}
 <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative">
   <div className="absolute inset-0 flex items-center justify-center">
-    <Image src="/brain-wave.gif" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" />
+  <Image src="/brain-wave.gif" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" unoptimized />
+
   </div>
   <div className="absolute inset-0 flex items-center justify-center text-center">
     <div className="mb-16"> {/* Add margin-bottom to move the text higher */}
@@ -67,6 +99,25 @@ const WebDevelopmentPage = () => {
         </div>
       </section>
 
+
+
+
+              {/* Stripe Web Development Table 1 */}
+              <section className="mb-8" id="stripe-pricing-table">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1P6vBG2KKbBgfCwqezujW7zj" publishable-key="pk_live_51OzdDN2KKbBgfCwqKoIShIjFkusasFpbP2ZlynP3gNyQ15fO5jXfwcFBlsoCK6gFfRn6Q2qtYyFBYK0pGdfoLE7y00bLcnNS4J"></stripe-pricing-table>
+          </div>
+        </section>
+
+                      {/* Stripe Web Development Table 2 */}
+                      <section className="mb-8" id="stripe-pricing-table">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+            <stripe-pricing-table pricing-table-id="prctbl_1P6vUF2KKbBgfCwqqHIiHCFI" publishable-key="pk_live_51OzdDN2KKbBgfCwqKoIShIjFkusasFpbP2ZlynP3gNyQ15fO5jXfwcFBlsoCK6gFfRn6Q2qtYyFBYK0pGdfoLE7y00bLcnNS4J"></stripe-pricing-table>
+          </div>
+        </section>
+
       {/* Call to Action Section */}
       <section className="bg-gray-800 py-12">
         <div className="container mx-auto text-center">
@@ -75,6 +126,9 @@ const WebDevelopmentPage = () => {
           <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full">Get Started</button>
         </div>
       </section>
+
+      
+
 
     </div>
   );
