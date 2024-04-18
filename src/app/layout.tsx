@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
-import Header from "./Header.tsx"; // Import the Header component
-import Footer from "./Footer.tsx"; // Import the Footer component
+import Header from "Header.tsx"; // Import the Header component
+import Footer from "Footer.tsx"; // Import the Footer component
 
 const inter = Inter({ subsets: ["latin"] });
 
