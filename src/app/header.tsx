@@ -1,9 +1,9 @@
-// Header.tsx
+// header.tsx
 
 import React from "react";
 import Image from "next/image";
 
-const Header: React.FC = () => {
+const header: React.FC = () => {
   return (
     <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
       <div className="container mx-auto py-4 flex items-center justify-between">
@@ -50,4 +50,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default header;
