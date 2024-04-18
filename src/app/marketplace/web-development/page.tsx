@@ -22,25 +22,60 @@ const WebDevelopmentPage = () => {
 </section>
 
 
+      {/* Content Section */}
       <section className="container mx-auto py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Existing Cards */}
+          {/* You can keep the existing cards or replace them with new content */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
             <Image src="/digital-product-logo.png" alt="Digital Product Placeholder" width={200} height={200} className="mb-4" />
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Product Leadership</h2>
             <p className="text-gray-600 text-center">Empower your digital products with innovative leadership.</p>
           </div>
+          {/* Add new content here */}
+          {/* Captivating Design */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/digital-marketing-logo.png" alt="Digital Marketing Placeholder" width={200} height={200} className="mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Marketing Leadership</h2>
-            <p className="text-gray-600 text-center">Lead your digital marketing campaigns to success with our expert guidance.</p>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Captivating Design</h2>
+            <p className="text-gray-600 text-center mb-4">We'll create a visually stunning website that showcases your destinations and services in a way that inspires wanderlust.</p>
           </div>
+          {/* Seamless User Experience */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/aviation-management-logo.png" alt="Aviation Management Placeholder" width={200} height={200} className="mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Aviation Management Leadership</h2>
-            <p className="text-gray-600 text-center">Navigate the skies of aviation management with our strategic leadership solutions.</p>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Seamless User Experience</h2>
+            <p className="text-gray-600 text-center mb-4">Effortless navigation and intuitive booking processes will ensure visitors convert into paying customers.</p>
           </div>
+          {/* Mobile-First Development */}
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Mobile-First Development</h2>
+            <p className="text-gray-600 text-center mb-4">With the rise of mobile travel booking, we prioritize responsive design that provides an exceptional experience on any device.</p>
+          </div>
+          {/* Search Engine Optimization (SEO) */}
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Search Engine Optimization (SEO)</h2>
+            <p className="text-gray-600 text-center mb-4">Our data-driven approach will optimize your website to rank higher in search results, driving organic traffic and attracting new customers.</p>
+          </div>
+          {/* Content Marketing Magic */}
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Content Marketing Magic</h2>
+            <p className="text-gray-600 text-center mb-4">We'll craft compelling content that fuels brand awareness, educates travelers, and positions you as an industry leader.</p>
+          </div>
+          {/* Measurable Results */}
+          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Measurable Results</h2>
+            <p className="text-gray-600 text-center mb-4">We don't just build websites, we build results. Track your progress with clear analytics and data-driven insights.</p>
+          </div>
+          {/* End of new content */}
         </div>
       </section>
+
+      {/* Call to Action Section */}
+      <section className="bg-gray-800 py-12">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Partner with Alpha Digital Group and Unlock the Full Potential of Your Travel Business</h2>
+          <p className="text-white text-lg mb-8">Contact us today for a free consultation!</p>
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full">Get Started</button>
+        </div>
+      </section>
+      
     </div>
   );
 };
