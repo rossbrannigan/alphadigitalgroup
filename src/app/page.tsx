@@ -36,7 +36,7 @@ export default function Home() {
 {/* Hero Section */}
 <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative">
   <div className="absolute inset-0 flex items-center justify-center">
-    <Image src="/brain-wave.png" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" />
+    <Image src="/brain-wave.gif" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" unoptimized />
   </div>
   <div className="absolute inset-0 flex items-center justify-center text-center">
     <div className="mx-auto max-w-7xl"> {/* Set max width to ensure full width and center alignment */}
