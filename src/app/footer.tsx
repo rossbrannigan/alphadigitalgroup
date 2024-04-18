@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-const Footer: React.FC = () => {
+const footer: React.FC = () => {
   return (
-    <Footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8">
       <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
         {/* Logo */}
         <div className="mb-4 lg:mb-0 lg:order-1 lg:self-start">
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
       <p className="text-xs text-gray-300 text-center mt-4 lg:order-6">
         Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
       </p>
-    </Footer>
+    </footer>
   );
 };
 
