@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { GoogleAnalytics } from "@next/third-parties/google"
+import WebDevelopmentSection from './WebDevelopmentSection';
 
 
 // Declare JSX namespace for custom elements
@@ -39,47 +40,6 @@ const MarketplacePage: React.FC = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
-
-      {/* Header */}
-      <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
-        <div className="container mx-auto py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="mr-4">
-            <a href="/">
-              <Image src="/company-logo.svg" alt="Alpha Digital Group Logo" width={250} height={150} />
-            </a>
-          </div>
-          {/* Main Navigation */}
-          <nav>
-            <ul className="flex space-x-6">
-              {/* Main Nav Links */}
-              <li><a href="industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-              <li><a href="capabilities" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Capabilities</a></li>
-              <li><a href="featured-insights" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Featured Insights</a></li>
-              <li><a href="locations" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Locations</a></li>
-              <li><a href="about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
-              <li><a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Alpha Digital Blog</a></li>
-              <li><a href="/hire-us" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full border border-white transition-colors duration-300 hover:bg-white hover:text-purple-600 hover:border-purple-600">Get Started</a></li>
-            </ul>
-          </nav>
-        </div>
-        {/* Sub Navigation */}
-        <nav className="bg-purple-600 py-2">
-          <div className="container mx-auto flex items-center justify-between">
-            {/* Services Links */}
-            <div className="text-xs text-white flex items-center space-x-6">
-              <h2 className="mr-4 text-xs text-white font-bold">Services Marketplace:</h2>
-              <a href="#airline-consulting-services" className="hover:text-brand-green transition-colors duration-300">Airline Services</a>
-              <span>|</span>
-              <a href="#hotel-consulting-services" className="hover:text-brand-green transition-colors duration-300">Hotel Services</a>
-              <span>|</span>
-              <a href="#consultant-as-a-service" className="hover:text-brand-green transition-colors duration-300">Consultancy as a Service</a>
-              <span>|</span>
-              <a href="#web3-services" className="hover:text-brand-green transition-colors duration-300">Web3</a>
-            </div>
-          </div>
-        </nav>
-      </header>
 
       {/* Google Analytics - https://nextjs.org/docs/messages/next-script-for-ga */}
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
@@ -122,15 +82,27 @@ const MarketplacePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Web3 Services Section */}
-        <section className="mb-8" id="web3-services">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Web3 Services</h2>
-            <p className="text-gray-700">
-              Introducing our Web3 Services, leveraging the latest in decentralized technologies such as blockchain, smart contracts, and decentralized applications (DApps). Our team of experts can assist you in navigating the decentralized landscape, building blockchain solutions, auditing smart contracts, and developing decentralized applications tailored to your business needs.
-            </p>
-          </div>
-        </section>
+{/* Web Development Section */}
+<section className="mb-4" id="web-development-services">
+  <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+    <h2 className="text-2xl font-semibold text-purple-800 mb-4">Web Development Services</h2>
+    <p className="text-gray-700">
+      Introducing our web development services tailored for airlines, hotels, and travel companies. We offer custom website design, e-commerce integration, mobile app development, search engine optimization (SEO), and content management systems (CMS) to boost your online presence and drive sales.
+    </p>
+    {/* Add a button or link to redirect visitors to purchase web development services */}
+    <a href="/purchase-web-development" className="btn mt-4">Purchase Web Development Services</a>
+  </div>
+</section>
+
+{/* Web3 Services Section */}
+<section className="mb-4" id="web3-services">
+  <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+    <h2 className="text-2xl font-semibold text-purple-800 mb-4">Web3 Services</h2>
+    <p className="text-gray-700">
+      Introducing our Web3 Services, leveraging the latest in decentralized technologies such as blockchain, smart contracts, and decentralized applications (DApps). Our team of experts can assist you in navigating the decentralized landscape, building blockchain solutions, auditing smart contracts, and developing decentralized applications tailored to your business needs.
+    </p>
+  </div>
+</section>
 
         {/* Stripe Pricing Table */}
         <section className="mb-8" id="stripe-pricing-table-web3">
@@ -161,104 +133,6 @@ const MarketplacePage: React.FC = () => {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-          {/* Logo */}
-          <div className="mb-4 lg:mb-0 lg:order-1 lg:self-start">
-            <Image
-              src="/company-logo-small.png"
-              alt="Alpha Digital Group Logo"
-              width={40}
-              height={40}
-            />
-          </div>
-          {/* Links */}
-          <div className="lg:ml-auto lg:order-3">
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-left">
-                <h3 className="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
-                <ul className="text-gray-300">
-                  <li className="mb-0.5">
-                    <a href="industries" className="hover:text-white text-xs">
-                      Industries
-                    </a>
-                  </li>
-                  <li className="mb-0.5">
-                    <a href="capabilities" className="hover:text-white text-xs">
-                      Capabilities
-                    </a>
-                  </li>
-                  <li className="mb-0.5">
-                    <a href="featured-insights" className="hover:text-white text-xs">
-                      Featured Insights
-                    </a>
-                  </li>
-                  <li className="mb-0.5">
-                    <a href="locations" className="hover:text-white text-xs">
-                      Locations
-                    </a>
-                  </li>
-                  <li className="mb-0.5">
-                    <a href="hire-us" className="hover:text-white text-xs">
-                      Hire Us
-                    </a>
-                  </li>
-                  <li className="mb-0.5">
-                    <a
-                      href="https://www.linkedin.com/company/alphadigitalgroup"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white text-xs"
-                    >
-                      Alpha Digital Blog
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-left">
-                <h3 className="text-gray-300 mb-2 text-xs font-bold">Contact Us</h3>
-                <ul className="text-gray-300">
-                  <li className="mb-0.5 flex items-center">
-                    📞 <span className="ml-2 text-xs">+66 82 836 2713</span>
-                  </li>
-                  <li className="mb-0.5 flex items-center">
-                    ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
-                  </li>
-                  <li className="mb-0.5 flex items-center">
-                    📝 
-                    <a href="contact" className="ml-2 text-xs hover:text-white">
-                      Contact Us Form
-                    </a>
-                  </li>
-                  <li className="mb-2">
-                    <a
-                      href="https://www.linkedin.com/company/alphadigitalgroup"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white text-xs"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <hr className="border-t border-gray-600 w-full my-8" />
-        {/* Copyright text */}
-        <p className="text-xs text-gray-300 text-center lg:order-5">
-          © 2020-2024 Alpha Digital Group. All rights reserved.
-        </p>
-        {/* Powered by Ross Brannigan */}
-        <p className="text-xs text-gray-300 text-center mt-4 lg:order-6">
-          Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
-        </p>
-      </footer>
     </div>
   );
 };
