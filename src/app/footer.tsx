@@ -102,4 +102,4 @@ const footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default footer;
