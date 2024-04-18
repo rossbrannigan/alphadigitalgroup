@@ -36,7 +36,7 @@ const WebDevelopmentPage = () => {
           {/* Captivating Design */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Captivating Design</h2>
-            <p className="text-gray-600 text-center mb-4">We'll create a visually stunning website that showcases your destinations and services in a way that inspires wanderlust.</p>
+            <p className="text-gray-600 text-center mb-4">We will create a visually stunning website that showcases your destinations and services in a way that inspires wanderlust.</p>
           </div>
           {/* Seamless User Experience */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
@@ -56,12 +56,12 @@ const WebDevelopmentPage = () => {
           {/* Content Marketing Magic */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Content Marketing Magic</h2>
-            <p className="text-gray-600 text-center mb-4">We'll craft compelling content that fuels brand awareness, educates travelers, and positions you as an industry leader.</p>
+            <p className="text-gray-600 text-center mb-4">We will craft compelling content that fuels brand awareness, educates travelers, and positions you as an industry leader.</p>
           </div>
           {/* Measurable Results */}
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Measurable Results</h2>
-            <p className="text-gray-600 text-center mb-4">We don't just build websites, we build results. Track your progress with clear analytics and data-driven insights.</p>
+            <p className="text-gray-600 text-center mb-4">We do not just build websites, we build results. Track your progress with clear analytics and data-driven insights.</p>
           </div>
           {/* End of new content */}
         </div>
