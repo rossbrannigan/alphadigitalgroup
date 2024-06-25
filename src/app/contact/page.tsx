@@ -11,26 +11,26 @@ const ContactPage: React.FC = () => {
         <title>Contact Us | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-
-        {/* Google Analytics and Tag Manager Scripts */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
-          strategy="afterInteractive"
-        />
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-25Y0G3QQE6');
-            `,
-          }}
-        />
-        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
       </Head>
+
+      {/* Google Analytics and Tag Manager Scripts */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
+        strategy="afterInteractive"
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-25Y0G3QQE6');
+          `,
+        }}
+      />
+      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+      <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
       {/* Main Content - Submission Form */}
       <main className="container mx-auto py-8 flex flex-wrap justify-center gap-8">
@@ -72,7 +72,8 @@ const ContactPage: React.FC = () => {
         <section className="bg-white shadow-md rounded-md p-8 border-2" style={{ borderColor: '#bdff03', flex: '1' }}>
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Write to Us!</h2>
           <div className="flex justify-center mb-4">
-            <Image src="/images/contact-us.png" alt="Placeholder Image" width={500} height={300} />
+            {/* Replace with your actual image */}
+            <img src="/images/contact-us.png" alt="Placeholder Image" width={500} height={300} />
           </div>
           <p className="text-gray-700">
             We would love to hear from you! Whether you have questions, comments, or feedback, feel free to reach out to us using the form on the left. Our team is here to assist you.
