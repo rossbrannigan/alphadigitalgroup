@@ -2,6 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
+import { FiMessageCircle } from 'react-icons/fi'; // Import WhatsApp icon
 
 export default function Home() {
   return (
@@ -61,6 +62,14 @@ export default function Home() {
             <p className="text-gray-600 text-center">Navigate the skies of aviation management with our strategic leadership solutions.</p>
           </div>
         </div>
+      </section>
+
+      {/* WhatsApp Chat Button */}
+      <section className="fixed bottom-8 left-8">
+        <a href="https://wa.me/66828362713" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg flex items-center">
+          <FiMessageCircle className="h-6 w-6 inline-block mr-2" /> {/* WhatsApp Icon */}
+          Chat on WhatsApp
+        </a>
       </section>
 
       <Script id="tawk-script" strategy="lazyOnload">

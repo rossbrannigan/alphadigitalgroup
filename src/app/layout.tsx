@@ -20,10 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Include the Header component */}
+        {/* Include the Header component outside of main */}
         <Header />
         <main>{children}</main>
-        {/* Include the Footer component */}
         <Footer />
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/>
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
