@@ -73,6 +73,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brands Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-extrabold text-gray-900">These Folks Get It</h2>
+            <p className="mt-4 text-lg text-gray-600">Check out some of our trusted partners</p>
+          </div>
+          <div className="flex justify-center items-center flex-wrap gap-16">
+            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
+              <Image src="/airberlin.svg" alt="airberlin" width={120} height={120} />
+            </div>
+            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
+              <Image src="/hans.svg" alt="hans" width={100} height={100} />
+            </div>
+            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
+              <Image src="/etihad.svg" alt="etihad" width={80} height={80} />
+            </div>
+            {/* Add more logo divs as needed */}
+          </div>
+        </div>
+      </section>
+
       {/* Feature section */}
       <section className="bg-white pb-6">
         <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
@@ -150,7 +172,7 @@ export default function Home() {
       </section>
 
 
-      {/* Rest of your content */}
+      {/* Digital Leadership Section */}
       <section className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
