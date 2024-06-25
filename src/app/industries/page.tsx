@@ -2,7 +2,7 @@ import React from "react";
 import Head from 'next/head';
 import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics } from   @next/third-parties/google';
 
 const IndustriesPage: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4">
             <h1 className="text-3xl font-semibold text-purple-800 mb-4">Welcome to Alpha Digital Group - Industries We Serve</h1>
             <p className="text-purple-800">
-              At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in today's dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
+              At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in todays dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
             </p>
           </div>
         </section>
@@ -82,7 +82,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">Aviation</h2>
             <p className="text-purple-800">
-              In the fast-paced world of aviation, staying ahead requires strategic vision and meticulous planning. Alpha Digital Group offers specialized consulting services to airlines, airports, and aviation service providers. Whether it's streamlining operations, implementing cutting-edge technologies, or enhancing safety protocols, we empower aviation stakeholders to thrive in a rapidly evolving environment.
+              In the fast-paced world of aviation, staying ahead requires strategic vision and meticulous planning. Alpha Digital Group offers specialized consulting services to airlines, airports, and aviation service providers. Whether its streamlining operations, implementing cutting-edge technologies, or enhancing safety protocols, we empower aviation stakeholders to thrive in a rapidly evolving environment.
             </p>
           </div>
         </section>
@@ -102,7 +102,7 @@ const IndustriesPage: React.FC = () => {
           <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold text-purple-800 mb-4">Consumer Internet</h2>
             <p className="text-purple-800">
-              The consumer internet sector is characterized by fierce competition and rapidly changing consumer preferences. At Alpha Digital Group, we help companies navigate this dynamic landscape with strategic insights and actionable recommendations. Whether it's developing scalable business models, optimizing user experiences, or leveraging data analytics, we empower consumer internet companies to thrive in the digital age.
+              The consumer internet sector is characterized by fierce competition and rapidly changing consumer preferences. At Alpha Digital Group, we help companies navigate this dynamic landscape with strategic insights and actionable recommendations. Whether its developing scalable business models, optimizing user experiences, or leveraging data analytics, we empower consumer internet companies to thrive in the digital age.
             </p>
           </div>
         </section>
