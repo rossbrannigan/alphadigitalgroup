@@ -1,0 +1,11 @@
+/* styles.css */
+
+#menu-toggle:checked + label + #menu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+}

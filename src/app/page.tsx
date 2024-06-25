@@ -3,6 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { FiMessageCircle } from 'react-icons/fi'; // Import WhatsApp icon
+import './styles.css';
 
 export default function Home() {
   return (
@@ -29,22 +30,20 @@ export default function Home() {
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
       </Head>
 
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative">
+      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative p-4">
         <div className="absolute inset-0 flex items-center justify-center">
           <Image src="/brain-wave.gif" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" unoptimized />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-          <div className="mx-auto max-w-7xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
-            <p className="text-lg md:text-xl">Unlock boundless possibilities with Alpha Digital Group.</p>
-            <a href="/marketplace">
-              <button className="bg-white text-purple-600 font-bold px-6 py-3 rounded-full mt-8 hover:bg-purple-100 transition duration-300 ease-in-out" style={{ border: '2px solid #BDFF03' }}>Get Started</button>
-            </a>
-          </div>
+        <div className="relative z-10 text-center max-w-2xl mx-auto p-4">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
+          <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
+          <a href="/marketplace">
+            <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
+          </a>
         </div>
       </section>
 
-      <section className="container mx-auto py-8">
+      <section className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
             <Image src="/digital-product-logo.png" alt="Digital Product Leadership" width={200} height={200} className="mb-4" />
