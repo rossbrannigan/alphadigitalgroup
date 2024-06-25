@@ -16,10 +16,12 @@ const CapabilitiesPage: React.FC = () => {
 
       {/* Google Analytics and Tag Manager Scripts */}
       <Script
+        id="google-tag-manager"
         src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
         strategy="afterInteractive"
       />
       <Script
+        id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
