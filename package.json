@@ -26,8 +26,7 @@
     "react-slick": "^0.30.2",
     "react-whatsapp-widget": "^2.2.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.1",
-    "twind": "^0.16.19"
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.19",
