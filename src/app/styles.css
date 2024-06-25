@@ -7,8 +7,8 @@
 @media (max-width: 768px) {
   #menu {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 4rem; /* Adjust to position menu below the header */
     left: 0;
     width: 100%;
     background-color: #bdff03;
