@@ -54,8 +54,8 @@ const MarketplacePage: React.FC = () => {
               team of seasoned aviation professionals brings expertise in areas
               including fleet optimization, route planning, revenue management,
               regulatory compliance, and customer experience enhancement.
-              Partner with us to elevate your airline's performance and achieve
-              sustainable growth in today's dynamic aviation landscape.
+              Partner with us to elevate your airlines performance and achieve
+              sustainable growth in todays dynamic aviation landscape.
             </p>
           </div>
         </section>
@@ -90,8 +90,8 @@ const MarketplacePage: React.FC = () => {
               marketing strategies, we provide customized solutions to address
               the specific challenges and opportunities of your property. With a
               focus on innovation and industry best practices, we collaborate
-              with you to elevate your hotel's performance, drive profitability,
-              and exceed guest expectations in today's competitive hospitality
+              with you to elevate your hotels performance, drive profitability,
+              and exceed guest expectations in todays competitive hospitality
               market.
             </p>
           </div>
