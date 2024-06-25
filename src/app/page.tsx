@@ -7,7 +7,12 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        {/* Google Analytics tracking tag */}
+        {/* Title and Meta Description */}
+        <title>Global Management Consulting | Alpha Digital Group</title>
+        <meta name="description" content="Unlock boundless possibilities with Alpha Digital Group’s global management consulting services. Empower your digital journey with our leadership in digital products, digital marketing, and aviation management." />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Google Analytics and Tag Manager */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -19,12 +24,8 @@ export default function Home() {
             `,
           }}
         ></script>
-        {/* Google Analytics and Google Tag Manager components */}
         <GoogleAnalytics gaId="G-25Y0G3QQE6"/>
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
-        <title>Global management consulting | Alpha Digital Group</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
 
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative">
@@ -45,17 +46,17 @@ export default function Home() {
       <section className="container mx-auto py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/digital-product-logo.png" alt="Digital Product Placeholder" width={200} height={200} className="mb-4" />
+            <Image src="/digital-product-logo.png" alt="Digital Product Leadership" width={200} height={200} className="mb-4" />
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Product Leadership</h2>
             <p className="text-gray-600 text-center">Empower your digital products with innovative leadership.</p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/digital-marketing-logo.png" alt="Digital Marketing Placeholder" width={200} height={200} className="mb-4" />
+            <Image src="/digital-marketing-logo.png" alt="Digital Marketing Leadership" width={200} height={200} className="mb-4" />
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Marketing Leadership</h2>
             <p className="text-gray-600 text-center">Lead your digital marketing campaigns to success with our expert guidance.</p>
           </div>
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/aviation-management-logo.png" alt="Aviation Management Placeholder" width={200} height={200} className="mb-4" />
+            <Image src="/aviation-management-logo.png" alt="Aviation Management Leadership" width={200} height={200} className="mb-4" />
             <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Aviation Management Leadership</h2>
             <p className="text-gray-600 text-center">Navigate the skies of aviation management with our strategic leadership solutions.</p>
           </div>
