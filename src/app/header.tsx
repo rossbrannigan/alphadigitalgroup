@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           <label htmlFor="menu-toggle" className="cursor-pointer">
             <FiMenu size={24} className="text-purple-800" />
           </label>
-          <div id="menu" className="hidden absolute top-16 left-0 w-full bg-yellow-400" style={{ backgroundColor: '#bdff03' }}>
+          <div id="menu" className="hidden absolute top-16 left-0 w-full bg-yellow-400 z-50" style={{ backgroundColor: '#bdff03' }}>
             <nav>
               <ul className="flex flex-col space-y-4 py-4 px-4">
                 <li><a href="industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>

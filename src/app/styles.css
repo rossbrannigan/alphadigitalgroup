@@ -7,5 +7,15 @@
 @media (max-width: 768px) {
   #menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #bdff03;
+    z-index: 50;
+  }
+
+  #menu ul {
+    flex-direction: column;
   }
 }
