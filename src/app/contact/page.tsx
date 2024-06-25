@@ -15,10 +15,12 @@ const ContactPage: React.FC = () => {
 
       {/* Google Analytics and Tag Manager Scripts */}
       <Script
+        id="google-analytics-script"
         src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
         strategy="afterInteractive"
       />
       <Script
+        id="google-analytics-config-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
