@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Head from "next/head";
+import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -23,24 +24,33 @@ const BlogPage: React.FC = () => {
     <div className="bg-gray-100 min-h-screen">
       {/* Title */}
       <Head>
-        {/* Add Google Analytics tracking tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-25Y0G3QQE6');
-            `,
-          }}
-        ></script>
-        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
         <title>{"Web3 Consulting & Services | Alpha Digital Group"}</title>
         <meta name="description" content="Explore Alpha Digital Group's Web3 consulting and services. We specialize in blockchain, DeFi, NFTs, and more. Transform your business with our expert guidance." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* Google Analytics and Tag Manager Scripts */}
+      <Script
+        id="google-analytics-script"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics-inline-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-25Y0G3QQE6');
+          `,
+        }}
+      />
+
+      {/* Google Analytics and Google Tag Manager Components */}
+      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+      <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
       {/* Header */}
       <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
@@ -64,90 +74,90 @@ const BlogPage: React.FC = () => {
         </div>
       </header>
 
-{/* Blog Content */}
-<main className="container mx-auto py-8 grid grid-cols-3 gap-8">
-  {/* Recent Posts */}
-  <section className="col-span-2">
-    {/* Note: This section contains the blog post */}
-    <h2 className="text-2xl font-semibold text-purple-800 mb-4">Recent Posts</h2>
-    <div className="text-black">
-      <h3 className="text-lg font-semibold mb-2">Enhancing Airline Web Applications with NDC: Optimizing for Performance and Customer Experience ({formattedDate})</h3>
-      {/* Introduction */}
-      <h4 className="text-lg font-semibold mb-2">Introduction</h4>
-      <p>
-        As the airline industry continues to evolve, airlines are increasingly relying on advanced technologies to enhance their web applications and deliver superior customer experiences. One such technology is the New Distribution Capability (NDC), a standard developed by IATA to modernize airline distribution and enable richer, more personalized content and services. In this article, we will explore how airlines can optimize their web applications for enterprise APIs, specifically through NDC, to improve performance, scalability, and customer satisfaction.
-      </p>
-      {/* Include image for NDC explained */}
-      <div>
-        <img src="ndc-explained.png" alt="NDC Explained" className="mb-4" />
-      </div>
-      {/* Understanding NDC */}
-      <h4 className="text-lg font-semibold mb-2">Understanding NDC Requirements: </h4>
-      <p>
-        Before integrating with NDC APIs, airlines must understand the requirements of the standard, including authentication methods, data formats, and transaction protocols. NDC APIs enable airlines to offer personalized offers, rich media content, and ancillary services directly to customers and travel agencies, requiring adherence to specific guidelines for data exchange and communication.
-      </p>
-      {/* Efficient API Consumption */}
-      <h4 className="text-lg font-semibold mb-2">Efficient API Consumption: </h4>
-      <p>
-        Airlines can optimize API consumption by leveraging NDC APIs to access relevant data and services efficiently. By aggregating data, utilizing batch operations, and implementing caching mechanisms, airlines can minimize the number of API calls and reduce latency, ensuring a seamless booking experience for customers.
-      </p>
-      {/* Include other sections here */}
-      {/* Authentication and Authorization */}
-      <h4 className="text-lg font-semibold mb-2">Authentication and Authorization</h4>
-      <p>
-        Secure authentication and authorization mechanisms are essential for accessing NDC APIs. Airlines can implement robust authentication protocols, such as OAuth 2.0, to ensure secure access to NDC resources. Fine-grained authorization controls help restrict access to sensitive data and functionalities based on user roles and permissions, enhancing security and compliance with industry regulations.
-      </p>
-      {/* Include image for NDC airlines */}
-      <div>
-        <img src="ndc-airlines.webp" alt="NDC Airlines" className="mb-4" />
-      </div>
-      {/* Error Handling and Retry Policies */}
-      <h4 className="text-lg font-semibold mb-2">Error Handling and Retry Policies</h4>
-      <p>
-        Effective error handling is critical for managing API errors and ensuring a smooth customer experience. Airlines should implement robust error handling mechanisms and configure retry policies with exponential backoff strategies to handle transient errors and mitigate the impact of temporary API failures, minimizing disruption to the booking process.
-      </p>
-      {/* Data Validation and Sanitization */}
-      <h4 className="text-lg font-semibold mb-2">Data Validation and Sanitization</h4>
-      <p>
-        To prevent security vulnerabilities, airlines must implement data validation and sanitization measures when interacting with NDC APIs. By validating input data and sanitizing output data, airlines can protect against injection attacks and ensure that only properly formatted data is transmitted to and from the NDC API, maintaining data integrity and security.
-      </p>
-      {/* Optimized Data Transfer */}
-      <h4 className="text-lg font-semibold mb-2">Optimized Data Transfer</h4>
-      <p>
-        Minimizing payload size and optimizing data transfer speeds are crucial for enhancing application performance. Airlines can optimize data transfer by requesting only necessary data fields from NDC endpoints and employing compression techniques like gzip to reduce bandwidth usage and improve transfer speeds, resulting in faster booking transactions and improved customer satisfaction.
-      </p>
-      {/* Performance Optimization */}
-      <h4 className="text-lg font-semibold mb-2">Performance Optimization</h4>
-      <p>
-        Profiling API requests and optimizing critical operations can help airlines identify and address performance bottlenecks in their web applications. By implementing asynchronous processing and parallelization techniques, airlines can execute multiple API requests concurrently, improving responsiveness and user experience, especially during peak booking periods.
-      </p>
-      {/* Monitoring and Logging */}
-      <h4 className="text-lg font-semibold mb-2">Monitoring and Logging</h4>
-      <p>
-        Continuous monitoring and logging are essential for maintaining NDC API health and detecting performance issues. Airlines should implement robust monitoring and logging mechanisms to track API usage, identify anomalies, and troubleshoot problems in real-time, ensuring reliable operation and seamless integration with NDC APIs.
-      </p>
-      {/* Scalability and Load Balancing */}
-      <h4 className="text-lg font-semibold mb-2">Scalability and Load Balancing</h4>
-      <p>
-        Designing web applications for scalability is crucial for handling fluctuating NDC API traffic. Airlines can deploy multiple instances of their applications behind a load balancer and utilize auto-scaling capabilities provided by cloud platforms to dynamically adjust resources based on demand, ensuring optimal performance and reliability during peak travel seasons.
-      </p>
-      {/* Security Best Practices */}
-      <h4 className="text-lg font-semibold mb-2">Security Best Practices</h4>
-      <p>
-        Adhering to security best practices is paramount for protecting sensitive customer data and ensuring compliance with industry regulations. Airlines should utilize TLS encryption for data in transit, securely store NDC API credentials, and regularly update software dependencies to patch vulnerabilities and mitigate security risks, safeguarding customer information and maintaining trust.
-      </p>
-      {/* Documentation and Testing */}
-      <h4 className="text-lg font-semibold mb-2">Documentation and Testing</h4>
-      <p>
-        Comprehensive documentation and rigorous testing are essential for successful integration with NDC APIs. Airlines should maintain detailed documentation for NDC API usage and conduct thorough testing, including unit tests, integration tests, and end-to-end tests, to validate functionality, performance, and security aspects of API interactions, ensuring a seamless booking experience for customers.
-      </p>
-      {/* Conclusion */}
-      <h4 className="text-lg font-semibold mb-2">Conclusion</h4>
-      <p>
-        Optimizing web applications for NDC APIs presents airlines with an opportunity to enhance performance, scalability, and customer experience in the increasingly competitive travel industry. By adhering to best practices for API consumption, authentication, error handling, data validation, and security, airlines can leverage NDC APIs to offer personalized booking experiences, rich content, and ancillary services, driving customer satisfaction and loyalty in the digital age.
-      </p>
-    </div>
-  </section>
+      {/* Blog Content */}
+      <main className="container mx-auto py-8 grid grid-cols-3 gap-8">
+        {/* Recent Posts */}
+        <section className="col-span-2">
+          {/* Note: This section contains the blog post */}
+          <h2 className="text-2xl font-semibold text-purple-800 mb-4">Recent Posts</h2>
+          <div className="text-black">
+            <h3 className="text-lg font-semibold mb-2">Enhancing Airline Web Applications with NDC: Optimizing for Performance and Customer Experience ({formattedDate})</h3>
+            {/* Introduction */}
+            <h4 className="text-lg font-semibold mb-2">Introduction</h4>
+            <p>
+              As the airline industry continues to evolve, airlines are increasingly relying on advanced technologies to enhance their web applications and deliver superior customer experiences. One such technology is the New Distribution Capability (NDC), a standard developed by IATA to modernize airline distribution and enable richer, more personalized content and services. In this article, we will explore how airlines can optimize their web applications for enterprise APIs, specifically through NDC, to improve performance, scalability, and customer satisfaction.
+            </p>
+            {/* Include image for NDC explained */}
+            <div>
+              <img src="ndc-explained.png" alt="NDC Explained" className="mb-4" />
+            </div>
+            {/* Understanding NDC */}
+            <h4 className="text-lg font-semibold mb-2">Understanding NDC Requirements: </h4>
+            <p>
+              Before integrating with NDC APIs, airlines must understand the requirements of the standard, including authentication methods, data formats, and transaction protocols. NDC APIs enable airlines to offer personalized offers, rich media content, and ancillary services directly to customers and travel agencies, requiring adherence to specific guidelines for data exchange and communication.
+            </p>
+            {/* Efficient API Consumption */}
+            <h4 className="text-lg font-semibold mb-2">Efficient API Consumption: </h4>
+            <p>
+              Airlines can optimize API consumption by leveraging NDC APIs to access relevant data and services efficiently. By aggregating data, utilizing batch operations, and implementing caching mechanisms, airlines can minimize the number of API calls and reduce latency, ensuring a seamless booking experience for customers.
+            </p>
+            {/* Include other sections here */}
+            {/* Authentication and Authorization */}
+            <h4 className="text-lg font-semibold mb-2">Authentication and Authorization</h4>
+            <p>
+              Secure authentication and authorization mechanisms are essential for accessing NDC APIs. Airlines can implement robust authentication protocols, such as OAuth 2.0, to ensure secure access to NDC resources. Fine-grained authorization controls help restrict access to sensitive data and functionalities based on user roles and permissions, enhancing security and compliance with industry regulations.
+            </p>
+            {/* Include image for NDC airlines */}
+            <div>
+              <img src="ndc-airlines.webp" alt="NDC Airlines" className="mb-4" />
+            </div>
+            {/* Error Handling and Retry Policies */}
+            <h4 className="text-lg font-semibold mb-2">Error Handling and Retry Policies</h4>
+            <p>
+              Effective error handling is critical for managing API errors and ensuring a smooth customer experience. Airlines should implement robust error handling mechanisms and configure retry policies with exponential backoff strategies to handle transient errors and mitigate the impact of temporary API failures, minimizing disruption to the booking process.
+            </p>
+            {/* Data Validation and Sanitization */}
+            <h4 className="text-lg font-semibold mb-2">Data Validation and Sanitization</h4>
+            <p>
+              To prevent security vulnerabilities, airlines must implement data validation and sanitization measures when interacting with NDC APIs. By validating input data and sanitizing output data, airlines can protect against injection attacks and ensure that only properly formatted data is transmitted to and from the NDC API, maintaining data integrity and security.
+            </p>
+            {/* Optimized Data Transfer */}
+            <h4 className="text-lg font-semibold mb-2">Optimized Data Transfer</h4>
+            <p>
+              Minimizing payload size and optimizing data transfer speeds are crucial for enhancing application performance. Airlines can optimize data transfer by requesting only necessary data fields from NDC endpoints and employing compression techniques like gzip to reduce bandwidth usage and improve transfer speeds, resulting in faster booking transactions and improved customer satisfaction.
+            </p>
+            {/* Performance Optimization */}
+            <h4 className="text-lg font-semibold mb-2">Performance Optimization</h4>
+            <p>
+              Profiling API requests and optimizing critical operations can help airlines identify and address performance bottlenecks in their web applications. By implementing asynchronous processing and parallelization techniques, airlines can execute multiple API requests concurrently, improving responsiveness and user experience, especially during peak booking periods.
+            </p>
+            {/* Monitoring and Logging */}
+            <h4 className="text-lg font-semibold mb-2">Monitoring and Logging</h4>
+            <p>
+              Continuous monitoring and logging are essential for maintaining NDC API health and detecting performance issues. Airlines should implement robust monitoring and logging mechanisms to track API usage, identify anomalies, and troubleshoot problems in real-time, ensuring reliable operation and seamless integration with NDC APIs.
+            </p>
+            {/* Scalability and Load Balancing */}
+            <h4 className="text-lg font-semibold mb-2">Scalability and Load Balancing</h4>
+            <p>
+              Designing web applications for scalability is crucial for handling fluctuating NDC API traffic. Airlines can deploy multiple instances of their applications behind a load balancer and utilize auto-scaling capabilities provided by cloud platforms to dynamically adjust resources based on demand, ensuring optimal performance and reliability during peak travel seasons.
+            </p>
+            {/* Security Best Practices */}
+            <h4 className="text-lg font-semibold mb-2">Security Best Practices</h4>
+            <p>
+              Adhering to security best practices is paramount for protecting sensitive customer data and ensuring compliance with industry regulations. Airlines should utilize TLS encryption for data in transit, securely store NDC API credentials, and regularly update software dependencies to patch vulnerabilities and mitigate security risks, safeguarding customer information and maintaining trust.
+            </p>
+            {/* Documentation and Testing */}
+            <h4 className="text-lg font-semibold mb-2">Documentation and Testing</h4>
+            <p>
+              Comprehensive documentation and rigorous testing are essential for successful integration with NDC APIs. Airlines should maintain detailed documentation for NDC API usage and conduct thorough testing, including unit tests, integration tests, and end-to-end tests, to validate functionality, performance, and security aspects of API interactions, ensuring a seamless booking experience for customers.
+            </p>
+            {/* Conclusion */}
+            <h4 className="text-lg font-semibold mb-2">Conclusion</h4>
+            <p>
+              Optimizing web applications for NDC APIs presents airlines with an opportunity to enhance performance, scalability, and customer experience in the increasingly competitive travel industry. By adhering to best practices for API consumption, authentication, error handling, data validation, and security, airlines can leverage NDC APIs to offer personalized booking experiences, rich content, and ancillary services, driving customer satisfaction and loyalty in the digital age.
+            </p>
+          </div>
+        </section>
         {/* Vertical Navigation */}
         <aside className="col-span-1">
           <div className="bg-white p-4 rounded-lg shadow-md text-black">
@@ -275,7 +285,6 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </div>
-
 
         {/* Divider */}
         <hr className="border-t border-gray-600 w-full my-8" />

@@ -2,14 +2,13 @@ import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { GoogleAnalytics } from "@next/third-parties/google"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
+        {/* Google Analytics tracking tag */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -21,6 +20,7 @@ export default function Home() {
             `,
           }}
         ></script>
+        {/* Google Analytics and Google Tag Manager components */}
         <GoogleAnalytics gaId="G-25Y0G3QQE6"/>
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
         <title>Global management consulting | Alpha Digital Group</title>

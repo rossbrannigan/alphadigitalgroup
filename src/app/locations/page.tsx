@@ -1,16 +1,21 @@
-import Image from "next/image";
+import React from "react";
 import Head from 'next/head';
+import Script from "next/script";
 import { GoogleMapsEmbed } from '@next/third-parties/google'
 import { GoogleTagManager } from '@next/third-parties/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const LocationsPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
         {/* Add Google Analytics tracking tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
-        <script
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"
+          strategy="afterInteractive"
+        />
+        <Script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -19,7 +24,7 @@ const LocationsPage: React.FC = () => {
               gtag('config', 'G-25Y0G3QQE6');
             `,
           }}
-        ></script>
+        />
         {/* Google Analytics and Google Tag Manager components */}
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
         <GoogleTagManager gtmId="G-25Y0G3QQE6" />
@@ -56,14 +61,19 @@ const LocationsPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Google Maps Embed Section */}
+        <section className="mb-8" id="google-maps">
+          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
+            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Google Maps</h2>
             <GoogleMapsEmbed
-      apiKey="AIzaSyCoYiZhK-bLa8taz2lUaQQJj-WRjC0omYM"
-      height={200}
-      width="100%"
-      mode="place"
-      q="Dubai"
-    />
-
+              apiKey="AIzaSyCoYiZhK-bLa8taz2lUaQQJj-WRjC0omYM"
+              height={400}
+              width="100%"
+              mode="place"
+              q="Dubai"
+            />
+          </div>
+        </section>
       </main>
     </div>
   );

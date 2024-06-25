@@ -1,8 +1,7 @@
-// pages/capabilities/CapabilitiesPage.tsx
-
-
+import React from "react";
 import Image from "next/image";
 import Head from 'next/head';
+import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -10,23 +9,28 @@ const CapabilitiesPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        {/* Add Google Analytics tracking tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
-        <script
+        <title>Global management consulting | Alpha Digital Group</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Alpha Digital Group - Global management consulting" />
+
+        {/* Google Analytics and Tag Manager Scripts */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
+          strategy="afterInteractive"
+        />
+        <Script
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-R17NJV1L4N');
+              gtag('config', 'G-25Y0G3QQE6');
             `,
           }}
         />
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
         <GoogleTagManager gtmId="G-25Y0G3QQE6" />
-        <title>Global management consulting | Alpha Digital Group</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
 
       {/* Main Content */}
