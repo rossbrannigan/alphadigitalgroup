@@ -3,7 +3,9 @@ import Head from "next/head";
 import Script from "next/script";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { FiMessageCircle } from 'react-icons/fi'; // Import WhatsApp icon
-import './styles.css';
+import './styles.css'; // Import your custom styles
+import { AiOutlineLineChart, AiOutlineTool, AiOutlineRise, AiOutlineTeam, AiOutlineBank } from 'react-icons/ai'; // Import icons from react-icons
+
 
 export default function Home() {
   return (
@@ -30,19 +32,125 @@ export default function Home() {
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
       </Head>
 
-      <section className="bg-gradient-to-r from-purple-600 to-indigo-600 min-h-screen flex items-center justify-center text-white relative p-4">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Image src="/brain-wave.gif" alt="Unleash the Power of Digital to Supercharge Revenue" layout="fill" objectFit="cover" unoptimized />
+      {/* Slider section */}
+      <section className="carousel">
+        <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="/brain-wave.gif" alt="Image 1" layout="fill" objectFit="cover" unoptimized />
+          </div>
+          <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
+            <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
+            <a href="/marketplace">
+              <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
+            </a>
+          </div>
         </div>
-        <div className="relative z-10 text-center max-w-2xl mx-auto p-4">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
-          <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
-          <a href="/marketplace">
-            <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
-          </a>
+        {/* Additional carousel items */}
+        <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="/brain-wave.gif" alt="Image 2" layout="fill" objectFit="cover" unoptimized />
+          </div>
+          <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
+            <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
+            <a href="/marketplace">
+              <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
+            </a>
+          </div>
+        </div>
+        <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="/brain-wave.gif" alt="Image 3" layout="fill" objectFit="cover" unoptimized />
+          </div>
+          <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
+            <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
+            <a href="/marketplace">
+              <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
+            </a>
+          </div>
         </div>
       </section>
 
+      {/* Feature section */}
+      <section className="bg-white pb-6">
+        <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+          <div className="container mx-auto px-6 p-6 bg-white">
+            <div className="mb-16 text-center">
+              <h4 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">CAPABILITIES</h4>
+              <p className="mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">
+                How We Drive Transformative Growth
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="border-b p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineLineChart className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Commercial Strategy</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Leverage our deep industry expertise to develop commercial strategies that optimize revenue streams,
+                  enhance customer experiences, and fortify your competitive edge.
+                </p>
+              </div>
+              <div className="border-b p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineRise className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Digital Transformation</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Embrace the power of digital technologies to streamline operations, unlock new business models, and
+                  future-proof your organization with our comprehensive digital transformation solutions
+                </p>
+              </div>
+              <div className="border-b p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineTool className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Operational Excellence</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Maximize efficiency and productivity through our data-driven approach to optimizing processes, enhancing
+                  resource utilization, and driving continuous improvement across your operations.
+                </p>
+              </div>
+              <div className="border-b p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineTeam className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Interim Leadership</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Bridge critical leadership gaps with our seasoned executives who bring hands-on experience and a proven
+                  track record of delivering results in times of change or transition.
+                </p>
+              </div>
+              <div className="border-b p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineBank className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Industry-Specific Solutions</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Benefit from our tailored solutions that address the unique challenges and opportunities within the
+                  airline, hospitality, and related industries, ensuring a competitive advantage.
+                </p>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center mb-6">
+                  <AiOutlineTool className="h-6 w-6 text-indigo-500" />
+                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Strategic Partnerships</div>
+                </div>
+                <p className="leading-loose text-gray-500">
+                  Extend your capabilities and accelerate growth through our strategic partnerships with industry-leading
+                  technology providers, offering seamless integrations and cutting-edge solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Rest of your content */}
       <section className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
