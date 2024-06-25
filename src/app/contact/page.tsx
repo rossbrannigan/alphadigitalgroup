@@ -1,13 +1,13 @@
 import React from "react";
 import Head from 'next/head';
 import Script from "next/script";
-import { GoogleTagManager } from '@next/third-parties/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 
 const ContactPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
+        {/* Page title, icon, and meta description */}
         <title>Contact Us | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
@@ -15,12 +15,11 @@ const ContactPage: React.FC = () => {
 
       {/* Google Analytics and Tag Manager Scripts */}
       <Script
-        id="google-analytics-script"
         src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
         strategy="afterInteractive"
+        id="google-analytics-script"
       />
       <Script
-        id="google-analytics-config-script"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -30,6 +29,7 @@ const ContactPage: React.FC = () => {
             gtag('config', 'G-25Y0G3QQE6');
           `,
         }}
+        id="google-analytics-config-script"
       />
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       <GoogleTagManager gtmId="G-25Y0G3QQE6" />
