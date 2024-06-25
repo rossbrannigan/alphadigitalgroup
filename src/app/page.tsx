@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Home() {
   return (
@@ -63,7 +62,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Script strategy="lazyOnload">
+      <Script id="tawk-script" strategy="lazyOnload">
         {`
           var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
           (function(){
