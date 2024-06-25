@@ -12,26 +12,26 @@ const CapabilitiesPage: React.FC = () => {
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
-
-        {/* Google Analytics and Tag Manager Scripts */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
-          strategy="afterInteractive"
-        />
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-25Y0G3QQE6');
-            `,
-          }}
-        />
-        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-        <GoogleTagManager gtmId="G-25Y0G3QQE6" />
       </Head>
+
+      {/* Google Analytics and Tag Manager Scripts */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`}
+        strategy="afterInteractive"
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-25Y0G3QQE6');
+          `,
+        }}
+      />
+      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
+      <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
       {/* Main Content */}
       <main className="container mx-auto py-8">
