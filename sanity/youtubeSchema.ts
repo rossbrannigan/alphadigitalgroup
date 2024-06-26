@@ -1,4 +1,4 @@
-import { defineField, defineType } from 'sanity'
+import { defineField, defineType, PreviewValue } from 'sanity';
 
 export default defineType({
   name: 'youtubeVideo',
@@ -70,16 +70,16 @@ export default defineType({
       title: 'title',
       media: 'thumbnailUrl',
     },
-    prepare(selection) {
-      const { title, media } = selection
+    prepare(selection): PreviewValue {
+      const { title, media } = selection;
 
       // Ensure media is a valid URL if present
-      const mediaUrl = media && typeof media === 'string' && media.startsWith('http') ? media : undefined
+      const mediaUrl = media && typeof media === 'string' && media.startsWith('http') ? media : undefined;
 
       return {
-        title: title,
+        title: title || 'Untitled',
         media: mediaUrl ? { src: mediaUrl } : undefined,
-      }
+      };
     },
   },
-})
+});
