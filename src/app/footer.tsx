@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li className="mb-0.5">
-                  <a href="featured-insights" className="hover:text-white text-xs">
+                  <a href="https://alphadigitalgroup.tawk.help/" className="hover:text-white text-xs">
                     Featured Insights
                   </a>
                 </li>
