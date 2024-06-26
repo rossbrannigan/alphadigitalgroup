@@ -95,6 +95,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* YouTube Video Section */}
+      <section className="bg-white py-16 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-extrabold text-gray-900">The Future of Airlines</h2>
+            <p className="mt-4 text-lg text-gray-600">Explore the latest innovations shaping the future of airlines.</p>
+          </div>
+          <div className="flex justify-center items-center">
+            <div className="relative" style={{ maxWidth: '1000px', width: '100%', paddingBottom: '35%' }}>
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                width="1000"
+                height="350"
+                src="https://www.youtube.com/embed/za3HjrAYmhM?si=yDpqk_BHYGgrEfGt"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* List Section */}
 
 <section className="bg-white lg:py-28 pt-28 overflow-hidden">
