@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           <ul className="flex space-x-6">
             <li><a href="industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
             <li><a href="capabilities" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Capabilities</a></li>
-            <li><a href="featured-insights" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Featured Insights</a></li>
+            <li><a href="https://alphadigitalgroup.tawk.help/" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Featured Insights</a></li>
             <li><a href="locations" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Locations</a></li>
             <li><a href="about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
             <li><a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Alpha Digital Blog</a></li>
