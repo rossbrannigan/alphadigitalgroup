@@ -95,6 +95,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* List Section */}
+
+<section class="bg-white lg:py-28 pt-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+    <div class="mb-16 text-center">
+      <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+        UNLOCK GROWTH POTENTIAL
+      </h2>
+      <p class="mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">
+        Maximize Revenue and Business Transformation
+      </p>
+    </div>
+    <div class="flex flex-wrap -mx-8 items-center">
+      <div class="w-full lg:w-1/2 px-8">
+        <ul class="space-y-12">
+          <li class="flex -mx-4">
+            <div class="px-4">
+              <span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+                1
+              </span>
+            </div>
+            <div class="px-4">
+              <h3 class="my-4 text-xl font-semibold text-purple-600">Strategic Advisory</h3>
+              <p class="text-gray-500 leading-loose">
+                Our seasoned consultants provide expert guidance on commercial strategies, digital transformation, and operational excellence to drive sustainable growth and profitability for your business.
+              </p>
+            </div>
+          </li>
+          <li class="flex -mx-4">
+            <div class="px-4">
+              <span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+                2
+              </span>
+            </div>
+            <div class="px-4">
+              <h3 class="my-4 text-xl font-semibold text-purple-600">Digital Solutions</h3>
+              <p class="text-gray-500 leading-loose">
+                Leverage our cutting-edge digital expertise to enhance customer experiences, streamline processes, and unlock new revenue streams through innovative digital solutions tailored to your unique needs.
+              </p>
+            </div>
+          </li>
+          <li class="flex -mx-4">
+            <div class="px-4">
+              <span class="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+                3
+              </span>
+            </div>
+            <div class="px-4">
+              <h3 class="my-4 text-xl font-semibold text-purple-600">Interim Leadership</h3>
+              <p class="text-gray-500 leading-loose">
+                Gain experienced leaders who can seamlessly step in and drive critical initiatives, manage transitions, and provide hands-on guidance to keep your organization running smoothly during times of change.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="w-full lg:w-1/2 px-8">
+        <div class="lg:mb-12 lg:mb-0 pb-12 lg:pb-0 mt-16 lg:mt-0 mx-6 lg:mx-0">
+          <img src="/features.svg" alt="Digital transformation services at Alpha Digital Group" class="w-full h-full" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       {/* Feature section */}
       <section className="bg-white pb-6">
         <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
