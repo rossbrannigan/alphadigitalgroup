@@ -4,6 +4,7 @@ import "./globals.css";
 import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
 import Header from "./header"; // Import the Header component
 import Footer from "./footer"; // Import the Footer component
+import ContactHeader from "./ContactHeader"; // Adjust the import path as needed
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={inter.className}>
-        {/* Include the Header component outside of main */}
+        <ContactHeader />
         <Header />
         <main>{children}</main>
         <Footer />

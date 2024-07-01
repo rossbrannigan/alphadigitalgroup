@@ -34,6 +34,16 @@ const ContactPage: React.FC = () => {
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
+      {/* Header Section */}
+      <header className="bg-white shadow-md p-4">
+        {/* Your header content goes here */}
+        <div className="container mx-auto">
+          {/* Header content */}
+          <h1 className="text-3xl font-semibold text-gray-800">Welcome to Alpha Digital Group</h1>
+          {/* Add your header navigation or other elements */}
+        </div>
+      </header>
+
       {/* Main Content - Submission Form */}
       <main className="container mx-auto py-8 flex flex-wrap justify-center gap-8">
         {/* Form Section */}
