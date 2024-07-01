@@ -20,8 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>{metadata.title as string}</title>
+        <meta name="description" content={metadata.description as string} />
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={inter.className}>
