@@ -118,7 +118,7 @@ const Footer: React.FC = () => {
       </div>
       <hr className="border-gray-700 my-6 w-full" />
       <p className="text-xs text-gray-400 text-center">
-        © 2020-2024 Alpha Digital Group. All rights reserved.
+        © 2020-2024 Alpha Digital Group LLC. All rights reserved.
       </p>
       <div className="flex justify-center space-x-4 mt-4">
         <a href="https://x.com/alphadigitalllc" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
