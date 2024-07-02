@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 <h4 className="text-xs font-medium text-gray-400">Guides</h4>
                 <ul className="space-y-1 text-xs">
                   <li><a href="/marketing-ai" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing with AI</a></li>
-                  <li><a href="/api-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Using API's for Marketing</a></li>
+                  <li><a href="/api-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Using APIs for Marketing</a></li>
                 </ul>
               </div>
               <div>
