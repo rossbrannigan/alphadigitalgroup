@@ -1,115 +1,136 @@
 import React from "react";
 import Image from "next/image";
-import { FaLinkedin, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa6";
+import { SiNextdotjs, SiTypescript, SiNetlify, SiContentful } from "react-icons/si";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-8">
-      <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-        {/* Logo */}
-        <div className="mb-6 lg:mb-0 lg:order-1 lg:self-start w-full lg:w-auto flex justify-center lg:justify-start">
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
+        <div className="flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-1/5">
           <Image
             src="/company-logo-small.png"
             alt="Alpha Digital Group Logo"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
+            className="mb-4"
           />
-        </div>
-        {/* Links */}
-        <div className="w-full lg:w-auto lg:ml-auto lg:order-3">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="text-left">
-              <h3 className="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
-              <ul className="text-gray-300">
-                <li className="mb-0.5">
-                  <a href="industries" className="hover:text-white text-xs">
-                    Industries
-                  </a>
-                </li>
-                <li className="mb-0.5">
-                  <a href="capabilities" className="hover:text-white text-xs">
-                    Capabilities
-                  </a>
-                </li>
-                <li className="mb-0.5">
-                  <a href="https://alphadigitalgroup.tawk.help/" className="hover:text-white text-xs">
-                    Featured Insights
-                  </a>
-                </li>
-                <li className="mb-0.5">
-                  <a href="locations" className="hover:text-white text-xs">
-                    Locations
-                  </a>
-                </li>
-                <li className="mb-0.5">
-                  <a href="hire-us" className="hover:text-white text-xs">
-                    Hire Us
-                  </a>
-                </li>
-                <li className="mb-0.5">
-                  <a
-                    href="https://www.linkedin.com/company/alphadigitalgroup"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white text-xs"
-                  >
-                    Alpha Digital Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-left">
-              <h3 className="text-gray-300 mb-2 text-xs font-bold">Contact Us</h3>
-              <ul className="text-gray-300">
-                <li className="mb-0.5 flex items-center">
-                  📞 <span className="ml-2 text-xs">+66 82 836 2713</span>
-                </li>
-                <li className="mb-0.5 flex items-center">
-                  ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
-                </li>
-                <li className="mb-0.5 flex items-center">
-                  📝
-                  <a href="contact" className="ml-2 text-xs hover:text-white">
-                    Contact Us Form
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a
-                    href="https://www.linkedin.com/company/alphadigitalgroup"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-white text-xs"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <p className="text-xs text-gray-400 mt-2">
+            Made in 🇹🇭 Thailand, 🇦🇪 UAE
+          </p>
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-2 mt-2">
+            <span className="text-xs text-gray-400">Built with:</span>
+            <SiNextdotjs className="text-gray-400 hover:text-white transition-colors duration-300" size={16} title="Next.js" />
+            <SiTypescript className="text-gray-400 hover:text-white transition-colors duration-300" size={16} title="TypeScript" />
+            <SiNetlify className="text-gray-400 hover:text-white transition-colors duration-300" size={16} title="Netlify" />
+            <SiContentful className="text-gray-400 hover:text-white transition-colors duration-300" size={16} title="Contentful" />
           </div>
         </div>
+        <div className="flex flex-col items-start w-full sm:w-1/2 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Knowledge Center</h3>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/knowledge/marketing-glossary" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing Glossary</a></li>
+              <li><a href="/knowledge/digital-marketing-101" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Marketing 101</a></li>
+              <li><a href="/knowledge/roi-calculator" className="text-gray-400 hover:text-white transition-colors duration-300">ROI Calculator</a></li>
+            </ul>
+            <h3 className="text-xs font-semibold mb-2 mt-4">Latest Posts</h3>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/blog/latest-marketing-trends" className="text-gray-400 hover:text-white transition-colors duration-300">Latest Marketing Trends for 2024</a></li>
+              <li><a href="/blog/ai-in-digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">How AI is Shaping Digital Strategy</a></li>
+              <li><a href="/blog/seo-best-practices" className="text-gray-400 hover:text-white transition-colors duration-300">SEO Best Practices for 2024</a></li>
+            </ul>
+          </div>
+        <div className="flex flex-wrap justify-end w-full md:w-4/5 gap-4 md:gap-8">
+          <div className="flex flex-col items-start w-full sm:w-1/2 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Marketing</h3>
+            <div className="flex flex-col space-y-2">
+              <div>
+                <h4 className="text-xs font-medium text-gray-400">Guides</h4>
+                <ul className="space-y-1 text-xs">
+                  <li><a href="/marketing-ai" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing with AI</a></li>
+                  <li><a href="/api-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Using API's for Marketing</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-xs font-medium text-gray-400">Services</h4>
+                <ul className="space-y-1 text-xs pl-2 max-h-40 overflow-y-auto">
+                  <li><a href="/seo" className="text-gray-400 hover:text-white transition-colors duration-300">Search Engine Optimization (SEO)</a></li>
+                  <li><a href="/ppc" className="text-gray-400 hover:text-white transition-colors duration-300">Pay-Per-Click Advertising (PPC)</a></li>
+                  <li><a href="/smm" className="text-gray-400 hover:text-white transition-colors duration-300">Social Media Marketing (SMM)</a></li>
+                  <li><a href="/content-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Content Marketing</a></li>
+                  <li><a href="/email-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Email Marketing</a></li>
+                  <li><a href="/cro" className="text-gray-400 hover:text-white transition-colors duration-300">Conversion Rate Optimization (CRO)</a></li>
+                  <li><a href="/web-design" className="text-gray-400 hover:text-white transition-colors duration-300">Website Design and Development</a></li>
+                  <li><a href="/digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy and Consulting</a></li>
+                  <li><a href="/brand-identity" className="text-gray-400 hover:text-white transition-colors duration-300">Brand Identity and Design</a></li>
+                  <li><a href="/video-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Video Marketing</a></li>
+                  <li><a href="/analytics" className="text-gray-400 hover:text-white transition-colors duration-300">Analytics and Reporting</a></li>
+                  <li><a href="/mobile-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Mobile Marketing</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Digital</h3>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/digital-guides" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Guides</a></li>
+              <li><a href="/digital-services" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Services</a></li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Commercial</h3>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/commercial-guides" className="text-gray-400 hover:text-white transition-colors duration-300">Commercial Guides</a></li>
+              <li><a href="/commercial-services" className="text-gray-400 hover:text-white transition-colors duration-300">Commercial Services</a></li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Company</h3>
+            <ul className="space-y-1 text-xs">
+              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+              <li><a href="/case-studies" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
+              <li><a href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+              <li><a href="/careers" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+            <h3 className="text-xs font-semibold mb-2">Contact Us</h3>
+            <div className="flex items-center mb-1">
+              <FaEnvelope className="text-gray-400 mr-1" size={12} />
+              <a href="mailto:ross@alphadigitalgroup.co" className="text-xs text-gray-400 hover:text-white transition-colors duration-300">
+                ross@alphadigitalgroup.co
+              </a>
+            </div>
+            <div className="flex items-center">
+              <FaWhatsapp className="text-gray-400 mr-1" size={12} />
+              <a href="https://wa.me/66828362713" className="text-xs text-gray-400 hover:text-white transition-colors duration-300">
+                00 66 82 836 2713
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
-
-      {/* Divider */}
-      <hr className="border-t border-gray-600 w-full my-8" />
-
-      {/* Social Media Icons */}
-      <div className="flex justify-center space-x-6 mb-4 lg:order-4">
-        <a href="https://www.linkedin.com/company/alphadigitalgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-          <FaLinkedin size={24} />
-        </a>
-        <a href="https://twitter.com/alphadigital" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-          <FaTwitter size={24} />
-        </a>
-        <a href="https://facebook.com/alphadigital" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
-          <FaFacebookF size={24} />
-        </a>
+      <div className="container mx-auto px-4 mt-8">
+        <p className="text-xs text-gray-400 text-center">
+          Alpha Digital Group is a global full service agency and consultancy that brings your commercial, marketing and digital performance to the next level.
+        </p>
       </div>
-
-      {/* Copyright text */}
-      <p className="text-xs text-gray-300 text-center lg:order-5">
+      <hr className="border-gray-700 my-6 w-full" />
+      <p className="text-xs text-gray-400 text-center">
         © 2020-2024 Alpha Digital Group. All rights reserved.
       </p>
-
+      <div className="flex justify-center space-x-4 mt-4">
+        <a href="https://x.com/alphadigitalllc" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+          <FaTwitter size={16} />
+        </a>
+        <a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+          <FaLinkedin size={16} />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100089144407255" className="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+          <FaFacebook size={16} />
+        </a>
+      </div>
     </footer>
   );
 };
