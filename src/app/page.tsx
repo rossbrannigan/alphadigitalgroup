@@ -32,6 +32,7 @@ export default function Home() {
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/> 
       </Head>
 
+
       {/* Slider section */}
       <section className="carousel">
         <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
@@ -72,6 +73,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
 
       {/* Brands Section */}
       <section className="bg-white py-16">
