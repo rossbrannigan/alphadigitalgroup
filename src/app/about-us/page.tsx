@@ -101,7 +101,7 @@ const AboutPage: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-semibold text-purple-700 mb-2">Customer Focus</h3>
-                <p className="text-gray-600">Prioritizing our clients' success.</p>
+                <p className="text-gray-600">Prioritizing our clients success.</p>
               </div>
             </div>
             <div className="flex items-center bg-white p-6 rounded-lg shadow-xl transform hover:scale-105 transition-transform">
@@ -137,7 +137,7 @@ const AboutPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-purple-700 mb-2">Ross Brannigan</h3>
               <p className="text-gray-600">CEO & Founder</p>
               <p className="text-gray-700 mt-4">
-                Ross holds a Master's degree from the prestigious IE Business School in Madrid, Spain. He is an accomplished marketing and commercial strategist, known for his ability to develop and execute innovative, results-driven strategies.
+                Ross holds a Masters degree from the prestigious IE Business School in Madrid, Spain. He is an accomplished marketing and commercial strategist, known for his ability to develop and execute innovative, results-driven strategies.
               </p>
               <p className="text-gray-700 mt-2">
                 With a keen analytical mind and a talent for problem-solving, Ross brings a strategic approach to every challenge. He is a lifelong learner, constantly expanding his knowledge and skills across diverse domains.
@@ -168,7 +168,7 @@ const AboutPage: React.FC = () => {
               <div className="text-center">
                 <div className="mt-4">
                   <p className="text-gray-700">
-                    We are seeking a Co-Founder with visionary ambition, healthy intellect, and the confidence to challenge the status quo. Candidates with both commercial and technical backgrounds are welcome. As a Co-Founder, you will play a crucial role in shaping our company's strategy and future direction.
+                    We are seeking a Co-Founder with visionary ambition, healthy intellect, and the confidence to challenge the status quo. Candidates with both commercial and technical backgrounds are welcome. As a Co-Founder, you will play a crucial role in shaping our companys strategy and future direction.
                   </p>
                   <p className="text-gray-700 mt-2">
                     Interested candidates can contact Ross Brannigan directly at <a href="mailto:ross@alphadigitalgroup.co" className="text-purple-600 hover:text-purple-800 transition-colors duration-300">ross@alphadigitalgroup.co</a>.

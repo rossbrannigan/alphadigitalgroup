@@ -48,10 +48,10 @@ const WhatWeDo: React.FC = () => {
         </div>
         <div className="mt-8 text-center">
           <p className="text-gray-700">
-            Whether you're looking to revolutionize your digital presence, unlock new commercial opportunities, or amplify your marketing efforts, our agency is here to be your trusted partner in driving cutting-edge solutions that deliver tangible results.
+            Whether you are looking to revolutionize your digital presence, unlock new commercial opportunities, or amplify your marketing efforts, our agency is here to be your trusted partner in driving cutting-edge solutions that deliver tangible results.
           </p>
           <button className="bg-purple-800 hover:bg-purple-900 text-white font-bold py-3 px-6 rounded-lg mt-4">
-            Let's Get Started
+            Lets Get Started
           </button>
         </div>
       </div>

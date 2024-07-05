@@ -86,7 +86,7 @@ const OurStorySection = () => {
             From securing contracts with startup airlines to advising cutting-edge travel tech companies, Alpha Digital Group quickly established itself as a go-to consultancy for businesses seeking to navigate the new digital landscape. Our success is built on a bedrock of values that define who we are:
           </p>
           <p className="text-gray-700 leading-relaxed text-lg">
-            At Alpha Digital Group, we're not just adapting to the future of digital strategy – we're defining it. Join us on this exhilarating journey as we continue to push boundaries and redefine what's possible in the digital realm.
+            At Alpha Digital Group, we are not just adapting to the future of digital strategy – we are defining it. Join us on this exhilarating journey as we continue to push boundaries and redefine whats possible in the digital realm.
           </p>
         </div>
         <div className="md:w-1/3 mt-8 md:mt-0">
