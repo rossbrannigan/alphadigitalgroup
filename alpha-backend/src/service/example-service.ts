@@ -1,4 +1,4 @@
-import { SquidService, webhook } from '@squidcloud/backend';
+import { Service, webhook } from '@squidcloud/backend';
 
 /**
  * Here you can define different backend functions that:
@@ -14,7 +14,7 @@ import { SquidService, webhook } from '@squidcloud/backend';
  *
  * For more information and examples see: https://docs.squid.cloud/docs/development-tools/backend/
  */
-export class ExampleService extends SquidService {
+export class ExampleService extends Service { // Assuming Service is the correct export
   // Example function to secure data access; placeholder if secureDatabase isn't available
   secureDataAccess(): boolean {
     // TODO: Implement your own granular security rules
