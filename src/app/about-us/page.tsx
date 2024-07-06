@@ -3,14 +3,10 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { FaAward, FaLightbulb, FaShieldAlt, FaUserFriends, FaHandshake, FaSync } from 'react-icons/fa';
 import { BeakerIcon, LightBulbIcon, ShieldCheckIcon, UserGroupIcon, HandIcon, RefreshIcon } from '@heroicons/react/outline';
 import { FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import OurStorySection from './OurStorySection';
 import DigitalSkillsSection from './DigitalSkillsSection';
-import MarketingSkillsSection from './MarketingSkillsSection';
-
-
 
 const AboutPage: React.FC = () => {
   return (
@@ -211,7 +207,6 @@ const AboutPage: React.FC = () => {
 
         {/* Digital Skills Section */}
         <DigitalSkillsSection />
-
         
       </main>
     </div>
