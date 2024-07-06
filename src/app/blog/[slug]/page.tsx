@@ -9,15 +9,13 @@ import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
 import { Entry, EntrySkeletonType, Asset } from 'contentful';
 
-interface FeaturedImage extends Asset {
-  fields: {
-    file: {
-      url: string;
-      details?: {
-        image?: {
-          width?: number;
-          height?: number;
-        };
+interface FeaturedImageFields {
+  file: {
+    url: string;
+    details?: {
+      image?: {
+        width?: number;
+        height?: number;
       };
     };
   };
@@ -29,7 +27,7 @@ interface BlogPostFields extends EntrySkeletonType {
   author: string;
   date: string;
   category: string;
-  featuredImage?: FeaturedImage;
+  featuredImage?: Asset<FeaturedImageFields>;
   excerpt?: string;
   slug: string;
 }
