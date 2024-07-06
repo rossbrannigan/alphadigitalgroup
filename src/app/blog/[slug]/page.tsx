@@ -15,7 +15,7 @@ interface BlogPostFields extends EntrySkeletonType {
   author: string;
   date: string;
   category: string;
-  featuredImage?: Asset | string;
+  featuredImage?: Asset;
   excerpt?: string;
   slug: string;
 }
@@ -40,14 +40,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
 
-  const openGraphImages: Array<{ url: string; width?: number; height?: number }> = 
-    featuredImage && typeof featuredImage !== 'string' && featuredImage.fields
-      ? [{
-          url: `https:${featuredImage.fields.file.url}`,
-          width: featuredImage.fields.file.details?.image?.width,
-          height: featuredImage.fields.file.details?.image?.height,
-        }]
-      : [];
+  let openGraphImages: Array<{ url: string; width?: number; height?: number }> = [];
+
+  if (featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage) {
+    openGraphImages = [{
+      url: `https:${featuredImage.fields.file.url}`,
+      width: featuredImage.fields.file.details?.image?.width,
+      height: featuredImage.fields.file.details?.image?.height,
+    }];
+  }
 
   return {
     title: `${title} | Alpha Digital Group Blog`,
@@ -74,7 +75,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </Link>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && typeof featuredImage !== 'string' && featuredImage.fields && featuredImage.fields.file && (
+          {featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage && featuredImage.fields.file && (
             <div className="relative h-96">
               <Image
                 src={`https:${featuredImage.fields.file.url}`}
