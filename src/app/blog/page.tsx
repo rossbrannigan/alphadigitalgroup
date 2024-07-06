@@ -61,18 +61,17 @@ export default async function BlogPage() {
 
   if (!blogPosts || blogPosts.length === 0) {
     return (
-      <div className="bg-white min-h-screen flex items-center justify-center">
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
         <p className="text-2xl text-gray-600">No blog posts available at the moment.</p>
       </div>
     );
   }
 
-  const categories = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
-
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-gray-100 min-h-screen">
       <Head>
-        {/* ... (keep the existing Head content) */}
+        <title>Alpha Digital Group Blog</title>
+        <meta name="description" content="Latest insights and articles from Alpha Digital Group" />
       </Head>
 
       <Script id="google-analytics-script" src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`} strategy="afterInteractive" />
@@ -90,72 +89,73 @@ export default async function BlogPage() {
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
-      <header className="bg-white shadow-sm">
-        <div className="container mx-auto px-4 py-6">
-          <h1 className="text-4xl font-bold text-gray-900">Alpha Digital Group Blog</h1>
+      <header className="bg-white shadow-sm fixed w-full z-10">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <h1 className="text-3xl font-bold text-gray-900">Alpha Digital Group Blog</h1>
+          <nav>
+            <ul className="flex space-x-6">
+              <li><a href="#" className="text-gray-600 hover:text-purple-600">Home</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-purple-600">About</a></li>
+              <li><a href="#" className="text-gray-600 hover:text-purple-600">Contact</a></li>
+            </ul>
+          </nav>
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-8 flex">
-        {/* Sidebar Navigation */}
-        <nav className="w-64 pr-8">
-          <h2 className="text-xl font-semibold mb-4">Categories</h2>
-          <ul>
-            {categories.map((category, index) => (
-              <li key={index} className="mb-2">
-                <a href={`#${category}`} className="text-gray-700 hover:text-purple-600">{category}</a>
+      <div className="container mx-auto px-4 py-24 flex">
+        {/* Sidebar with post list */}
+        <aside className="w-1/4 pr-8">
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">Recent Posts</h2>
+          <ul className="space-y-2">
+            {blogPosts.map((post: BlogPost, index: number) => (
+              <li key={index}>
+                <a href={`/blog/${post.slug}`} className="text-gray-600 hover:text-purple-600 text-sm">{post.title}</a>
               </li>
             ))}
           </ul>
-        </nav>
+        </aside>
 
-        {/* Main Content */}
-        <main className="flex-1">
-          <div className="space-y-16">
-            {categories.map((category, categoryIndex) => (
-              <section key={categoryIndex} id={category}>
-                <h2 className="text-2xl font-semibold mb-8 text-gray-900">{category}</h2>
-                {blogPosts.filter(post => post.tags.includes(category)).map((post: BlogPost, postIndex: number) => (
-                  <article key={postIndex} className="mb-12 pb-12 border-b">
-                    {post.featuredImage && (
-                      <div className="relative h-64 mb-8">
-                        <Image
-                          src={post.featuredImage}
-                          alt={post.title}
-                          fill
-                          style={{ objectFit: "cover" }}
-                          className="rounded-lg"
-                        />
-                      </div>
-                    )}
-                    <h3 className="text-3xl font-semibold mb-4 text-gray-900">
-                      <a href={`/blog/${post.slug}`} className="hover:text-purple-600">{post.title}</a>
-                    </h3>
-                    <div className="flex items-center mb-4">
-                      <Image
-                        src={post.author.image}
-                        alt={post.author.name}
-                        width={40}
-                        height={40}
-                        className="rounded-full mr-3"
-                      />
-                      <div>
-                        <p className="text-gray-800 font-medium">{post.author.name}</p>
-                        <p className="text-gray-600 text-sm">{post.date}</p>
-                      </div>
-                    </div>
-                    <p className="text-gray-700 mb-4">{post.excerpt}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">{tag}</span>
-                      ))}
-                    </div>
-                    <a href={`/blog/${post.slug}`} className="text-purple-600 hover:underline">Read more</a>
-                  </article>
-                ))}
-              </section>
-            ))}
-          </div>
+        {/* Main content */}
+        <main className="w-3/4 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {blogPosts.map((post: BlogPost, index: number) => (
+            <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
+              {post.featuredImage && (
+                <div className="relative h-48">
+                  <Image
+                    src={post.featuredImage}
+                    alt={post.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              )}
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                  <a href={`/blog/${post.slug}`} className="hover:text-purple-600">{post.title}</a>
+                </h3>
+                <div className="flex items-center mb-4">
+                  <Image
+                    src={post.author.image}
+                    alt={post.author.name}
+                    width={32}
+                    height={32}
+                    className="rounded-full mr-3"
+                  />
+                  <div>
+                    <p className="text-gray-800 text-sm font-medium">{post.author.name}</p>
+                    <p className="text-gray-600 text-xs">{post.date}</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {post.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">{tag}</span>
+                  ))}
+                </div>
+                <a href={`/blog/${post.slug}`} className="text-purple-600 text-sm hover:underline">Read more</a>
+              </div>
+            </article>
+          ))}
         </main>
       </div>
     </div>
