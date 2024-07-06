@@ -42,11 +42,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   let openGraphImages: Array<{ url: string; width?: number; height?: number }> = [];
 
-  if (featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage && featuredImage.fields.file) {
+  if (featuredImage && featuredImage.fields) {
     openGraphImages = [{
       url: `https:${featuredImage.fields.file.url}`,
-      width: featuredImage.fields.file.details?.image?.width,
-      height: featuredImage.fields.file.details?.image?.height,
+      width: featuredImage.fields.file.details?.width
     }];
   }
 
