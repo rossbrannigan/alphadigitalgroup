@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
+import { Entry } from 'contentful';
 
 interface FeaturedImage {
   fields: {
@@ -33,20 +34,12 @@ interface BlogPostFields {
   slug: string;
 }
 
-interface ContentfulEntry<T> {
-  fields: T;
-  sys: {
-    id: string;
-    // Add other sys properties as needed
-  };
-}
-
-async function getBlogPost(slug: string): Promise<ContentfulEntry<BlogPostFields>> {
-  const response = await contentfulClient.getEntries({
+async function getBlogPost(slug: string): Promise<Entry<BlogPostFields>> {
+  const response = await contentfulClient.getEntries<BlogPostFields>({
     content_type: 'blogPost',
     'fields.slug': slug,
   });
-  return response.items[0] as ContentfulEntry<BlogPostFields>;
+  return response.items[0];
 }
 
 const renderOptions = {
@@ -122,8 +115,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
-  const response = await contentfulClient.getEntries({ content_type: 'blogPost' });
-  return response.items.map((item: ContentfulEntry<BlogPostFields>) => ({
+  const response = await contentfulClient.getEntries<BlogPostFields>({ content_type: 'blogPost' });
+  return response.items.map((item) => ({
     slug: item.fields.slug,
   }));
 }
