@@ -42,11 +42,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   let openGraphImages: Array<{ url: string; width?: number; height?: number }> = [];
 
-  if (featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage) {
+  if (featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage && featuredImage.fields.file) {
     openGraphImages = [{
-      url: `https:${featuredImage.fields?.file?.url || ''}`,
-      width: featuredImage.fields?.file?.details?.image?.width,
-      height: featuredImage.fields?.file?.details?.image?.height,
+      url: `https:${featuredImage.fields.file.url}`,
+      width: featuredImage.fields.file.details?.image?.width,
+      height: featuredImage.fields.file.details?.image?.height,
     }];
   }
 
@@ -75,10 +75,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </Link>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage && featuredImage.fields?.file && (
+          {featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage && featuredImage.fields.file && (
             <div className="relative h-96">
               <Image
-                src={`https:${featuredImage.fields?.file?.url}`}
+                src={`https:${featuredImage.fields.file.url}`}
                 alt={title}
                 fill
                 style={{ objectFit: 'cover' }}
