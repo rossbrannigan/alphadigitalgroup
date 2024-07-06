@@ -22,6 +22,17 @@ interface FeaturedImage {
   };
 }
 
+interface BlogPostFields {
+  title: string;
+  content: any;
+  author: string;
+  date: string;
+  category: string;
+  featuredImage?: FeaturedImage;
+  excerpt?: string;
+  slug: string;
+}
+
 async function getBlogPost(slug: string) {
   const response = await contentfulClient.getEntries({
     content_type: 'blogPost',
@@ -38,17 +49,15 @@ const renderOptions = {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
-  const { title, excerpt, featuredImage } = post.fields;
+  const { title, excerpt, featuredImage } = post.fields as BlogPostFields;
 
-  // Ensure excerpt is treated as a string
-  const description = typeof excerpt === 'string' ? excerpt : `Read about ${title} on Alpha Digital Group Blog`;
+  const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
 
-  // Ensure featuredImage is properly typed
   const openGraphImages = featuredImage
     ? [{
-        url: `https:${(featuredImage as FeaturedImage).fields.file.url}`,
-        width: (featuredImage as FeaturedImage).fields.file.details.image.width,
-        height: (featuredImage as FeaturedImage).fields.file.details.image.height,
+        url: `https:${featuredImage.fields.file.url}`,
+        width: featuredImage.fields.file.details.image.width,
+        height: featuredImage.fields.file.details.image.height,
       }]
     : [];
 
@@ -67,7 +76,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getBlogPost(params.slug);
-  const { title, content, author, date, category, featuredImage } = post.fields;
+  const { title, content, author, date, category, featuredImage } = post.fields as BlogPostFields;
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -80,19 +89,19 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           {featuredImage && (
             <div className="relative h-96">
               <Image
-                src={`https:${(featuredImage as FeaturedImage).fields.file.url}`}
-                alt={title as string} // Ensure alt is a string
+                src={`https:${featuredImage.fields.file.url}`}
+                alt={title}
                 fill
                 style={{ objectFit: 'cover' }}
               />
             </div>
           )}
           <div className="p-6">
-            <h1 className="text-4xl font-bold mb-4">{title as string}</h1> {/* Ensure title is cast to string */}
+            <h1 className="text-4xl font-bold mb-4">{title}</h1>
             <div className="mb-4 text-gray-600">
-              <span>By {author}</span> {/* Ensure author is treated as string */}
-              <span>{new Date(date).toLocaleDateString()}</span> {/* Ensure date is treated as string */}
-              <span>{category}</span> {/* Ensure category is treated as string */}
+              <span>By {author}</span>
+              <span>{new Date(date).toLocaleDateString()}</span>
+              <span>{category}</span>
             </div>
             <div className="prose lg:prose-xl max-w-none">
               {documentToReactComponents(content, renderOptions)}
