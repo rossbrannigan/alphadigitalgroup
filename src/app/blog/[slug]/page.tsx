@@ -90,9 +90,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{title as string}</h1> {/* Ensure title is cast to string */}
             <div className="mb-4 text-gray-600">
-              <span>By {author} | </span>
-              <span>{new Date(date).toLocaleDateString()} | </span>
-              <span>{category}</span>
+              <span>By {author}</span> {/* Ensure author is treated as string */}
+              <span>{new Date(date).toLocaleDateString()}</span> {/* Ensure date is treated as string */}
+              <span>{category}</span> {/* Ensure category is treated as string */}
             </div>
             <div className="prose lg:prose-xl max-w-none">
               {documentToReactComponents(content, renderOptions)}
