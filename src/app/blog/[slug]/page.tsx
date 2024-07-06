@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry } from 'contentful';
+import { Entry, EntrySkeletonType } from 'contentful';
 
 interface FeaturedImage {
   fields: {
@@ -23,7 +23,7 @@ interface FeaturedImage {
   };
 }
 
-interface BlogPostFields {
+interface BlogPostFields extends EntrySkeletonType {
   title: string;
   content: any;
   author: string;
