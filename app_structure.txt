@@ -1,5 +1,6 @@
 alpha
 -lib
+--contentful.ts
 -node_modules
 -pages
 -public
