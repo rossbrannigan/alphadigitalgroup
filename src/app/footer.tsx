@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-start w-full sm:w-1/2 md:w-auto">
             <h3 className="text-xs font-semibold mb-2">Knowledge Center</h3>
             <ul className="space-y-1 text-xs">
-              <li><a href="/knowledge/marketing-glossary" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing Glossary</a></li>
+              <li><a href="https://knowledge.alphadigitalgroup.co/marketing/marketing-glossary/" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing Glossary</a></li>
               <li><a href="/knowledge/digital-marketing-101" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Marketing 101</a></li>
               <li><a href="/knowledge/roi-calculator" className="text-gray-400 hover:text-white transition-colors duration-300">ROI Calculator</a></li>
             </ul>
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <li><a href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
               <li><a href="/case-studies" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
               <li><a href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
-              <li><a href="/careers" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+              <li><a href="https://alpha-digital-group.breezy.hr/" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
             </ul>
           </div>
           <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
