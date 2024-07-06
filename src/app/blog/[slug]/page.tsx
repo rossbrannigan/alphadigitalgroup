@@ -70,12 +70,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = await getBlogPost(params.slug);
   const { title, excerpt, featuredImage } = post.fields;
 
+  // Ensure excerpt is treated as a string
+  const description = typeof excerpt === 'string' ? excerpt : `Read about ${title} on Alpha Digital Group Blog`;
+
   return {
     title: `${title} | Alpha Digital Group Blog`,
-    description: excerpt || `Read about ${title} on Alpha Digital Group Blog`,
+    description,
     openGraph: {
       title: `${title} | Alpha Digital Group Blog`,
-      description: excerpt || `Read about ${title} on Alpha Digital Group Blog`,
+      description,
       type: 'article',
       url: `https://www.alphadigitalgroup.co/blog/${params.slug}`,
       images: featuredImage ? [{
