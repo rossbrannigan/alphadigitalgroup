@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
 
-  const openGraphImages = featuredImage && typeof featuredImage !== 'string' && featuredImage.fields && featuredImage.fields.file
+  const openGraphImages = featuredImage && 'fields' in featuredImage && featuredImage.fields
     ? [{
         url: `https:${featuredImage.fields.file.url}`,
         width: featuredImage.fields.file.details?.image?.width,
@@ -73,7 +73,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </Link>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && typeof featuredImage !== 'string' && featuredImage.fields && featuredImage.fields.file && (
+          {featuredImage && 'fields' in featuredImage && featuredImage.fields && featuredImage.fields.file && (
             <div className="relative h-96">
               <Image
                 src={`https:${featuredImage.fields.file.url}`}
