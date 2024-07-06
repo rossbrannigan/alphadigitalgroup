@@ -88,7 +88,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             </div>
           )}
           <div className="p-6">
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
+            <h1 className="text-4xl font-bold mb-4">{title as string}</h1> {/* Ensure title is cast to string */}
             <div className="mb-4 text-gray-600">
               <span>By {author} | </span>
               <span>{new Date(date).toLocaleDateString()} | </span>
