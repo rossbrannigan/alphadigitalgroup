@@ -1,13 +1,12 @@
 // src/app/blog/[slug]/page.tsx
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, EntrySkeletonType, Asset } from 'contentful';
+import { Entry, EntrySkeletonType } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
@@ -15,7 +14,6 @@ interface BlogPostFields extends EntrySkeletonType {
   author: string;
   date: string;
   category: string;
-  featuredImage?: Asset;
   excerpt?: string;
   slug: string;
 }
@@ -34,25 +32,11 @@ const renderOptions = {
   },
 };
 
-function getImageData(featuredImage: Asset | undefined) {
-  if (featuredImage && 'fields' in featuredImage && featuredImage.fields.file) {
-    return {
-      url: `https:${featuredImage.fields.file.url}`,
-      width: featuredImage.fields.file.details?.image?.width,
-      height: featuredImage.fields.file.details?.image?.height,
-    };
-  }
-  return null;
-}
-
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
-  const { title, excerpt, featuredImage } = post.fields;
+  const { title, excerpt } = post.fields;
 
   const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
-
-  const imageData = getImageData(featuredImage);
-  const openGraphImages = imageData ? [imageData] : [];
 
   return {
     title: `${title} | Alpha Digital Group Blog`,
@@ -62,16 +46,13 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description,
       type: 'article',
       url: `https://www.alphadigitalgroup.co/blog/${params.slug}`,
-      images: openGraphImages,
     },
   };
 }
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getBlogPost(params.slug);
-  const { title, content, author, date, category, featuredImage } = post.fields;
-
-  const imageData = getImageData(featuredImage);
+  const { title, content, author, date, category } = post.fields;
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -81,16 +62,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </Link>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {imageData && (
-            <div className="relative h-96">
-              <Image
-                src={imageData.url}
-                alt={title}
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-          )}
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{title}</h1>
             <div className="mb-4 text-gray-600">
