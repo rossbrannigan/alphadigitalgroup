@@ -7,15 +7,17 @@ import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, EntrySkeletonType, Asset } from 'contentful';
+import { Entry, EntrySkeletonType } from 'contentful';
 
-interface FeaturedImageFields {
-  file: {
-    url: string;
-    details?: {
-      image?: {
-        width?: number;
-        height?: number;
+interface FeaturedImage {
+  fields: {
+    file: {
+      url: string;
+      details?: {
+        image?: {
+          width?: number;
+          height?: number;
+        };
       };
     };
   };
@@ -27,7 +29,7 @@ interface BlogPostFields extends EntrySkeletonType {
   author: string;
   date: string;
   category: string;
-  featuredImage?: Asset<FeaturedImageFields>;
+  featuredImage?: FeaturedImage;
   excerpt?: string;
   slug: string;
 }
