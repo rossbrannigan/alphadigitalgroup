@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   if (featuredImage && typeof featuredImage === 'object' && 'fields' in featuredImage) {
     openGraphImages = [{
-      url: `https:${featuredImage.fields?.file?.url}`,
+      url: `https:${featuredImage.fields?.file?.url || ''}`,
       width: featuredImage.fields?.file?.details?.image?.width,
       height: featuredImage.fields?.file?.details?.image?.height,
     }];
