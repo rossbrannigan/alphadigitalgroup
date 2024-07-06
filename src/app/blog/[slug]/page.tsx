@@ -7,21 +7,7 @@ import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, EntrySkeletonType } from 'contentful';
-
-interface FeaturedImage {
-  fields: {
-    file: {
-      url: string;
-      details: {
-        image: {
-          width: number;
-          height: number;
-        };
-      };
-    };
-  };
-}
+import { Entry, EntrySkeletonType, Asset } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
@@ -29,7 +15,7 @@ interface BlogPostFields extends EntrySkeletonType {
   author: string;
   date: string;
   category: string;
-  featuredImage?: FeaturedImage;
+  featuredImage?: Asset;
   excerpt?: string;
   slug: string;
 }
@@ -54,11 +40,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
 
-  const openGraphImages = featuredImage
+  const openGraphImages = featuredImage && featuredImage.fields
     ? [{
         url: `https:${featuredImage.fields.file.url}`,
-        width: featuredImage.fields.file.details.image.width,
-        height: featuredImage.fields.file.details.image.height,
+        width: featuredImage.fields.file.details.image?.width,
+        height: featuredImage.fields.file.details.image?.height,
       }]
     : [];
 
@@ -87,7 +73,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         </Link>
 
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && (
+          {featuredImage && featuredImage.fields && (
             <div className="relative h-96">
               <Image
                 src={`https:${featuredImage.fields.file.url}`}
