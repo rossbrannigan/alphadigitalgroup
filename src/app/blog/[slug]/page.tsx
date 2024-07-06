@@ -33,12 +33,20 @@ interface BlogPostFields {
   slug: string;
 }
 
-async function getBlogPost(slug: string) {
+interface ContentfulEntry<T> {
+  fields: T;
+  sys: {
+    id: string;
+    // Add other sys properties as needed
+  };
+}
+
+async function getBlogPost(slug: string): Promise<ContentfulEntry<BlogPostFields>> {
   const response = await contentfulClient.getEntries({
     content_type: 'blogPost',
     'fields.slug': slug,
   });
-  return response.items[0];
+  return response.items[0] as ContentfulEntry<BlogPostFields>;
 }
 
 const renderOptions = {
@@ -49,7 +57,7 @@ const renderOptions = {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
-  const { title, excerpt, featuredImage } = post.fields as BlogPostFields;
+  const { title, excerpt, featuredImage } = post.fields;
 
   const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
 
@@ -76,7 +84,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getBlogPost(params.slug);
-  const { title, content, author, date, category, featuredImage } = post.fields as BlogPostFields;
+  const { title, content, author, date, category, featuredImage } = post.fields;
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -115,7 +123,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   const response = await contentfulClient.getEntries({ content_type: 'blogPost' });
-  return response.items.map((item: any) => ({
+  return response.items.map((item: ContentfulEntry<BlogPostFields>) => ({
     slug: item.fields.slug,
   }));
 }
