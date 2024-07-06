@@ -81,7 +81,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             <div className="relative h-96">
               <Image
                 src={`https:${(featuredImage as FeaturedImage).fields.file.url}`}
-                alt={title}
+                alt={title as string} // Ensure alt is a string
                 fill
                 style={{ objectFit: 'cover' }}
               />
