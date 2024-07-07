@@ -4,13 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, INLINES } from '@contentful/rich-text-types';
+import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
 import { Entry, EntrySkeletonType } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
-  content: any;
+  content: Document;
   author: string;
   date: string;
   category: string;
@@ -71,7 +71,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               <span>{typeof category === 'string' ? category : 'Uncategorized'}</span>
             </div>
             <div className="prose lg:prose-xl max-w-none">
-              {documentToReactComponents(content, renderOptions)}
+              {content && documentToReactComponents(content, renderOptions)}
             </div>
           </div>
         </article>
