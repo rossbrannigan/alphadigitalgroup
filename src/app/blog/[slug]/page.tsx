@@ -10,7 +10,7 @@ import { Entry, EntrySkeletonType } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
-  content: Document;
+  content: any; // Change this back to 'any' to accommodate various content types
   author: string;
   date: string;
   category: string;
@@ -55,6 +55,14 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const post = await getBlogPost(params.slug);
   const { title, content, author, date, category } = post.fields;
 
+  // Function to safely render content
+  const renderContent = () => {
+    if (content && typeof content === 'object' && 'nodeType' in content && content.nodeType === 'document') {
+      return documentToReactComponents(content as Document, renderOptions);
+    }
+    return <p>Content not available</p>;
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="container mx-auto px-4 py-8 pt-24">
@@ -71,7 +79,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               <span>{typeof category === 'string' ? category : 'Uncategorized'}</span>
             </div>
             <div className="prose lg:prose-xl max-w-none">
-              {content && documentToReactComponents(content, renderOptions)}
+              {renderContent()}
             </div>
           </div>
         </article>
