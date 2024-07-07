@@ -26,7 +26,7 @@ async function getBlogPosts() {
   try {
     const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
-      order: '-sys.createdAt',
+      order: ['-sys.createdAt'], // This line has been changed
       include: 2,
     });
     return response.items.map((item: any) => ({
