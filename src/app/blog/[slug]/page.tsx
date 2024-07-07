@@ -10,7 +10,7 @@ import { Entry, EntrySkeletonType } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
-  content: any;
+  content: any; // Consider using a more specific type from Contentful
   author: string;
   date: string;
   category: string;
@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const post = await getBlogPost(params.slug);
   const { title, excerpt } = post.fields;
 
-  const description = excerpt || `Read about ${title} on Alpha Digital Group Blog`;
+  // Ensure description is always a string
+  const description = typeof excerpt === 'string' ? excerpt : `Read about ${title} on Alpha Digital Group Blog`;
 
   return {
     title: `${title} | Alpha Digital Group Blog`,
