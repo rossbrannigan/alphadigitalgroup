@@ -18,19 +18,19 @@ interface BlogPost {
   };
   slug: string;
   excerpt: string;
-  featuredImage?: string;
+  featuredImage: string | null;
   tags: string[];
 }
 
-async function getBlogPosts() {
+async function getBlogPosts(): Promise<BlogPost[]> {
   try {
     const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
-      order: ['-sys.createdAt'], // This line has been changed
+      order: ['-sys.createdAt'],
       include: 2,
     });
     return response.items.map((item: any) => ({
-      title: item.fields.title,
+      title: item.fields.title || '',
       content: item.fields.content,
       date: new Date(item.sys.createdAt).toLocaleDateString(),
       author: {
@@ -107,7 +107,7 @@ export default async function BlogPage() {
         <aside className="w-1/4 pr-8">
           <h2 className="text-xl font-semibold mb-4 text-gray-900">Recent Posts</h2>
           <ul className="space-y-2">
-            {blogPosts.map((post: BlogPost, index: number) => (
+            {blogPosts.map((post, index) => (
               <li key={index}>
                 <a href={`/blog/${post.slug}`} className="text-gray-600 hover:text-purple-600 text-sm">{post.title}</a>
               </li>
@@ -117,7 +117,7 @@ export default async function BlogPage() {
 
         {/* Main content */}
         <main className="w-3/4 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post: BlogPost, index: number) => (
+          {blogPosts.map((post, index) => (
             <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
               {post.featuredImage && (
                 <div className="relative h-48">
