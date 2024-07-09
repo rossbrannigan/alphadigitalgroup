@@ -1,5 +1,3 @@
-// src/app/blog/[slug]/page.tsx
-
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -10,7 +8,7 @@ import { Entry, EntrySkeletonType } from 'contentful';
 
 interface BlogPostFields extends EntrySkeletonType {
   title: string;
-  content: any; // Change this back to 'any' to accommodate various content types
+  content: any;
   author: string;
   date: string;
   category: string;
@@ -35,10 +33,8 @@ const renderOptions = {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
   const { title, excerpt } = post.fields;
-
   const safeTitle = typeof title === 'string' ? title : 'Blog Post';
   const description = typeof excerpt === 'string' ? excerpt : `Read about ${safeTitle} on Alpha Digital Group Blog`;
-
   return {
     title: `${safeTitle} | Alpha Digital Group Blog`,
     description,
@@ -69,14 +65,13 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <Link href="/blog" className="text-blue-600 hover:underline mb-4 inline-block">
           &larr; Back to Blog
         </Link>
-
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{typeof title === 'string' ? title : 'Blog Post'}</h1>
             <div className="mb-4 text-gray-600">
               <span>By {typeof author === 'string' ? author : 'Unknown'}</span>
-              <span>{typeof date === 'string' ? new Date(date).toLocaleDateString() : 'Unknown Date'}</span>
-              <span>{typeof category === 'string' ? category : 'Uncategorized'}</span>
+              <span> | {typeof date === 'string' ? new Date(date).toLocaleDateString() : 'Unknown Date'}</span>
+              <span> | {typeof category === 'string' ? category : 'Uncategorized'}</span>
             </div>
             <div className="prose lg:prose-xl max-w-none">
               {renderContent()}

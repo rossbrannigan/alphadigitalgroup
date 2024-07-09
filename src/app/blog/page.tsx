@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google';
@@ -94,9 +95,9 @@ export default async function BlogPage() {
           <h1 className="text-3xl font-bold text-gray-900">Alpha Digital Group Blog</h1>
           <nav>
             <ul className="flex space-x-6">
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Home</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">About</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-purple-600">Contact</a></li>
+              <li><Link href="/" className="text-gray-600 hover:text-purple-600">Home</Link></li>
+              <li><Link href="/about" className="text-gray-600 hover:text-purple-600">About</Link></li>
+              <li><Link href="/contact" className="text-gray-600 hover:text-purple-600">Contact</Link></li>
             </ul>
           </nav>
         </div>
@@ -109,7 +110,7 @@ export default async function BlogPage() {
           <ul className="space-y-2">
             {blogPosts.map((post, index) => (
               <li key={index}>
-                <a href={`/blog/${post.slug}`} className="text-gray-600 hover:text-purple-600 text-sm">{post.title}</a>
+                <Link href={`/blog/${post.slug}`} className="text-gray-600 hover:text-purple-600 text-sm">{post.title}</Link>
               </li>
             ))}
           </ul>
@@ -131,7 +132,7 @@ export default async function BlogPage() {
               )}
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">
-                  <a href={`/blog/${post.slug}`} className="hover:text-purple-600">{post.title}</a>
+                  <Link href={`/blog/${post.slug}`} className="hover:text-purple-600">{post.title}</Link>
                 </h3>
                 <div className="flex items-center mb-4">
                   <Image
@@ -152,7 +153,7 @@ export default async function BlogPage() {
                     <span key={tagIndex} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">{tag}</span>
                   ))}
                 </div>
-                <a href={`/blog/${post.slug}`} className="text-purple-600 text-sm hover:underline">Read more</a>
+                <Link href={`/blog/${post.slug}`} className="text-purple-600 text-sm hover:underline">Read more</Link>
               </div>
             </article>
           ))}

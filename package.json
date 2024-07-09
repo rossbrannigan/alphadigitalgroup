@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@21yunbox/netlify-plugin-21yunbox-deploy-to-china-cdn": "^1.0.7",
+    "@apollo/client": "^3.10.8",
     "@contentful/rich-text-react-renderer": "^15.22.1",
     "@contentful/rich-text-types": "^16.6.1",
     "@heroicons/react": "^1.0.6",
@@ -27,6 +28,7 @@
     "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.0.2",
     "feather-icons": "^4.29.2",
+    "graphql": "^16.9.0",
     "lucide-react": "^0.400.0",
     "mixpanel": "^0.18.0",
     "next": "^14.1.4",
@@ -53,6 +55,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.13.0",
     "daisyui": "^4.9.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",

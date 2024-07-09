@@ -5,6 +5,7 @@ alpha
 -pages
 -public
 -sanity
+-strapi-admin
 -src
 --app
 ---about-us

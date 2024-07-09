@@ -1,4 +1,3 @@
-// /alpha/lib/contentful.ts
 import { createClient } from 'contentful';
 
 const client = createClient({
