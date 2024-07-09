@@ -25,8 +25,8 @@ export default function DigitalRetailStrategy() {
         <p className="text-gray-600 mt-2">
           Sources:
           <ul className="list-disc list-inside">
-            <li>McKinsey & Company, "Understanding the Pandemic's Impact on the Aviation Value Chain" (2023)</li>
-            <li>IATA, "Modern Airline Retailing: Insights on Customer Personalization" (2023)</li>
+            <li>McKinsey & Company, Understanding the Pandemics Impact on the Aviation Value Chain (2023)</li>
+            <li>IATA, Modern Airline Retailing: Insights on Customer Personalization (2023)</li>
           </ul>
         </p>
       </div>
