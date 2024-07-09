@@ -1,4 +1,5 @@
-// next.config.mjs
+import 'dotenv/config';
+
 export default {
   env: {
     NEXT_PUBLIC_CONTENTFUL_SPACE_ID: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
