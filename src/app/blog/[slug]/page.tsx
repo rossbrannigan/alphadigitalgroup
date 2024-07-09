@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
@@ -16,12 +17,17 @@ interface BlogPostFields extends EntrySkeletonType {
   slug: string;
 }
 
-async function getBlogPost(slug: string): Promise<Entry<BlogPostFields>> {
-  const response = await contentfulClient.getEntries<BlogPostFields>({
-    content_type: 'blogPost',
-    'fields.slug': slug,
-  });
-  return response.items[0];
+async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
+  try {
+    const response = await contentfulClient.getEntries<BlogPostFields>({
+      content_type: 'blogPost',
+      'fields.slug': slug,
+    });
+    return response.items[0] || null;
+  } catch (error) {
+    console.error('Error fetching blog post:', error);
+    return null;
+  }
 }
 
 const renderOptions = {
@@ -32,6 +38,12 @@ const renderOptions = {
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const post = await getBlogPost(params.slug);
+  if (!post) {
+    return {
+      title: 'Post Not Found | Alpha Digital Group Blog',
+      description: 'The requested blog post could not be found.',
+    };
+  }
   const { title, excerpt } = post.fields;
   const safeTitle = typeof title === 'string' ? title : 'Blog Post';
   const description = typeof excerpt === 'string' ? excerpt : `Read about ${safeTitle} on Alpha Digital Group Blog`;
@@ -49,6 +61,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
   const post = await getBlogPost(params.slug);
+  
+  if (!post) {
+    notFound();
+  }
+
   const { title, content, author, date, category } = post.fields;
 
   // Function to safely render content
@@ -84,8 +101,13 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 }
 
 export async function generateStaticParams() {
-  const response = await contentfulClient.getEntries<BlogPostFields>({ content_type: 'blogPost' });
-  return response.items.map((item) => ({
-    slug: item.fields.slug,
-  }));
+  try {
+    const response = await contentfulClient.getEntries<BlogPostFields>({ content_type: 'blogPost' });
+    return response.items.map((item) => ({
+      slug: item.fields.slug,
+    }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
