@@ -12,24 +12,20 @@ interface ContentTypeSkeleton {
   contentTypeId: string;
 }
 
-interface AuthorFields extends ContentTypeSkeleton {
-  fields: {
-    name?: EntryFields.Symbol;
-    // Add other author fields as needed
-  };
+interface AuthorFields {
+  name?: EntryFields.Symbol;
+  // Add other author fields as needed
 }
 
-interface BlogPostFields extends ContentTypeSkeleton {
-  fields: {
-    title?: EntryFields.Symbol;
-    author?: Entry<AuthorFields>;
-    content?: Document;
-    featuredImage?: Asset;
-    rating?: EntryFields.Number;
-    videoGallery?: Asset[];
-    relatedBlogPosts?: Entry<BlogPostFields>[];
-    slug?: EntryFields.Symbol;
-  };
+interface BlogPostFields {
+  title?: EntryFields.Symbol;
+  author?: Entry<AuthorFields>;
+  content?: Document;
+  featuredImage?: Asset;
+  rating?: EntryFields.Number;
+  videoGallery?: Asset[];
+  relatedBlogPosts?: Entry<BlogPostFields>[];
+  slug?: EntryFields.Symbol;
 }
 
 interface AssetFields {
@@ -44,9 +40,9 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
   try {
     const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
-      'fields.slug': slug, // Use standard key here
+      'fields.slug': slug,
       include: 2,
-    } as any); // Cast to 'any' to bypass the TypeScript error
+    });
     return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
@@ -128,7 +124,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{displayTitle}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
-              {author && author.fields && author.fields.name && (
+              {author && author.fields?.name && (
                 <>
                   <span>By {author.fields.name}</span>
                   {rating && (
