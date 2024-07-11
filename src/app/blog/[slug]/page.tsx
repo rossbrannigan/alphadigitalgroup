@@ -101,7 +101,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           &larr; Back to Blog
         </Link>
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && (
+          {featuredImage && featuredImage.fields && (
             <Image
               src={`https:${featuredImage.fields.file.url}`}
               width={1200}
