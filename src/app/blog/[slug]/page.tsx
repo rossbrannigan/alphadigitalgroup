@@ -6,16 +6,22 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, EntrySkeletonType, Asset } from 'contentful';
+import { Entry, Asset } from 'contentful';
 
-interface BlogPostFields extends EntrySkeletonType {
+interface AuthorFields {
+  name: string;
+  image?: Asset;
+}
+
+interface BlogPostFields {
   title: string;
-  author: Entry<{ name: string; image?: Asset }>;
+  author: Entry<AuthorFields>;
   content: Document;
   featuredImage?: Asset;
   rating?: number;
   videoGallery?: Asset[];
   relatedBlogPosts?: Entry<BlogPostFields>[];
+  slug: string;
 }
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
@@ -23,7 +29,7 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
     const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
       'fields.slug': slug,
-      include: 2, // Include nested entries
+      include: 2,
     });
     return response.items[0] || null;
   } catch (error) {
@@ -47,7 +53,6 @@ const renderOptions = {
         />
       );
     },
-    // Add more custom renderers as needed
   },
 };
 
