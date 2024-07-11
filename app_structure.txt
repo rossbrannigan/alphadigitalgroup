@@ -1,23 +1,36 @@
 alpha
--lib
---contentful.ts
--node_modules
--pages
--public
--sanity
--strapi-admin
--src
---app
----about-us
-----page.tsx
----blog
----[slug]
-----page.tsx
---page.tsx
---header.tsx
---footer.tsx
---layout.tsx
---globals.css
---constants
--package.json
--next.config.mjs
+├── .circleci
+├── .env
+├── .env.local
+├── .env.sentry-build-plugin
+├── .storybook
+│   ├── main.ts
+│   ├── preview.ts
+├── cypress
+│   ├── cypress.config.ts
+├── lib
+│   ├── contentful.ts
+├── node_modules
+├── pages
+├── public
+├── sanity
+├── strapi-admin
+├── src
+│   ├── app
+│   │   ├── about-us
+│   │   │   ├── page.tsx
+│   │   ├── blog
+│   │   │   ├── [slug]
+│   │   │   │   ├── page.tsx
+│   │   ├── page.tsx
+│   │   ├── header.tsx
+│   │   ├── footer.tsx
+│   │   ├── layout.tsx
+│   │   ├── globals.css
+│   ├── constants
+│   ├── stories
+│   │   ├── assets
+├── package.json
+├── next.config.mjs
+├── tailwind.config.ts
+├── tailwind.config.js
