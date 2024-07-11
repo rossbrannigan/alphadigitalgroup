@@ -107,6 +107,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     featuredImageFields = featuredImage.fields as AssetFields;
   }
 
+  const displayTitle = typeof title === 'string' ? title : 'Untitled';
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="container mx-auto px-4 py-8 pt-24">
@@ -124,7 +126,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             />
           )}
           <div className="p-6">
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
+            <h1 className="text-4xl font-bold mb-4">{displayTitle}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
               {author && author.fields.name && (
                 <>
