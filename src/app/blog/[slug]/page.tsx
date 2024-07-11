@@ -128,7 +128,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{displayTitle}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
-              {author && author.fields.name && (
+              {author && author.fields && author.fields.name && (
                 <>
                   <span>By {author.fields.name}</span>
                   {rating && (
