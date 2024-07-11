@@ -13,9 +13,20 @@ interface AuthorFields {
   // Add other author fields as needed
 }
 
+interface Author {
+  fields: AuthorFields;
+  sys: {
+    contentType: {
+      sys: {
+        id: string;
+      };
+    };
+  };
+}
+
 interface BlogPostFields {
   title?: EntryFields.Symbol;
-  author?: Entry<AuthorFields>;
+  author?: Entry<Author>;
   content?: Document;
   featuredImage?: Asset;
   rating?: EntryFields.Number;
