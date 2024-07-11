@@ -6,37 +6,35 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, Asset, EntrySkeletonType, EntryCollection } from 'contentful';
+import { Entry, Asset } from 'contentful';
 
-interface AuthorFields extends EntrySkeletonType {
-  fields: {
-    name: string;
-    image?: Asset;
-  };
+interface AuthorFields {
+  name?: string;
+  // Add other author fields as needed
 }
 
-interface BlogPostFields extends EntrySkeletonType {
-  fields: {
-    title: string;
-    author: Entry<AuthorFields>;
-    content: Document;
-    featuredImage?: Asset;
-    rating?: number;
-    videoGallery?: Asset[];
-    relatedBlogPosts?: Entry<BlogPostFields>[];
-    slug: string;
-  };
+interface BlogPostFields {
+  title?: string;
+  author?: Entry<AuthorFields>;
+  content?: Document;
+  featuredImage?: Asset;
+  rating?: number;
+  videoGallery?: Asset[];
+  relatedBlogPosts?: Entry<BlogPostFields>[];
+  slug?: string;
 }
 
-async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
+interface BlogPostEntry extends Entry<BlogPostFields> {}
+
+async function getBlogPost(slug: string): Promise<BlogPostEntry | null> {
   try {
-    const response = await contentfulClient.getEntries({
+    const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
       'fields.slug': slug,
       include: 2,
     });
     
-    return response.items[0] as Entry<BlogPostFields> || null;
+    return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
     return null;
@@ -69,7 +67,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: 'The requested blog post could not be found.',
     };
   }
-  const { title } = post.fields;
+  const { title = 'Untitled Post' } = post.fields;
   return {
     title: `${title} | Alpha Digital Group Blog`,
     description: `Read about ${title} on Alpha Digital Group Blog`,
@@ -89,7 +87,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     notFound();
   }
 
-  const { title, content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
+  const { title = 'Untitled', content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
 
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -103,33 +101,30 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               src={`https:${featuredImage.fields.file.url}`}
               width={1200}
               height={600}
-              alt={featuredImage.fields.title}
+              alt={featuredImage.fields.title || 'Featured Image'}
               className="w-full h-64 object-cover"
             />
           )}
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{title}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
-              {author.fields.image && (
-                <Image
-                  src={`https:${author.fields.image.fields.file.url}`}
-                  width={40}
-                  height={40}
-                  alt={author.fields.name}
-                  className="rounded-full mr-2"
-                />
-              )}
-              <span>By {author.fields.name}</span>
-              {rating && (
+              {author && author.fields.name && (
                 <>
-                  <span className="mx-2">|</span>
-                  <span>Rating: {rating}</span>
+                  <span>By {author.fields.name}</span>
+                  {rating && (
+                    <>
+                      <span className="mx-2">|</span>
+                      <span>Rating: {rating}</span>
+                    </>
+                  )}
                 </>
               )}
             </div>
-            <div className="prose lg:prose-xl max-w-none">
-              {documentToReactComponents(content, renderOptions)}
-            </div>
+            {content && (
+              <div className="prose lg:prose-xl max-w-none">
+                {documentToReactComponents(content, renderOptions)}
+              </div>
+            )}
             {videoGallery && videoGallery.length > 0 && (
               <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-4">Video Gallery</h2>
@@ -152,9 +147,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {relatedBlogPosts.map((relatedPost, index) => (
                     <li key={index}>
-                      <Link href={`/blog/${relatedPost.fields.slug}`} className="text-blue-600 hover:underline">
-                        {relatedPost.fields.title}
-                      </Link>
+                      {relatedPost.fields.slug && relatedPost.fields.title && (
+                        <Link href={`/blog/${relatedPost.fields.slug}`} className="text-blue-600 hover:underline">
+                          {relatedPost.fields.title}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -169,12 +166,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   try {
-    const response = await contentfulClient.getEntries({
+    const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost'
     });
     
-    return response.items.map((item: any) => ({
-      slug: item.fields.slug,
+    return response.items.map((item) => ({
+      slug: item.fields.slug || '',
     }));
   } catch (error) {
     console.error('Error generating static params:', error);
