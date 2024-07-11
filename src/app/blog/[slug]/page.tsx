@@ -97,8 +97,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const { title = 'Untitled', content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
 
   let featuredImageFields: AssetFields | undefined;
-  if (featuredImage?.fields) {
-    featuredImageFields = featuredImage.fields as AssetFields;
+  if ((featuredImage as Asset)?.fields) {
+    featuredImageFields = (featuredImage as Asset).fields as AssetFields;
   }
 
   const displayTitle = typeof title === 'string' ? title : 'Untitled';
