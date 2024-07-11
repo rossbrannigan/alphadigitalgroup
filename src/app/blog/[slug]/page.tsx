@@ -35,7 +35,6 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
       'fields.slug': slug,
       include: 2,
     });
-    
     return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
