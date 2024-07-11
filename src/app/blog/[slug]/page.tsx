@@ -6,22 +6,26 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, Asset } from 'contentful';
+import { Entry, Asset, EntrySkeletonType } from 'contentful';
 
-interface AuthorFields {
-  name: string;
-  image?: Asset;
+interface AuthorFields extends EntrySkeletonType {
+  fields: {
+    name: string;
+    image?: Asset;
+  };
 }
 
-interface BlogPostFields {
-  title: string;
-  author: Entry<AuthorFields>;
-  content: Document;
-  featuredImage?: Asset;
-  rating?: number;
-  videoGallery?: Asset[];
-  relatedBlogPosts?: Entry<BlogPostFields>[];
-  slug: string;
+interface BlogPostFields extends EntrySkeletonType {
+  fields: {
+    title: string;
+    author: Entry<AuthorFields>;
+    content: Document;
+    featuredImage?: Asset;
+    rating?: number;
+    videoGallery?: Asset[];
+    relatedBlogPosts?: Entry<BlogPostFields>[];
+    slug: string;
+  };
 }
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
