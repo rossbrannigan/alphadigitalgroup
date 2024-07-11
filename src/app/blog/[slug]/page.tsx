@@ -30,13 +30,13 @@ interface BlogPostFields extends EntrySkeletonType {
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
   try {
-    const response = await contentfulClient.getEntries<BlogPostFields>({
+    const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
       'fields.slug': slug,
       include: 2,
-    }) as EntryCollection<BlogPostFields>;
+    });
     
-    return response.items[0] || null;
+    return response.items[0] as Entry<BlogPostFields> || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
     return null;
@@ -169,11 +169,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   try {
-    const response = await contentfulClient.getEntries<BlogPostFields>({
+    const response = await contentfulClient.getEntries({
       content_type: 'blogPost'
-    }) as EntryCollection<BlogPostFields>;
+    });
     
-    return response.items.map((item) => ({
+    return response.items.map((item: any) => ({
       slug: item.fields.slug,
     }));
   } catch (error) {
