@@ -32,6 +32,14 @@ interface BlogPostFields extends ContentTypeSkeleton {
   };
 }
 
+interface AssetFields {
+  title?: string;
+  description?: string;
+  file: {
+    url: string;
+  };
+}
+
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
   try {
     const response = await contentfulClient.getEntries<BlogPostFields>({
@@ -49,7 +57,7 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-      const { file, description } = node.data.target.fields;
+      const { file, description } = (node.data.target.fields as AssetFields);
       const { url } = file;
       return (
         <Image
@@ -94,6 +102,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   const { title = 'Untitled', content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
 
+  const featuredImageFields = featuredImage?.fields as AssetFields;
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <div className="container mx-auto px-4 py-8 pt-24">
@@ -101,12 +111,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           &larr; Back to Blog
         </Link>
         <article className="bg-white rounded-lg shadow-lg overflow-hidden">
-          {featuredImage && featuredImage.fields && (
+          {featuredImage && featuredImageFields && (
             <Image
-              src={`https:${featuredImage.fields.file.url}`}
+              src={`https:${featuredImageFields.file.url}`}
               width={1200}
               height={600}
-              alt={featuredImage.fields.title || 'Featured Image'}
+              alt={featuredImageFields.title || 'Featured Image'}
               className="w-full h-64 object-cover"
             />
           )}
