@@ -36,7 +36,7 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
   try {
     const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
-      'fields.slug': slug,
+      'fields.slug[in]': slug, // Change here
       include: 2,
     });
     return response.items[0] || null;
