@@ -102,7 +102,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   const { title = 'Untitled', content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
 
-  const featuredImageFields = featuredImage?.fields ? (featuredImage.fields as AssetFields) : undefined;
+  let featuredImageFields: AssetFields | undefined;
+  if (featuredImage?.fields) {
+    featuredImageFields = featuredImage.fields as AssetFields;
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen">
