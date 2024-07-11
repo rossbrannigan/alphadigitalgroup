@@ -13,19 +13,23 @@ interface ContentTypeSkeleton {
 }
 
 interface AuthorFields extends ContentTypeSkeleton {
-  name?: EntryFields.Symbol;
-  // Add other author fields as needed
+  fields: {
+    name?: EntryFields.Symbol;
+    // Add other author fields as needed
+  };
 }
 
 interface BlogPostFields extends ContentTypeSkeleton {
-  title?: EntryFields.Symbol;
-  author?: Entry<AuthorFields>;
-  content?: Document;
-  featuredImage?: Asset;
-  rating?: EntryFields.Number;
-  videoGallery?: Asset[];
-  relatedBlogPosts?: Entry<BlogPostFields>[];
-  slug?: EntryFields.Symbol;
+  fields: {
+    title?: EntryFields.Symbol;
+    author?: Entry<AuthorFields>;
+    content?: Document;
+    featuredImage?: Asset;
+    rating?: EntryFields.Number;
+    videoGallery?: Asset[];
+    relatedBlogPosts?: Entry<BlogPostFields>[];
+    slug?: EntryFields.Symbol;
+  };
 }
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
@@ -170,7 +174,6 @@ export async function generateStaticParams() {
     const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost'
     });
-    
     return response.items.map((item) => ({
       slug: item.fields.slug || '',
     }));
