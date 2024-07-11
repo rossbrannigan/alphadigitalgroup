@@ -10,7 +10,9 @@ import { Entry, Asset, EntryFields, EntrySkeletonType } from 'contentful';
 
 // Define the AuthorFields interface with the necessary properties
 interface AuthorFields extends EntrySkeletonType {
-  name?: EntryFields.Symbol;
+  fields: {
+    name?: EntryFields.Symbol;
+  };
 }
 
 interface BlogPostFields extends EntrySkeletonType {
@@ -144,7 +146,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                   {videoGallery.map((video, index) => (
                     <div key={index} className="aspect-w-16 aspect-h-9">
                       <iframe
-                        src={(video.fields as AssetFields).file.url}
+                        src={video.fields.file.url}
                         allowFullScreen
                         className="w-full h-full"
                       ></iframe>
