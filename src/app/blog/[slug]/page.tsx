@@ -6,15 +6,13 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, Asset, EntryFields } from 'contentful';
+import { Entry, Asset, EntryFields, EntrySkeletonType } from 'contentful';
 
-interface ContentTypeSkeleton {
-  contentTypeId: string;
-}
-
-interface AuthorFields {
-  name?: EntryFields.Symbol;
-  // Add other author fields as needed
+// Define the AuthorFields interface with the necessary properties
+interface AuthorFields extends EntrySkeletonType {
+  fields: {
+    name?: EntryFields.Symbol;
+  };
 }
 
 interface BlogPostFields {
@@ -53,7 +51,7 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
 const renderOptions = {
   renderNode: {
     [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-      const { file, description } = (node.data.target.fields as AssetFields);
+      const { file, description } = node.data.target.fields as AssetFields;
       const { url } = file;
       return (
         <Image
