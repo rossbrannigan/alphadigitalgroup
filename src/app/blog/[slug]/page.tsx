@@ -30,7 +30,7 @@ interface BlogPostFields extends EntrySkeletonType {
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
   try {
-    const response = await contentfulClient.getEntries<BlogPostFields>({
+    const response = await contentfulClient.getEntries({
       content_type: 'blogPost',
       'fields.slug': slug,
       include: 2,
@@ -168,7 +168,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   try {
-    const response = await contentfulClient.getEntries<BlogPostFields>({ content_type: 'blogPost' });
+    const response = await contentfulClient.getEntries({ content_type: 'blogPost' });
     return response.items.map((item) => ({
       slug: item.fields.slug,
     }));
