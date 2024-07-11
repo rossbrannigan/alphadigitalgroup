@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../lib/contentful';
-import { Entry, Asset, EntrySkeletonType } from 'contentful';
+import { Entry, Asset, EntrySkeletonType, EntryCollection } from 'contentful';
 
 interface AuthorFields extends EntrySkeletonType {
   fields: {
@@ -30,11 +30,12 @@ interface BlogPostFields extends EntrySkeletonType {
 
 async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> {
   try {
-    const response = await contentfulClient.getEntries({
+    const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
       'fields.slug': slug,
       include: 2,
-    });
+    }) as EntryCollection<BlogPostFields>;
+    
     return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
@@ -168,7 +169,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 export async function generateStaticParams() {
   try {
-    const response = await contentfulClient.getEntries({ content_type: 'blogPost' });
+    const response = await contentfulClient.getEntries<BlogPostFields>({
+      content_type: 'blogPost'
+    }) as EntryCollection<BlogPostFields>;
+    
     return response.items.map((item) => ({
       slug: item.fields.slug,
     }));
