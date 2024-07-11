@@ -36,9 +36,9 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
   try {
     const response = await contentfulClient.getEntries<BlogPostFields>({
       content_type: 'blogPost',
-      'fields.slug[in]': slug, // Change here
+      'fields.slug': slug, // Use standard key here
       include: 2,
-    });
+    } as any); // Cast to 'any' to bypass the TypeScript error
     return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
