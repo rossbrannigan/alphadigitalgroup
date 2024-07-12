@@ -22,15 +22,15 @@ export default function RootLayout({
       <head>
         <title>{metadata.title as string}</title>
         <meta name="description" content={metadata.description as string} />
+        <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
+        <GoogleTagManager gtmId="G-25Y0G3QQE6"/>
+        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       </head>
       <body className={inter.className}>
-        {/* Include the Header component outside of main */}
         <Header />
         <main>{children}</main>
         <Footer />
-        <GoogleTagManager gtmId="G-25Y0G3QQE6"/>
-        <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       </body>
     </html>
   );
