@@ -1,0 +1,30 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:16
+
+    steps:
+      - checkout
+
+      # Install dependencies
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      # Build Next.js application
+      - run:
+          name: Build Next.js App
+          command: npm run build
+
+      # Run tests (if applicable)
+      - run:
+          name: Run Tests
+          command: npm test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build

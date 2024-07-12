@@ -16,14 +16,16 @@ interface AuthorFields extends EntrySkeletonType {
 }
 
 interface BlogPostFields extends EntrySkeletonType {
-  title?: EntryFields.Symbol;
-  author?: Entry<AuthorFields>;
-  content?: Document;
-  featuredImage?: Asset;
-  rating?: EntryFields.Number;
-  videoGallery?: Asset[];
-  relatedBlogPosts?: Entry<BlogPostFields>[];
-  slug?: EntryFields.Symbol;
+  fields: {
+    title?: EntryFields.Symbol;
+    author?: Entry<AuthorFields>;
+    content?: Document;
+    featuredImage?: Asset;
+    rating?: EntryFields.Number;
+    videoGallery?: Asset[];
+    relatedBlogPosts?: Entry<BlogPostFields>[];
+    slug?: EntryFields.Symbol;
+  };
 }
 
 interface AssetFields {
@@ -40,7 +42,7 @@ async function getBlogPost(slug: string): Promise<Entry<BlogPostFields> | null> 
       content_type: 'blogPost',
       'fields.slug': slug,
       include: 2,
-    });
+    } as any);
     return response.items[0] || null;
   } catch (error) {
     console.error('Error fetching blog post:', error);
@@ -97,8 +99,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const { title = 'Untitled', content, author, featuredImage, rating, videoGallery, relatedBlogPosts } = post.fields;
 
   let featuredImageFields: AssetFields | undefined;
-  if ((featuredImage as Asset)?.fields) {
-    featuredImageFields = (featuredImage as Asset).fields as AssetFields;
+  if ((featuredImage as unknown as Asset)?.fields) {
+    featuredImageFields = (featuredImage as unknown as Asset).fields as AssetFields;
   }
 
   const displayTitle = typeof title === 'string' ? title : 'Untitled';
@@ -122,13 +124,13 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           <div className="p-6">
             <h1 className="text-4xl font-bold mb-4">{displayTitle}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
-              {author && (author as Entry<AuthorFields>).fields?.name && (
+              {author && 'fields' in author && author.fields && 'name' in (author.fields as AuthorFields['fields']) && (author.fields as AuthorFields['fields']).name && (
                 <>
-                  <span>By {(author as Entry<AuthorFields>).fields.name as string}</span>
+                  <span>By {(author.fields as AuthorFields['fields']).name}</span>
                   {rating && (
                     <>
                       <span className="mx-2">|</span>
-                      <span>Rating: {rating}</span>
+                      <span>Rating: {String(rating)}</span>
                     </>
                   )}
                 </>
@@ -136,10 +138,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             </div>
             {content && (
               <div className="prose lg:prose-xl max-w-none">
-                {documentToReactComponents(content, renderOptions)}
+                {documentToReactComponents(content as unknown as Document, renderOptions)}
               </div>
             )}
-            {videoGallery && videoGallery.length > 0 && (
+            {videoGallery && Array.isArray(videoGallery) && videoGallery.length > 0 && (
               <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-4">Video Gallery</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -155,7 +157,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 </div>
               </div>
             )}
-            {relatedBlogPosts && relatedBlogPosts.length > 0 && (
+            {relatedBlogPosts && Array.isArray(relatedBlogPosts) && relatedBlogPosts.length > 0 && (
               <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-4">Related Posts</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
