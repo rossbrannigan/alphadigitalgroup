@@ -1,19 +1,18 @@
 import React from "react";
 import Head from 'next/head';
 import Script from "next/script";
-import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google'; // Corrected import
+import { GoogleTagManager, GoogleAnalytics } from '@next/third-parties/google';
+import { Plane, Rocket, Cpu, Globe, Video } from 'lucide-react';
 
 const IndustriesPage: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gradient-to-b from-purple-50 to-purple-100 min-h-screen">
       <Head>
-        {/* Page title, icon, and meta description */}
         <title>Global management consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
 
-      {/* Google Analytics and Tag Manager Scripts */}
       <Script
         id="google-analytics-script"
         src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"
@@ -34,91 +33,73 @@ const IndustriesPage: React.FC = () => {
       <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       <GoogleTagManager gtmId="G-25Y0G3QQE6" />
 
-      {/* Main Content */}
-      <main className="container mx-auto py-8">
-        {/* Introductory Text */}
-        <section className="mb-8" id="intro">
-          <div className="px-4">
-            <h1 className="text-3xl font-semibold text-purple-800 mb-4">Welcome to Alpha Digital Group - Industries We Serve</h1>
-            <p className="text-purple-800">
-              At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in todays dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
-            </p>
-          </div>
+      <header className="h-16"></header>
+
+      <main className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <section className="mb-16 text-center" id="intro">
+          <h1 className="text-4xl sm:text-5xl font-bold text-purple-800 mb-6">Welcome to Alpha Digital Group</h1>
+          <p className="text-xl text-purple-700 max-w-3xl mx-auto">
+            Empowering businesses across industries with expert management consulting services. Discover how we drive innovation and success in todays dynamic market landscape.
+          </p>
         </section>
 
-        {/* Industries Section */}
-        <section className="mb-8" id="industries">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Industries</h2>
-            <p className="text-purple-800">
-              At Alpha Digital Group, we offer management consulting services across several industries, including:
+        <section className="mb-16" id="industries">
+          <div className="bg-white shadow-xl rounded-lg p-8">
+            <h2 className="text-3xl font-semibold text-purple-800 mb-6">Industries We Serve</h2>
+            <p className="text-lg text-purple-700 mb-8">
+              Our expertise spans across various sectors, delivering tailored solutions to drive growth and innovation:
             </p>
-            <ul className="list-disc pl-6 mt-4">
-              <li><a href="#airlines" className="text-purple-800">Airlines</a></li>
-              <li><a href="#aviation" className="text-purple-800">Aviation</a></li>
-              <li><a href="#technology" className="text-purple-800">Technology</a></li>
-              <li><a href="#consumer-internet" className="text-purple-800">Consumer Internet</a></li>
-              <li><a href="#media" className="text-purple-800">Media</a></li>
-            </ul>
-            <p className="text-purple-800 mt-4">
-              Our expert consultants collaborate closely with clients in these sectors to deliver strategic guidance and innovative solutions that drive growth and success.
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: "Airlines", icon: Plane, id: "airlines" },
+                { name: "Aviation", icon: Rocket, id: "aviation" },
+                { name: "Technology", icon: Cpu, id: "technology" },
+                { name: "Consumer Internet", icon: Globe, id: "consumer-internet" },
+                { name: "Media", icon: Video, id: "media" },
+              ].map((industry) => (
+                <a
+                  key={industry.id}
+                  href={`#${industry.id}`}
+                  className="flex items-center p-4 bg-purple-50 rounded-lg transition-all hover:bg-purple-100 hover:shadow-md"
+                >
+                  <industry.icon className="w-8 h-8 text-purple-600 mr-3" />
+                  <span className="text-lg font-medium text-purple-800">{industry.name}</span>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
         
-        {/* Airlines Section */}
-        <section className="mb-8" id="airlines">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Airlines</h2>
-            <p className="text-purple-800">
-              In the highly competitive airline industry, operational efficiency and customer satisfaction are paramount. Our seasoned consultants work closely with airlines to optimize processes, enhance customer experience, and navigate industry complexities. From revenue management strategies to cost optimization initiatives, we help airlines achieve sustainable growth and competitive advantage.
-            </p>
-          </div>
-        </section>
-
-        {/* Aviation Section */}
-        <section className="mb-8" id="aviation">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Aviation</h2>
-            <p className="text-purple-800">
-              In the fast-paced world of aviation, staying ahead requires strategic vision and meticulous planning. Alpha Digital Group offers specialized consulting services to airlines, airports, and aviation service providers. Whether its streamlining operations, implementing cutting-edge technologies, or enhancing safety protocols, we empower aviation stakeholders to thrive in a rapidly evolving environment.
-            </p>
-          </div>
-        </section>
-
-        {/* Technology Section */}
-        <section className="mb-8" id="technology">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Technology</h2>
-            <p className="text-purple-800">
-              In the ever-evolving tech landscape, innovation is the key to success. Our expert consultants partner with technology firms to drive innovation, streamline operations, and capitalize on emerging opportunities. From software development to digital transformation initiatives, we equip technology companies with the tools and strategies needed to stay ahead of the curve and deliver unparalleled value to their customers.
-            </p>
-          </div>  
-        </section>
-
-        {/* Consumer Internet Section */}
-        <section className="mb-8" id="consumer-internet">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Consumer Internet</h2>
-            <p className="text-purple-800">
-              The consumer internet sector is characterized by fierce competition and rapidly changing consumer preferences. At Alpha Digital Group, we help companies navigate this dynamic landscape with strategic insights and actionable recommendations. Whether its developing scalable business models, optimizing user experiences, or leveraging data analytics, we empower consumer internet companies to thrive in the digital age.
-            </p>
-          </div>
-        </section>
-
-        {/* Media Section */}
-        <section className="mb-8" id="media">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">Media</h2>
-            <p className="text-purple-800">
-              In the digital era, the media industry faces unprecedented challenges and opportunities. Our seasoned consultants collaborate with media companies to navigate digital disruption, monetize content effectively, and adapt to shifting consumer behaviors. From content strategy to audience engagement initiatives, we help media organizations innovate and succeed in an ever-evolving landscape.
-            </p>
-          </div>
-        </section>
+        {["airlines", "aviation", "technology", "consumer-internet", "media"].map((id) => (
+          <section key={id} className="mb-12" id={id}>
+            <div className="bg-white shadow-lg rounded-lg p-8">
+              <h2 className="text-2xl font-semibold text-purple-800 mb-4 capitalize">{id.replace('-', ' ')}</h2>
+              <p className="text-purple-700">
+                {getIndustryContent(id)}
+              </p>
+            </div>
+          </section>
+        ))}
       </main>
-      
     </div>
   );
+};
+
+const getIndustryContent = (id: string): string => {
+  switch (id) {
+    case 'airlines':
+      return "We help airlines optimize operations, enhance customer experiences, and navigate the complexities of the aviation industry.";
+    case 'aviation':
+      return "Our aviation consulting services cover airport management, air traffic control optimization, and sustainable aviation practices.";
+    case 'technology':
+      return "In the fast-paced world of technology, we assist companies in staying competitive through digital transformation and AI integration.";
+    case 'consumer-internet':
+      return "We guide consumer internet companies in leveraging data analytics, improving user experiences, and developing growth strategies.";
+    case 'media':
+      return "Our media industry expertise helps clients navigate the shift to digital platforms and optimize revenue streams.";
+    default:
+      return "We provide tailored consulting services to help businesses in this industry thrive and adapt to changing market conditions.";
+  }
 };
 
 export default IndustriesPage;

@@ -17,9 +17,13 @@
     "@builder.io/dev-tools": "^1.0.17",
     "@builder.io/react": "^3.2.10",
     "@builder.io/sdk": "^2.2.5",
+    "@chakra-ui/react": "^2.8.2",
     "@contentful/rich-text-react-renderer": "^15.22.1",
     "@contentful/rich-text-types": "^16.6.1",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@heroicons/react": "^1.0.6",
+    "@mui/material": "^5.16.1",
     "@next/bundle-analyzer": "^14.2.5",
     "@next/third-parties": "^14.2.4",
     "@plasmicapp/loader-nextjs": "^1.0.398",
@@ -31,11 +35,13 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.13",
     "@types/google.analytics": "^0.0.46",
+    "bootstrap": "^5.3.3",
     "contentful": "^10.12.8",
     "d3": "^7.9.0",
     "dotenv": "^16.4.5",
     "embla-carousel-react": "^8.0.2",
     "feather-icons": "^4.29.2",
+    "framer-motion": "^11.3.2",
     "graphql": "^16.9.0",
     "lucide-react": "^0.400.0",
     "mixpanel": "^0.18.0",
@@ -56,6 +62,7 @@
     "react-slick": "^0.30.2",
     "react-whatsapp-widget": "^2.2.0",
     "sanity": "^3.48.0",
+    "sass": "^1.77.8",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
     "swiper": "^11.1.1"
@@ -96,4 +103,3 @@
   },
   "nx": {}
 }
-

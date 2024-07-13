@@ -40,7 +40,7 @@ const Header: React.FC = () => {
               <ul className="flex space-x-6">
                 <li className="relative group">
                   <button className="text-lg text-purple-800 hover:text-black transition-colors duration-300 flex items-center focus:outline-none">
-                    Services <FiChevronDown className="ml-1" />
+                    <a href="/services">Services</a> <FiChevronDown className="ml-1" />
                   </button>
                   <div className="absolute left-3/4 transform -translate-x-1/2 mt-8 w-screen max-w-7xl bg-white shadow-lg rounded-md py-8 px-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -158,7 +158,7 @@ const Header: React.FC = () => {
                     onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                     className="flex items-center justify-between w-full text-left text-lg text-purple-800 hover:text-black transition-colors duration-300"
                   >
-                    Services <FiChevronDown className={`ml-1 transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
+                    <a href="/services">Services</a> <FiChevronDown className={`ml-1 transform ${isServicesDropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                   {isServicesDropdownOpen && (
                     <div className="mt-2 ml-4 space-y-2">

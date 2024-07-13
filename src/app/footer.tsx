@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
             <h3 className="text-xs font-semibold mb-2">Company</h3>
             <ul className="space-y-1 text-xs">
-              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+              <li><a href="/about-us" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
               <li><a href="/case-studies" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
               <li><a href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
               <li><a href="https://alpha-digital-group.breezy.hr/" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
