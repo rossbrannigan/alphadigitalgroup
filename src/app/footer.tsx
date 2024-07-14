@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
             <h3 className="text-xs font-semibold mb-2">Knowledge Center</h3>
             <ul className="space-y-1 text-xs">
               <li><a href="https://knowledge.alphadigitalgroup.co/marketing/marketing-glossary/" className="text-gray-400 hover:text-white transition-colors duration-300">Marketing Glossary</a></li>
-              <li><a href="/knowledge/digital-marketing-101" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Marketing 101</a></li>
-              <li><a href="/knowledge/roi-calculator" className="text-gray-400 hover:text-white transition-colors duration-300">ROI Calculator</a></li>
+              <li><a href="https://alphadigitalgroup.co/blog/digital-marketing-101" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Marketing 101</a></li>
+              <li><a href="https://alphadigitalgroup.co/blog/digital-marketing-roi-calculator" className="text-gray-400 hover:text-white transition-colors duration-300">ROI Calculator</a></li>
             </ul>
             <h3 className="text-xs font-semibold mb-2 mt-4">Latest Posts</h3>
             <ul className="space-y-1 text-xs">
-              <li><a href="/blog/latest-marketing-trends" className="text-gray-400 hover:text-white transition-colors duration-300">Latest Marketing Trends for 2024</a></li>
-              <li><a href="/blog/ai-in-digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">How AI is Shaping Digital Strategy</a></li>
+              <li><a href="https://alphadigitalgroup.co/blog/latest-marketing-trends-for-2024" className="text-gray-400 hover:text-white transition-colors duration-300">Latest Marketing Trends for 2024</a></li>
+              <li><a href="https://alphadigitalgroup.co/blog/how-ai-is-shaping-digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">How AI is Shaping Digital Strategy</a></li>
               <li><a href="/blog/seo-best-practices" className="text-gray-400 hover:text-white transition-colors duration-300">SEO Best Practices for 2024</a></li>
             </ul>
           </div>
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-xs font-medium text-gray-400">Services</h4>
                 <ul className="space-y-1 text-xs pl-2 max-h-40 overflow-y-auto">
-                  <li><a href="/seo" className="text-gray-400 hover:text-white transition-colors duration-300">Search Engine Optimization (SEO)</a></li>
-                  <li><a href="/ppc" className="text-gray-400 hover:text-white transition-colors duration-300">Pay-Per-Click Advertising (PPC)</a></li>
-                  <li><a href="/smm" className="text-gray-400 hover:text-white transition-colors duration-300">Social Media Marketing (SMM)</a></li>
-                  <li><a href="/content-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Content Marketing</a></li>
+                  <li><a href="/services/seo" className="text-gray-400 hover:text-white transition-colors duration-300">Search Engine Optimization (SEO)</a></li>
+                  <li><a href="/services/search-engine-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Pay-Per-Click Advertising (PPC)</a></li>
+                  <li><a href="/services/social-media-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Social Media Marketing (SMM)</a></li>
+                  <li><a href="/services/content-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Content Marketing</a></li>
                   <li><a href="/email-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Email Marketing</a></li>
                   <li><a href="/cro" className="text-gray-400 hover:text-white transition-colors duration-300">Conversion Rate Optimization (CRO)</a></li>
                   <li><a href="/web-design" className="text-gray-400 hover:text-white transition-colors duration-300">Website Design and Development</a></li>
                   <li><a href="/digital-strategy" className="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy and Consulting</a></li>
-                  <li><a href="/brand-identity" className="text-gray-400 hover:text-white transition-colors duration-300">Brand Identity and Design</a></li>
+                  <li><a href="/services/brand-identity" className="text-gray-400 hover:text-white transition-colors duration-300">Brand Identity and Design</a></li>
                   <li><a href="/video-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Video Marketing</a></li>
                   <li><a href="/analytics" className="text-gray-400 hover:text-white transition-colors duration-300">Analytics and Reporting</a></li>
                   <li><a href="/mobile-marketing" className="text-gray-400 hover:text-white transition-colors duration-300">Mobile Marketing</a></li>

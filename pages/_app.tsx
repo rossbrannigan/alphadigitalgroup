@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 import { builder } from '@builder.io/react';
+import '../src/app/globals.css';
 
 const isProduction = process.env.NODE_ENV === "production";
 

@@ -74,8 +74,6 @@ export default function Home() {
         </div>
       </section>
 
-      
-
       {/* Brands Section */}
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,37 +96,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* YouTube Video Section */}
-      <section className="bg-white py-16 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-extrabold text-gray-900">The Future of Airlines</h2>
-            <p className="mt-4 text-lg text-gray-600">Explore the latest innovations shaping the future of airlines.</p>
-          </div>
-          <div className="flex justify-center items-center">
-            <div className="relative" style={{ maxWidth: '1000px', width: '100%', paddingBottom: '35%' }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                width="1000"
-                height="350"
-                src="https://www.youtube.com/embed/za3HjrAYmhM?si=yDpqk_BHYGgrEfGt"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
+
       
-      {/* List Section */}
+{/* List Section */}
 
 <section className="bg-white lg:py-28 pt-28 overflow-hidden">
   <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
     <div className="mb-16 text-center">
-      <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+      <h2 className="text-base text-[rgba(137,12,181,255)] font-semibold tracking-wide uppercase">
         UNLOCK GROWTH POTENTIAL
       </h2>
       <p className="mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">
@@ -140,7 +115,7 @@ export default function Home() {
         <ul className="space-y-12">
           <li className="flex -mx-4">
             <div className="px-4">
-              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-[rgba(137,12,181,0.1)] text-[rgba(137,12,181,255)]">
                 1
               </span>
             </div>
@@ -153,7 +128,7 @@ export default function Home() {
           </li>
           <li className="flex -mx-4">
             <div className="px-4">
-              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-[rgba(137,12,181,0.1)] text-[rgba(137,12,181,255)]">
                 2
               </span>
             </div>
@@ -166,7 +141,7 @@ export default function Home() {
           </li>
           <li className="flex -mx-4">
             <div className="px-4">
-              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-blue-50 text-blue-500">
+              <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold rounded-full bg-[rgba(137,12,181,0.1)] text-[rgba(137,12,181,255)]">
                 3
               </span>
             </div>
@@ -194,7 +169,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
           <div className="container mx-auto px-6 p-6 bg-white">
             <div className="mb-16 text-center">
-              <h4 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">CAPABILITIES</h4>
+              <h4 className="text-base text-[rgba(137,12,181,255)] font-semibold tracking-wide uppercase">CAPABILITIES</h4>
               <p className="mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900">
                 How We Drive Transformative Growth
               </p>
@@ -202,8 +177,8 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="border-b p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineLineChart className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Commercial Strategy</div>
+                  <AiOutlineLineChart className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Commercial Strategy</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Leverage our deep industry expertise to develop commercial strategies that optimize revenue streams,
@@ -212,8 +187,8 @@ export default function Home() {
               </div>
               <div className="border-b p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineRise className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Digital Transformation</div>
+                  <AiOutlineRise className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Digital Transformation</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Embrace the power of digital technologies to streamline operations, unlock new business models, and
@@ -222,8 +197,8 @@ export default function Home() {
               </div>
               <div className="border-b p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineTool className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Operational Excellence</div>
+                  <AiOutlineTool className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Operational Excellence</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Maximize efficiency and productivity through our data-driven approach to optimizing processes, enhancing
@@ -232,8 +207,8 @@ export default function Home() {
               </div>
               <div className="border-b p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineTeam className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Interim Leadership</div>
+                  <AiOutlineTeam className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Interim Leadership</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Bridge critical leadership gaps with our seasoned executives who bring hands-on experience and a proven
@@ -242,8 +217,8 @@ export default function Home() {
               </div>
               <div className="border-b p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineBank className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Industry-Specific Solutions</div>
+                  <AiOutlineBank className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Industry-Specific Solutions</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Benefit from our tailored solutions that address the unique challenges and opportunities within the
@@ -252,8 +227,8 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <AiOutlineTool className="h-6 w-6 text-indigo-500" />
-                  <div className="ml-4 text-xl text-indigo-500 font-semibold">Strategic Partnerships</div>
+                  <AiOutlineTool className="h-6 w-6 text-[rgba(137,12,181,255)]" />
+                  <div className="ml-4 text-xl text-[rgba(137,12,181,255)] font-semibold">Strategic Partnerships</div>
                 </div>
                 <p className="leading-loose text-gray-500">
                   Extend your capabilities and accelerate growth through our strategic partnerships with industry-leading
@@ -261,28 +236,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Digital Leadership Section */}
-      <section className="container mx-auto py-8 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/digital-product-logo.png" alt="Digital Product Leadership" width={200} height={200} className="mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Product Leadership</h2>
-            <p className="text-gray-600 text-center">Empower your digital products with innovative leadership.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/digital-marketing-logo.png" alt="Digital Marketing Leadership" width={200} height={200} className="mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Digital Marketing Leadership</h2>
-            <p className="text-gray-600 text-center">Lead your digital marketing campaigns to success with our expert guidance.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-center items-center">
-            <Image src="/aviation-management-logo.png" alt="Aviation Management Leadership" width={200} height={200} className="mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Aviation Management Leadership</h2>
-            <p className="text-gray-600 text-center">Navigate the skies of aviation management with our strategic leadership solutions.</p>
           </div>
         </div>
       </section>

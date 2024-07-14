@@ -51,25 +51,27 @@ const Header: React.FC = () => {
                             <h3 className="font-bold text-gray-800">Marketing Strategy</h3>
                             <p className="text-sm text-gray-600">Develop comprehensive marketing strategies</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</a></li>
-                              <li><a href="/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</a></li>
-                              <li><a href="/sem" className="text-sm text-purple-600 hover:underline">SEM</a></li>
-                              <li><a href="/social-media" className="text-sm text-purple-600 hover:underline">Social Media</a></li>
-                              <li><a href="/seo" className="text-sm text-purple-600 hover:underline">SEO</a></li>
+                              <li><a href="/services/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</a></li>
+                              <li><a href="/services/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</a></li>
+                              <li><a href="/services/search-engine-marketing" className="text-sm text-purple-600 hover:underline">SEM</a></li>
+                              <li><a href="services/social-media-marketing" className="text-sm text-purple-600 hover:underline">Social Media</a></li>
+                              <li><a href="/services/seo" className="text-sm text-purple-600 hover:underline">SEO</a></li>
                             </ul>
                           </div>
                         </a>
                       </div>
                       <div>
-                        <a href="/commercial-strategy" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <a href="/services/commercial" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiDollarSign className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Commercial Strategy</h3>
                             <p className="text-sm text-gray-600">Optimize your business model and revenue streams</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/revenue-optimization" className="text-sm text-purple-600 hover:underline">Revenue Optimization</a></li>
-                              <li><a href="/pricing-strategy" className="text-sm text-purple-600 hover:underline">Pricing Strategy</a></li>
-                              <li><a href="/market-expansion" className="text-sm text-purple-600 hover:underline">Market Expansion</a></li>
+                              <li><a href="/services/commercial/revenue-optimization" className="text-sm text-purple-600 hover:underline">Revenue Optimization</a></li>
+                              <li><a href="/services/commercial/revenue-management" className="text-sm text-purple-600 hover:underline">Revenue Management</a></li>
+                              <li><a href="services/commercial/pricing-strategy" className="text-sm text-purple-600 hover:underline">Pricing Strategy</a></li>
+                              <li><a href="services/commercial/market-expansion" className="text-sm text-purple-600 hover:underline">Market Expansion</a></li>
+                              <li><a href="services/commercial/market-launch" className="text-sm text-purple-600 hover:underline">Market Launch</a></li>
                             </ul>
                           </div>
                         </a>

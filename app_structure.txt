@@ -12,7 +12,12 @@ alpha
 │   ├── contentful.ts
 ├── node_modules
 ├── pages
+│   ├── _app.tsx
+│   ├── _documents.tsx
+│   ├── _error.jsx
+│   ├── index.html
 ├── public
+│   ├── contact.html
 ├── sanity
 ├── strapi-admin
 ├── src
@@ -22,6 +27,8 @@ alpha
 │   │   ├── blog
 │   │   │   ├── [slug]
 │   │   │   │   ├── page.tsx
+│   │   ├── contact
+│   │   │   ├── page.tsx
 │   │   ├── page.tsx
 │   │   ├── header.tsx
 │   │   ├── footer.tsx
