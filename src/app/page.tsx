@@ -37,7 +37,7 @@ export default function Home() {
       <section className="carousel">
         <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="/brain-wave.gif" alt="Image 1" layout="fill" objectFit="cover" unoptimized />
+          <Image src="/brain-wave.gif" alt="Image 1" fill style={{ objectFit: 'cover' }} unoptimized />
           </div>
           <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
@@ -50,7 +50,7 @@ export default function Home() {
         {/* Additional carousel items */}
         <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="/brain-wave.gif" alt="Image 2" layout="fill" objectFit="cover" unoptimized />
+          <Image src="/brain-wave.gif" alt="Image 2" fill style={{ objectFit: 'cover' }} unoptimized />
           </div>
           <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <div className="carousel-item" style={{ height: "1000px" }}> {/* Adjusted inline height */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="/brain-wave.gif" alt="Image 3" layout="fill" objectFit="cover" unoptimized />
+          <Image src="/brain-wave.gif" alt="Image 3" fill style={{ objectFit: 'cover' }} unoptimized />
           </div>
           <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>

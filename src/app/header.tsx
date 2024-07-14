@@ -51,11 +51,11 @@ const Header: React.FC = () => {
                             <h3 className="font-bold text-gray-800">Marketing Strategy</h3>
                             <p className="text-sm text-gray-600">Develop comprehensive marketing strategies</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/services/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</a></li>
-                              <li><a href="/services/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</a></li>
-                              <li><a href="/services/search-engine-marketing" className="text-sm text-purple-600 hover:underline">SEM</a></li>
-                              <li><a href="services/social-media-marketing" className="text-sm text-purple-600 hover:underline">Social Media</a></li>
-                              <li><a href="/services/seo" className="text-sm text-purple-600 hover:underline">SEO</a></li>
+                              <li><a href="/services/marketing/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</a></li>
+                              <li><a href="/services/marketing/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</a></li>
+                              <li><a href="/services/marketing/search-engine-marketing" className="text-sm text-purple-600 hover:underline">SEM</a></li>
+                              <li><a href="services/marketing/social-media-marketing" className="text-sm text-purple-600 hover:underline">Social Media</a></li>
+                              <li><a href="/services/marketing/seo" className="text-sm text-purple-600 hover:underline">SEO</a></li>
                             </ul>
                           </div>
                         </a>
@@ -100,6 +100,7 @@ const Header: React.FC = () => {
                               <li><a href="/ai-strategy" className="text-sm text-purple-600 hover:underline">AI Strategy</a></li>
                               <li><a href="/data-strategy" className="text-sm text-purple-600 hover:underline">Data Strategy</a></li>
                               <li><a href="/digital-transformation" className="text-sm text-purple-600 hover:underline">Digital Transformation</a></li>
+                              <li><a href="/services/digital/ecommerce" className="text-sm text-purple-600 hover:underline">E-commerce</a></li>
                             </ul>
                           </div>
                         </a>
