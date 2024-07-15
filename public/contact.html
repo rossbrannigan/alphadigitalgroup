@@ -21,6 +21,9 @@
         .bg-gradient-to-b {
             background-image: linear-gradient(to bottom, #faf5ff, #f3e8ff);
         }
+        .bg-brand-green {
+            background-color: #bdff03;
+        }
     </style>
     <!-- Add Google Analytics tracking tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R17NJV1L4N"></script>
@@ -32,13 +35,54 @@
     </script>
 </head>
 <body class="bg-gradient-to-b from-purple-50 to-purple-100 min-h-screen">
-    <header class="bg-white shadow-md p-4 sm:p-6">
-        <div class="container mx-auto">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-purple-800">Alpha Digital Group</h1>
+    <!-- Header -->
+    <header class="shadow-lg fixed top-0 left-0 w-full z-50 bg-brand-green">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div>
+                    <a href="/">
+                        <img src="/company-logo.svg" alt="Alpha Digital Group Logo" width="150" height="90" />
+                    </a>
+                </div>
+                <!-- Services Navigation -->
+                <nav class="hidden lg:block">
+                    <ul class="flex space-x-6">
+                        <li class="relative group">
+                            <button class="text-lg text-purple-800 hover:text-black transition-colors duration-300 flex items-center focus:outline-none">
+                                <a href="/services">Services</a> <i data-lucide="chevron-down" class="ml-1"></i>
+                            </button>
+                            <!-- Dropdown menu content -->
+                            <div class="absolute left-3/4 transform -translate-x-1/2 mt-8 w-screen max-w-7xl bg-white shadow-lg rounded-md py-8 px-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <!-- Dropdown content here -->
+                            </div>
+                        </li>
+                        <li><a href="/industries" class="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
+                        <li><a href="/case-studies" class="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="/about-us" class="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
+                        <li><a href="/insights" class="text-lg text-purple-800 hover:text-black transition-colors duration-300">Insights</a></li>
+                        <li><a href="/contact" class="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <!-- Hamburger Menu -->
+                <div class="lg:hidden">
+                    <button id="menuToggle" class="text-purple-800 focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden py-4 bg-brand-green hidden">
+            <nav class="container mx-auto px-4">
+                <ul class="flex flex-col space-y-4">
+                    <!-- Mobile menu items -->
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container mx-auto py-8 sm:py-12 px-4">
+    <main class="container mx-auto py-24 sm:py-28 px-4"> 
         <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden lg:flex">
             <div class="lg:flex-1 p-6 sm:p-8 md:p-10">
                 <h2 class="text-3xl sm:text-4xl font-bold text-purple-800 mb-4 sm:mb-6">Get in Touch</h2>
@@ -47,27 +91,48 @@
                     <input type="hidden" name="form-name" value="contact">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
-                        <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150 ease-in-out">
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="user" class="h-5 w-5 text-gray-400"></i>
+                            </div>
+                            <input type="text" id="name" name="name" required class="form-input pl-10 block w-full rounded-md focus:ring-purple-500 focus:border-purple-500">
+                        </div>
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
-                        <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150 ease-in-out">
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="mail" class="h-5 w-5 text-gray-400"></i>
+                            </div>
+                            <input type="email" id="email" name="email" required class="form-input pl-10 block w-full rounded-md focus:ring-purple-500 focus:border-purple-500">
+                        </div>
                     </div>
                     <div>
                         <label for="role" class="block text-sm font-medium text-gray-700">Your Role</label>
-                        <select id="role" name="role[]" multiple required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150 ease-in-out">
-                            <option value="leader">Senior Management / Leadership</option>
-                            <option value="investor">Investor</option>
-                            <option value="customer">Potential Customer</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i data-lucide="briefcase" class="h-5 w-5 text-gray-400"></i>
+                            </div>
+                            <select id="role" name="role[]" multiple required class="form-input pl-10 block w-full rounded-md focus:ring-purple-500 focus:border-purple-500">
+                                <option value="leader">Senior Management / Leadership</option>
+                                <option value="investor">Investor</option>
+                                <option value="customer">Potential Customer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-purple-500 focus:border-purple-500 transition duration-150 ease-in-out"></textarea>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <div class="absolute inset-y-0 left-0 pl-3 pt-3 flex items-start pointer-events-none">
+                                <i data-lucide="message-square" class="h-5 w-5 text-gray-400"></i>
+                            </div>
+                            <textarea id="message" name="message" rows="4" required class="form-input pl-10 block w-full rounded-md focus:ring-purple-500 focus:border-purple-500"></textarea>
+                        </div>
                     </div>
                     <div>
-                        <button type="submit" class="w-full flex justify-center py-2 sm:py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out">
+                        <button type="submit" class="w-full flex justify-center items-center py-2 sm:py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition duration-150 ease-in-out">
+                            <i data-lucide="send" class="h-5 w-5 mr-2"></i>
                             Send Message
                         </button>
                     </div>
@@ -118,99 +183,127 @@
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-            <!-- Logo -->
-            <div class="mb-4 lg:mb-0 lg:order-1 lg:self-start">
-                <img src="company-logo-small.png" alt="Alpha Digital Group Logo" width="40" height="40">
-            </div>
-            <!-- Links -->
-            <div class="lg:ml-auto lg:order-3">
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="text-left">
-                        <h3 class="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
-                        <ul class="text-gray-300">
-                            <li class="mb-0.5">
-                                <a href="industries" class="hover:text-white text-xs">
-                                    Industries
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="capabilities" class="hover:text-white text-xs">
-                                    Capabilities
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="featured-insights" class="hover:text-white text-xs">
-                                    Featured Insights
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="locations" class="hover:text-white text-xs">
-                                    Locations
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="hire-us" class="hover:text-white text-xs">
-                                    Hire Us
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="about-us" class="hover:text-white text-xs">
-                                    About Us
-                                </a>
-                            </li>
-                            <li class="mb-0.5">
-                                <a href="https://www.linkedin.com/company/alphadigitalgroup" target="_blank" rel="noopener noreferrer" class="hover:text-white text-xs">
-                                    Alpha Digital Blog
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-left">
-                        <h3 class="text-gray-300 mb-2 text-xs font-bold">Contact Us</h3>
-                        <ul class="text-gray-300">
-                            <li class="mb-0.5 flex items-center">
-                                📞 <span class="ml-2 text-xs">+66 82 836 2713</span>
-                            </li>
-                            <li class="mb-0.5 flex items-center">
-                                ✉️ <span class="ml-2 text-xs">rossbrannigan@gmail.com</span>
-                            </li>
-                            <li class="mb-0.5 flex items-center">
-                                📝 <a href="contact" class="ml-2 text-xs hover:text-white">Contact Us Form</a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="https://www.linkedin.com/company/alphadigitalgroup" target="_blank" rel="noopener noreferrer" class="hover:text-white text-xs">
-                                    LinkedIn
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
+            <div class="flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-1/5">
+                <img src="/company-logo-small.png" alt="Alpha Digital Group Logo" width="60" height="60" class="mb-4" />
+                <p class="text-xs text-gray-400 mt-2">
+                    Made in 🇹🇭 Thailand, 🇦🇪 UAE
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-2 mt-2">
+                    <span class="text-xs text-gray-400">Built with:</span>
+                    <!-- Add icons for Next.js, TypeScript, Netlify, Contentful -->
+                    <i data-lucide="nextjs" class="text-gray-400 hover:text-white transition-colors duration-300" title="Next.js"></i>
+                    <i data-lucide="typescript" class="text-gray-400 hover:text-white transition-colors duration-300" title="TypeScript"></i>
+                    <i data-lucide="netlify" class="text-gray-400 hover:text-white transition-colors duration-300" title="Netlify"></i>
+                    <i data-lucide="contentful" class="text-gray-400 hover:text-white transition-colors duration-300" title="Contentful"></i>
                 </div>
             </div>
-            <!-- Subscription Box -->
-            <div class="mt-8 lg:mt-0 lg:order-2 lg:ml-auto self-start lg:ml-12">
-                <div class="bg-white shadow-lg rounded-lg p-8">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">
-                        Subscribe to Our Newsletter
-                    </h2>
-                    <form data-netlify="true">
-                        <div class="flex items-center">
-                            <input type="email" class="bg-gray-100 border-2 border-gray-300 rounded-l-md py-2 px-4 w-full text-black" placeholder="Your email address">
-                            <button type="submit" class="bg-purple-600 text-white font-bold px-6 py-2 rounded-r-md hover:bg-purple-700 transition duration-300 ease-in-out">
-                                Subscribe
-                            </button>
+            <div class="flex flex-col items-start w-full sm:w-1/2 md:w-auto">
+                <h3 class="text-xs font-semibold mb-2">Knowledge Center</h3>
+                <ul class="space-y-1 text-xs">
+                    <li><a href="https://knowledge.alphadigitalgroup.co/marketing/marketing-glossary/" class="text-gray-400 hover:text-white transition-colors duration-300">Marketing Glossary</a></li>
+                    <li><a href="https://alphadigitalgroup.co/blog/digital-marketing-101" class="text-gray-400 hover:text-white transition-colors duration-300">Digital Marketing 101</a></li>
+                    <li><a href="https://alphadigitalgroup.co/blog/digital-marketing-roi-calculator" class="text-gray-400 hover:text-white transition-colors duration-300">ROI Calculator</a></li>
+                </ul>
+                <h3 class="text-xs font-semibold mb-2 mt-4">Latest Posts</h3>
+                <ul class="space-y-1 text-xs">
+                    <li><a href="https://alphadigitalgroup.co/blog/latest-marketing-trends-for-2024" class="text-gray-400 hover:text-white transition-colors duration-300">Latest Marketing Trends for 2024</a></li>
+                    <li><a href="https://alphadigitalgroup.co/blog/how-ai-is-shaping-digital-strategy" class="text-gray-400 hover:text-white transition-colors duration-300">How AI is Shaping Digital Strategy</a></li>
+                    <li><a href="/blog/seo-best-practices" class="text-gray-400 hover:text-white transition-colors duration-300">SEO Best Practices for 2024</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap justify-end w-full md:w-4/5 gap-4 md:gap-8">
+                <div class="flex flex-col items-start w-full sm:w-1/2 md:w-auto">
+                    <h3 class="text-xs font-semibold mb-2">Marketing</h3>
+                    <div class="flex flex-col space-y-2">
+                        <div>
+                            <h4 class="text-xs font-medium text-gray-400">Guides</h4>
+                            <ul class="space-y-1 text-xs">
+                                <li><a href="/marketing-ai" class="text-gray-400 hover:text-white transition-colors duration-300">Marketing with AI</a></li>
+                                <li><a href="/api-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Using APIs for Marketing</a></li>
+                            </ul>
                         </div>
-                    </form>
+                        <div>
+                            <h4 class="text-xs font-medium text-gray-400">Services</h4>
+                            <ul class="space-y-1 text-xs pl-2 max-h-40 overflow-y-auto">
+                                <li><a href="/services/seo" class="text-gray-400 hover:text-white transition-colors duration-300">Search Engine Optimization (SEO)</a></li>
+                                <li><a href="/services/search-engine-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Pay-Per-Click Advertising (PPC)</a></li>
+                                <li><a href="/services/social-media-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Social Media Marketing (SMM)</a></li>
+                                <li><a href="/services/content-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Content Marketing</a></li>
+                                <li><a href="/email-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Email Marketing</a></li>
+                                <li><a href="/cro" class="text-gray-400 hover:text-white transition-colors duration-300">Conversion Rate Optimization (CRO)</a></li>
+                                <li><a href="/web-design" class="text-gray-400 hover:text-white transition-colors duration-300">Website Design and Development</a></li>
+                                <li><a href="/digital-strategy" class="text-gray-400 hover:text-white transition-colors duration-300">Digital Strategy and Consulting</a></li>
+                                <li><a href="/services/brand-identity" class="text-gray-400 hover:text-white transition-colors duration-300">Brand Identity and Design</a></li>
+                                <li><a href="/video-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Video Marketing</a></li>
+                                <li><a href="/analytics" class="text-gray-400 hover:text-white transition-colors duration-300">Analytics and Reporting</a></li>
+                                <li><a href="/mobile-marketing" class="text-gray-400 hover:text-white transition-colors duration-300">Mobile Marketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+                    <h3 class="text-xs font-semibold mb-2">Digital</h3>
+                    <ul class="space-y-1 text-xs">
+                        <li><a href="/digital-guides" class="text-gray-400 hover:text-white transition-colors duration-300">Digital Guides</a></li>
+                        <li><a href="/digital-services" class="text-gray-400 hover:text-white transition-colors duration-300">Digital Services</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+                    <h3 class="text-xs font-semibold mb-2">Commercial</h3>
+                    <ul class="space-y-1 text-xs">
+                        <li><a href="/commercial-guides" class="text-gray-400 hover:text-white transition-colors duration-300">Commercial Guides</a></li>
+                        <li><a href="/commercial-services" class="text-gray-400 hover:text-white transition-colors duration-300">Commercial Services</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+                    <h3 class="text-xs font-semibold mb-2">Company</h3>
+                    <ul class="space-y-1 text-xs">
+                        <li><a href="/about-us" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="/case-studies" class="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
+                        <li><a href="/blog" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+                        <li><a href="https://alpha-digital-group.breezy.hr/" class="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-start w-1/2 sm:w-1/3 md:w-auto">
+                    <h3 class="text-xs font-semibold mb-2">Contact Us</h3>
+                    <div class="flex items-center mb-1">
+                        <i data-lucide="mail" class="text-gray-400 mr-1"></i>
+                        <a href="mailto:ross@alphadigitalgroup.co" class="text-xs text-gray-400 hover:text-white transition-colors duration-300">
+                            ross@alphadigitalgroup.co
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="phone" class="text-gray-400 mr-1"></i>
+                        <a href="https://wa.me/66828362713" class="text-xs text-gray-400 hover:text-white transition-colors duration-300">
+                            00 66 82 836 2713
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Divider -->
-        <hr class="border-t border-gray-600 w-full my-8">
-        <!-- Copyright text -->
-        <p class="text-xs text-gray-300 text-center lg:order-5">
-            © 2020-2024 Alpha Digital Group. All rights reserved.
+        <div class="container mx-auto px-4 mt-8">
+            <p class="text-xs text-gray-400 text-center">
+                Alpha Digital Group is a global full service agency and consultancy that brings your commercial, marketing and digital performance to the next level.
+            </p>
+        </div>
+        <hr class="border-gray-700 my-6 w-full" />
+        <p class="text-xs text-gray-400 text-center">
+            © 2020-2024 Alpha Digital Group LLC. All rights reserved.
         </p>
-        <!-- Powered by Ross Brannigan -->
-        <p class="text-xs text-gray-300 text-center mt-4 lg:order-6">
-            Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" class="underline
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://x.com/alphadigitalllc" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Twitter">
+                <i data-lucide="twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/alphadigitalgroup" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
+                <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100089144407255" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Facebook">
+                <i data-lucide="facebook"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -90,6 +90,7 @@ const EcommerceServicesPage: React.FC = () => {
               <li className="text-lg text-gray-700">Mobile Commerce (M-commerce) Optimization</li>
               <li className="text-lg text-gray-700">Multi-channel and Omni-channel Retail Strategies</li>
               <li className="text-lg text-gray-700">E-commerce Security and Fraud Prevention</li>
+              <li className="text-lg text-gray-700"><a href="/services/digital/ecommerce/internationalization">Internationalization and i18n</a></li>
             </ul>
             <p className="text-lg text-gray-700 mb-4">
               We specialize in developing custom e-commerce strategies tailored to every industry, ensuring that our solutions perfectly align with your specific business context and online sales objectives.

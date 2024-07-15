@@ -1,4 +1,4 @@
-alpha
+alphadigitalgroup
 ├── .circleci
 ├── .env
 ├── .env.local

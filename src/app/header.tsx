@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                 <Image src="/company-logo.svg" alt="Alpha Digital Group Logo" width={150} height={90} />
               </a>
             </div>
-            {/* Main Navigation */}
+            {/* Services Navigation */}
             <nav className="hidden lg:block">
               <ul className="flex space-x-6">
                 <li className="relative group">
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
                   <div className="absolute left-3/4 transform -translate-x-1/2 mt-8 w-screen max-w-7xl bg-white shadow-lg rounded-md py-8 px-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                       <div>
-                        <a href="/marketing-strategy" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <a href="/services/marketing" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiSearch className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Marketing Strategy</h3>
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
                         </a>
                       </div>
                       <div>
-                        <a href="/interim-leadership" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <a href="/services/interim-leadership" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiBarChart2 className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Interim Leadership</h3>
@@ -91,15 +91,15 @@ const Header: React.FC = () => {
                         </a>
                       </div>
                       <div>
-                        <a href="/digital-strategy" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <a href="/services/digital" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiMonitor className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Digital Strategy</h3>
                             <p className="text-sm text-gray-600">Navigate the digital landscape with confidence</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/ai-strategy" className="text-sm text-purple-600 hover:underline">AI Strategy</a></li>
-                              <li><a href="/data-strategy" className="text-sm text-purple-600 hover:underline">Data Strategy</a></li>
-                              <li><a href="/digital-transformation" className="text-sm text-purple-600 hover:underline">Digital Transformation</a></li>
+                              <li><a href="/services/digital/ai-strategy" className="text-sm text-purple-600 hover:underline">AI Strategy</a></li>
+                              <li><a href="/services/digital/data-strategy" className="text-sm text-purple-600 hover:underline">Data Strategy</a></li>
+                              <li><a href="/services/digital/digital-transformation" className="text-sm text-purple-600 hover:underline">Digital Transformation</a></li>
                               <li><a href="/services/digital/ecommerce" className="text-sm text-purple-600 hover:underline">E-commerce</a></li>
                             </ul>
                           </div>
