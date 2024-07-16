@@ -71,7 +71,7 @@ export default async function BlogPage() {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        <title>Alpha Digital Group Blog</title>
+        <title>Elevate Your Digital, Commercial, and Marketing Expertise: Explore the Alpha Digital Group Blog</title>
         <meta name="description" content="Latest insights and articles from Alpha Digital Group" />
       </Head>
 

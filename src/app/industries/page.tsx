@@ -8,7 +8,7 @@ const IndustriesPage: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-purple-50 to-purple-100 min-h-screen">
       <Head>
-        <title>Global management consulting | Alpha Digital Group</title>
+        <title>Industries We Serve | Global Management Consulting | Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>

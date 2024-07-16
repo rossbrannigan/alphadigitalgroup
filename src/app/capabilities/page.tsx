@@ -9,7 +9,7 @@ const CapabilitiesPage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        <title>Global management consulting | Alpha Digital Group</title>
+        <title>Transformative Global Management Consulting from the Experts at Alpha Digital Group</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>

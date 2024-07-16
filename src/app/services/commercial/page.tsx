@@ -8,7 +8,7 @@ const CommercialStrategyServicesPage: React.FC = () => {
   return (
     <div className="bg-white min-h-screen">
       <Head>
-        <title>Commercial Strategy Services | Alpha Digital Group</title>
+        <title>Alpha Digital Group | Expert Commercial Strategy Consulting</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Expert Commercial Strategy Services for Business Model Optimization and Revenue Growth" />
       </Head>

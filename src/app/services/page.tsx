@@ -8,7 +8,7 @@ const ServicesPage: React.FC = () => {
     <div className="bg-white min-h-screen">
       <Head>
         {/* Page title, icon, and meta description */}
-        <title>Global management consulting | Alpha Digital Group</title>
+        <title>Alpha Digital Group | Global Commercial, Marketing & Digital Strategy Experts</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>

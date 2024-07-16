@@ -19,7 +19,7 @@ alphadigitalgroup
 ├── public
 │   ├── contact.html
 ├── sanity
-├── strapi-admin
+├── strapi
 ├── src
 │   ├── app
 │   │   ├── about-us

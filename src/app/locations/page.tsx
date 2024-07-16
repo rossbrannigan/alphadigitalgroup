@@ -9,7 +9,7 @@ const LocationsPage: React.FC = () => {
     <div className="bg-gray-100 min-h-screen">
       <Head>
         {/* Page title, icon, and meta description */}
-        <title>Global management consulting | Alpha Digital Group</title>
+        <title>Alpha Digital Group | Global Consulting: Thailand, Singapore & UAE</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>

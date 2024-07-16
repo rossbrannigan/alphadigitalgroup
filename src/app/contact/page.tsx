@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Contact Alpha Digital Group | Expert Digital Consulting Services</title>
+        <title>Contact Alpha Digital Group | Commercial, Marketing & Digital Experts</title>
         <meta name="description" content="Get in touch with Alpha Digital Group for expert digital consulting, global reach, and innovative solutions. Transform your business with our tailored services." />
         <meta name="keywords" content="Alpha Digital Group, digital consulting, business transformation, expert consulting, global reach, innovative solutions" />
         <link rel="canonical" href="https://www.alphadigitalgroup.co/contact" />
