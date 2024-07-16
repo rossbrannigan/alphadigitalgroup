@@ -31,6 +31,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "types/**/*.d.ts"  // Add this line
-  ],
+, "src/app/about-us/.CommercialSkillsSection.tsx"  ],
   "exclude": ["node_modules"]
 }

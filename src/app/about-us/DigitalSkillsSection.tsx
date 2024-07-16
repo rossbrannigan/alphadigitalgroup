@@ -85,7 +85,7 @@ const DigitalSkillsSection: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {skills.map((category, index) => (
           <div key={index} className="bg-gray-100 rounded-lg p-4 shadow-md">
-            <h3 className="text-xl font-bold mb-4">{category.category}</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-800">{category.category}</h3>
             <ul>
               {category.skills.map((skill, idx) => (
                 <li key={idx} className="flex items-center mb-2">

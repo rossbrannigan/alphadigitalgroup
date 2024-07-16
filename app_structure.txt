@@ -24,6 +24,10 @@ alphadigitalgroup
 │   ├── app
 │   │   ├── about-us
 │   │   │   ├── page.tsx
+│   │   │   ├── CommercialSkillsSection.tsx
+│   │   │   ├── DigitalSkillsSection.tsx
+│   │   │   ├── MarketingSkillsSection.tsx
+│   │   │   ├── OurStorySection.tsx
 │   │   ├── blog
 │   │   │   ├── [slug]
 │   │   │   │   ├── page.tsx

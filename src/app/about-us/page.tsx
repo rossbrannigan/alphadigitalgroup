@@ -8,6 +8,8 @@ import { FaLinkedin, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import OurStorySection from './OurStorySection';
 import DigitalSkillsSection from './DigitalSkillsSection';
 
+
+
 const AboutPage: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-purple-100 to-white min-h-screen">
