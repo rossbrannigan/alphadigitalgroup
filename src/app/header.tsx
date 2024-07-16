@@ -138,7 +138,7 @@ const Header: React.FC = () => {
                   </div>
                 </li>
                 <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-                <li><a href="/case-studies" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
+                <li><a href="/case-studies/hans-airways" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
                 <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
                 <li><a href="/insights" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Insights</a></li>
                 <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</a></li>

@@ -18,6 +18,11 @@ alphadigitalgroup
 │   ├── index.html
 ├── public
 │   ├── contact.html
+│   ├── locales
+│   │   ├── en
+│   │   │   ├── common.json
+│   │   ├── es
+│   │   │   ├── common.json
 ├── sanity
 ├── strapi
 ├── src
@@ -45,3 +50,4 @@ alphadigitalgroup
 ├── next.config.mjs
 ├── tailwind.config.ts
 ├── tailwind.config.js
+├── i18n.js

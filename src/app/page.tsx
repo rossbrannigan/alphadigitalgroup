@@ -5,9 +5,12 @@ import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { FiMessageCircle } from 'react-icons/fi'; // Import WhatsApp icon
 import './styles.css'; // Import your custom styles
 import { AiOutlineLineChart, AiOutlineTool, AiOutlineRise, AiOutlineTeam, AiOutlineBank } from 'react-icons/ai'; // Import icons from react-icons
+import { useTranslations } from 'next-intl';
 
 
 export default function Home() {
+  
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>

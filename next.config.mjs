@@ -1,5 +1,6 @@
 import { withSentryConfig } from '@sentry/nextjs';
 import 'dotenv/config';
+import path from 'path';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -51,6 +52,11 @@ const nextConfig = {
       },
     ];
   },
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+  },
+  localePath: path.resolve('./public/locales'),
 };
 
 const sentryWebpackPluginOptions = {
