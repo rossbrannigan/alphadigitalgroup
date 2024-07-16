@@ -18,13 +18,13 @@ const Header: React.FC = () => {
         <meta property="og:title" content="Alpha Digital Group - Digital Marketing Services" />
         <meta property="og:description" content="Expert digital marketing services including SEO, SEM, social media marketing, and more. Boost your online presence with Alpha Digital Group." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.alphadigitalgroup.com/" />
-        <meta property="og:image" content="https://www.alphadigitalgroup.com/og-image.jpg" />
+        <meta property="og:url" content="https://www.alphadigitalgroup.co/" />
+        <meta property="og:image" content="https://www.alphadigitalgroup.coo/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@alphadigitalgrp" />
+        <meta name="twitter:site" content="@alphadigitalllc" />
         <meta name="twitter:title" content="Alpha Digital Group - Digital Marketing Services" />
         <meta name="twitter:description" content="Expert digital marketing services including SEO, SEM, social media marketing, and more. Boost your online presence with Alpha Digital Group." />
-        <meta name="twitter:image" content="https://www.alphadigitalgroup.com/twitter-image.jpg" />
+        <meta name="twitter:image" content="https://www.alphadigitalgroup.co/twitter-image.jpg" />
       </Head>
       <header className="shadow-lg fixed top-0 left-0 w-full z-50" style={{ backgroundColor: '#bdff03' }}>
         <div className="container mx-auto px-4">
@@ -83,9 +83,10 @@ const Header: React.FC = () => {
                             <h3 className="font-bold text-gray-800">Interim Leadership</h3>
                             <p className="text-sm text-gray-600">Expert leadership support for critical transitions</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/cmo-services" className="text-sm text-purple-600 hover:underline">CMO Services</a></li>
-                              <li><a href="/cdo-services" className="text-sm text-purple-600 hover:underline">CDO Services</a></li>
-                              <li><a href="/cro-services" className="text-sm text-purple-600 hover:underline">CRO Services</a></li>
+                              <li><a href="/services/interim-leadership/interim-cmo" className="text-sm text-purple-600 hover:underline">CMO Services</a></li>
+                              <li><a href="/services/interim-leadership/interim-cdo" className="text-sm text-purple-600 hover:underline">CDO Services</a></li>
+                              <li><a href="/services/interim-leadership/interim-cco" className="text-sm text-purple-600 hover:underline">CCO Services</a></li>
+                              <li><a href="/services/interim-leadership/interim-ceo" className="text-sm text-purple-600 hover:underline">CEO Services</a></li>
                             </ul>
                           </div>
                         </a>

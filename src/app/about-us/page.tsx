@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-purple-100 to-white min-h-screen">
       <Head>
-        <title>Unlock Growth and Efficiency with Alpha Digital Group's Top-Tier Digital, Marketing and Commercial Services</title>
+        <title>Unlock Growth and Efficiency with Alpha Digital Groups Top-Tier Digital, Marketing and Commercial Services</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Alpha Digital Group - Global management consulting" />
       </Head>
