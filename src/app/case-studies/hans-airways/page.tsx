@@ -18,7 +18,7 @@ const HansAirwaysCaseStudy: React.FC = () => {
         <section className="bg-white rounded-lg shadow-md p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 text-black">Introduction</h2>
           <p className="text-gray-800 mb-4">
-            In the highly competitive and ever-evolving landscape of international air travel, establishing a new airline brand is a formidable challenge. Enter Hans Airways, a UK-based long-haul carrier that set out to do more than just transport passengers from point A to point B. Founded with the vision of being "an airline for the people by the people," Hans Airways embarked on an ambitious journey to create a brand that would resonate deeply with its target audience and stand out in a crowded marketplace.
+            In the highly competitive and ever-evolving landscape of international air travel, establishing a new airline brand is a formidable challenge. Enter Hans Airways, a UK-based long-haul carrier that set out to do more than just transport passengers from point A to point B. Founded with the vision of being &quot;an airline for the people by the people,&quot; Hans Airways embarked on an ambitious journey to create a brand that would resonate deeply with its target audience and stand out in a crowded marketplace.
           </p>
           <p className="text-gray-800 mb-4">
             The aviation industry, dominated by established giants and budget carriers, leaves little room for newcomers. However, Hans Airways identified a unique opportunity: to build an airline brand centered around empathy, community, and a genuine commitment to making a positive impact.
@@ -103,15 +103,15 @@ const HansAirwaysCaseStudy: React.FC = () => {
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4 text-black">1. Brand Positioning</h3>
             <p className="text-gray-800 mb-4">
-              Hans Airways has strategically positioned itself as "more than just an airline," with a strong emphasis on customer care, community building, and making a positive societal impact.
+              Hans Airways has strategically positioned itself as &quot;more than just an airline,&quot; with a strong emphasis on customer care, community building, and making a positive societal impact.
             </p>
             <h4 className="text-xl font-semibold mb-2 text-black">Internal Positioning:</h4>
             <p className="text-gray-800 mb-4">
-              "We are establishing ourselves as a thoughtful airline and we exist to make a positive difference. We understand our customers' needs better than anyone else. Hans Airways will make our customers and staff feel safe, cared for and appreciated. We will endeavour to act in an ethical, sustainable and transparent way. We are growing a community that values diversity, empathy and making sure you have an enjoyable experience. Hans Airways is more than just an airline."
+            &quot;We are establishing ourselves as a thoughtful airline and we exist to make a positive difference. We understand our customers&apos; needs better than anyone else. Hans Airways will make our customers and staff feel safe, cared for and appreciated. We will endeavour to act in an ethical, sustainable and transparent way. We are growing a community that values diversity, empathy and making sure you have an enjoyable experience. Hans Airways is more than just an airline.&quot;
             </p>
             <h4 className="text-xl font-semibold mb-2 text-black">External Positioning:</h4>
             <p className="text-gray-800 mb-4">
-              "Hans Airways is an international long-haul carrier based in the UK. We care about your comfort, safety and community. By choosing Hans Airways, you are not just flying but making a positive contribution to society. We are more than just an airline."
+            &quot;Hans Airways is an international long-haul carrier based in the UK. We care about your comfort, safety and community. By choosing Hans Airways, you are not just flying but making a positive contribution to society. We are more than just an airline.&quot;
             </p>
           </div>
 
@@ -162,13 +162,13 @@ const HansAirwaysCaseStudy: React.FC = () => {
                 <h4 className="text-xl font-semibold mb-2 text-black">Anand (Economy Service):</h4>
                 <ul className="list-disc pl-6 text-gray-800">
                   <li>Unique color scheme: Shades of purple with yellow accent</li>
-                  <li>Own logo design, incorporating "Economy" descriptor</li>
+                  <li>Own logo design, incorporating &quot;Economy&quot; descriptor</li>
                   <li>Brand values: Welcoming, Safe & Reliable</li>
                   <li>Emphasizes comfort, inclusion, and social awareness</li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2 text-black">AnandPlus ("More Than Premium Economy" Service):</h4>
+                <h4 className="text-xl font-semibold mb-2 text-black">AnandPlus (&quot;More Than Premium Economy&quot; Service):</h4>
                 <ul className="list-disc pl-6 text-gray-800">
                   <li>Regal color scheme: Shades of blue with platinum accent</li>
                   <li>Distinctive logo design</li>
@@ -211,7 +211,7 @@ const HansAirwaysCaseStudy: React.FC = () => {
             <li className="mb-2">Created a detailed brand book to ensure consistent application across all touchpoints</li>
             <li className="mb-2">Developed a suite of visual assets including logos, color palettes, and typography styles</li>
             <li className="mb-2">Established a 60/40 design rule for integrating sub-brands in marketing materials</li>
-            <li className="mb-2">Set clear imagery guidelines aligning with Hans Airways' values and community-focused ethos</li>
+            <li className="mb-2">Set clear imagery guidelines aligning with Hans Airways&apos; values and community-focused ethos</li>
             <li>Implied comprehensive employee training to effectively embody and deliver the Hans Airways brand experience</li>
           </ul>
         </section>
@@ -232,10 +232,10 @@ const HansAirwaysCaseStudy: React.FC = () => {
         <section className="bg-white rounded-lg shadow-md p-8">
           <h2 className="text-3xl font-bold mb-6 text-black">Conclusion</h2>
           <p className="text-gray-800 mb-4">
-            Hans Airways' brand-building exercise demonstrates a thoughtful and comprehensive approach to creating a distinctive identity in the competitive airline industry. By focusing on core values, community building, and a caring approach, Hans Airways has positioned itself as more than just a transportation provider.
+            Hans Airways&apos; brand-building exercise demonstrates a thoughtful and comprehensive approach to creating a distinctive identity in the competitive airline industry. By focusing on core values, community building, and a caring approach, Hans Airways has positioned itself as more than just a transportation provider.
           </p>
           <p className="text-gray-800 mb-4">
-            The airline's emphasis on being a thoughtful, community-oriented carrier sets it apart in an industry often perceived as commoditized. This unique positioning, coupled with a clear visual identity and tone of voice, provides Hans Airways with a solid platform for differentiation.
+            The airline&apos;s emphasis on being a thoughtful, community-oriented carrier sets it apart in an industry often perceived as commoditized. This unique positioning, coupled with a clear visual identity and tone of voice, provides Hans Airways with a solid platform for differentiation.
           </p>
           <p className="text-gray-800 mb-4">
             The detailed brand guidelines provide a strong foundation for consistent brand application, which is crucial for building trust and recognition in the long-haul carrier market. If executed well, this brand strategy has the potential to create a strong emotional connection with customers and build long-term brand equity.

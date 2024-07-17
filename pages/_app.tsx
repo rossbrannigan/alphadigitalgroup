@@ -20,8 +20,10 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
+      // Convert the string URL to a URL object
+      const urlObject = new URL(url, window.location.origin);
       // Invoke analytics function only for production
-      if (isProduction) gtag.pageview(url);
+      if (isProduction) gtag.pageview(urlObject);
     };
 
     i18n.on('languageChanged', (lng) => {
@@ -31,7 +33,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     return () => {
       i18n.off('languageChanged');
     };
-  }, [i18n, isProduction]);
+  }, [i18n]);
 
   return <Component {...pageProps} />;
 };
