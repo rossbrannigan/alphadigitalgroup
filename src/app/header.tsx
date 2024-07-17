@@ -121,7 +121,7 @@ const Header: React.FC = () => {
                         </a>
                       </div>
                       <div className="md:col-span-2 mt-6">
-                        <a href="#company-packages" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <a href="/services/packages" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
                           <div className="bg-brand-green p-6 h-full flex flex-col justify-between">
                             <div>
                               <FiPackage className="text-purple-800 text-4xl mb-4" />
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                 <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
                 <li><a href="/case-studies/hans-airways" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
                 <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
-                <li><a href="/insights" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Insights</a></li>
+                <li><a href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</a></li>
                 <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</a></li>
               </ul>
             </nav>
@@ -171,14 +171,14 @@ const Header: React.FC = () => {
                       <a href="/interim-leadership" className="block text-purple-800 hover:text-black">Interim Leadership</a>
                       <a href="/digital-strategy" className="block text-purple-800 hover:text-black">Digital Strategy</a>
                       <a href="#demand-revenue" className="block text-purple-800 hover:text-black">Demand and Revenue Generation</a>
-                      <a href="#company-packages" className="block text-purple-800 hover:text-black">Company Packages</a>
+                      <a href="/services/packages" className="block text-purple-800 hover:text-black">Company Packages</a>
                     </div>
                   )}
                 </li>
                 <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
                 <li><a href="/case-studies" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
                 <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
-                <li><a href="/insights" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Insights</a></li>
+                <li><a href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</a></li>
                 <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700 inline-block">Contact Us</a></li>
               </ul>
             </nav>
