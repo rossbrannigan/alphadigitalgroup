@@ -45,7 +45,7 @@ export default function Home() {
           <div className="relative z-10 text-center max-w-2xl mx-auto p-4 text-white flex flex-col justify-center items-center">
             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">Empower Your Digital Journey</h1>
             <p className="text-base sm:text-lg md:text-xl mb-4">Unlock boundless possibilities with Alpha Digital Group.</p>
-            <a href="/marketplace">
+            <a href="/services/packages">
               <button className="bg-white text-purple-600 font-bold px-4 py-2 sm:px-6 sm:py-3 rounded-full mt-4 sm:mt-8 hover:bg-purple-100 transition duration-300 ease-in-out border-2 border-green-400">Get Started</button>
             </a>
           </div>
