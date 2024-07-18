@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaWhatsapp, FaEnvelope, FaTwitter, FaLinkedin } from "react-icons/fa6";
+import { FaWhatsapp, FaEnvelope, FaTwitter, FaLinkedin, FaPhone } from "react-icons/fa6";
 import { SiNextdotjs, SiTypescript, SiNetlify, SiContentful } from "react-icons/si";
 
 const Footer: React.FC = () => {
@@ -78,6 +78,19 @@ const Footer: React.FC = () => {
                 />
                 <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                   Trade Desk Certification
+                </span>
+              </div>
+              <div className="relative group">
+                <Image
+                  src="/google-analytics-certified.png"
+                  alt="Google Analytics Certification"
+                  width={48}
+                  height={48}
+                  className="transition-transform duration-300 group-hover:scale-110"
+                  title="Google Analytics Certification"
+                />
+                <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  Google Analytics Certification
                 </span>
               </div>
             </div>
@@ -193,6 +206,12 @@ const Footer: React.FC = () => {
               <FaWhatsapp className="text-gray-400 mr-1" size={12} />
               <a href="https://wa.me/66828362713" className="text-xs text-gray-400 hover:text-white transition-colors duration-300">
                 00 66 82 836 2713
+              </a>
+            </div>
+            <div className="flex items-center">
+              <FaPhone className="text-gray-400 mr-1" size={12} />
+              <a href="tel:+855718796451" className="text-xs text-gray-400 hover:text-white transition-colors duration-300">
+                00 855 718 796 451
               </a>
             </div>
           </div>

@@ -138,7 +138,6 @@ const Header: React.FC = () => {
                   </div>
                 </li>
                 <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-                <li><a href="/case-studies/hans-airways" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
                 <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
                 <li><a href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</a></li>
                 <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</a></li>
@@ -176,7 +175,6 @@ const Header: React.FC = () => {
                   )}
                 </li>
                 <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-                <li><a href="/case-studies" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Case Studies</a></li>
                 <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
                 <li><a href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</a></li>
                 <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700 inline-block">Contact Us</a></li>
