@@ -45,10 +45,20 @@ async function getBlogPosts(): Promise<BlogPost[]> {
       featuredImage: item.fields.featuredImage?.fields?.file?.url 
         ? `https:${item.fields.featuredImage.fields.file.url}` 
         : null,
-      tags: item.fields.tags || [],
+      tags: item.metadata.tags.map((tag: any) => tag.sys.id) || [],
     }));
   } catch (error) {
     console.error('Error fetching blog posts:', error);
+    return [];
+  }
+}
+
+async function getAllTags(): Promise<string[]> {
+  try {
+    const response = await contentfulClient.getTags();
+    return response.items.map((tag: any) => tag.name);
+  } catch (error) {
+    console.error('Error fetching tags:', error);
     return [];
   }
 }
@@ -57,8 +67,54 @@ const renderOptions = {
   // ... (keep the existing renderOptions)
 };
 
+const Sidebar: React.FC<{ blogPosts: BlogPost[], allTags: string[] }> = ({ blogPosts, allTags }) => {
+  return (
+    <aside className="w-1/4 pr-8 h-[calc(100vh-6rem)] overflow-y-auto sticky top-24">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900 border-b pb-2">Recent Posts</h2>
+      <ul className="space-y-4 mb-8">
+        {blogPosts.map((post, index) => (
+          <li key={index} className="group">
+            <Link href={`/blog/${post.slug}`} className="flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors duration-200 hover:bg-purple-50">
+              {post.featuredImage && (
+                <div className="relative w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+                  <Image
+                    src={post.featuredImage}
+                    alt={post.title}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              )}
+              <div className="flex-1 min-w-0">
+                <h3 className="text-sm font-medium text-gray-900 group-hover:text-purple-600 truncate">{post.title}</h3>
+                <p className="text-xs text-gray-500">{post.date}</p>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      {allTags.length > 0 && (
+        <>
+          <h3 className="text-xl font-semibold mb-4 text-gray-900 border-b pb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {allTags.map((tag, index) => (
+              <button
+                key={index}
+                className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-purple-100 hover:text-purple-700 transition-colors duration-200"
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
+    </aside>
+  );
+};
+
 export default async function BlogPage() {
-  const blogPosts = await getBlogPosts();
+  const [blogPosts, allTags] = await Promise.all([getBlogPosts(), getAllTags()]);
 
   if (!blogPosts || blogPosts.length === 0) {
     return (
@@ -103,20 +159,9 @@ export default async function BlogPage() {
         </div>
       </header>
 
-      <div className="container mx-auto px-4 py-24 flex">
-        {/* Sidebar with post list */}
-        <aside className="w-1/4 pr-8">
-          <h2 className="text-xl font-semibold mb-4 text-gray-900">Recent Posts</h2>
-          <ul className="space-y-2">
-            {blogPosts.map((post, index) => (
-              <li key={index}>
-                <Link href={`/blog/${post.slug}`} className="text-gray-600 hover:text-purple-600 text-sm">{post.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+      <div className="container mx-auto px-4 pt-24 flex">
+        <Sidebar blogPosts={blogPosts} allTags={allTags} />
 
-        {/* Main content */}
         <main className="w-3/4 grid grid-cols-1 md:grid-cols-2 gap-8">
           {blogPosts.map((post, index) => (
             <article key={index} className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">

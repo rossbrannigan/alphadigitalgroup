@@ -122,7 +122,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
             />
           )}
           <div className="p-6">
-            <h1 className="text-4xl font-bold mb-4">{displayTitle}</h1>
+            <h1 className="text-4xl font-bold mb-4 text-black">{displayTitle}</h1>
             <div className="mb-4 text-gray-600 flex items-center">
               {author && 'fields' in author && author.fields && 'name' in (author.fields as AuthorFields['fields']) && (author.fields as AuthorFields['fields']).name && (
                 <>
@@ -137,7 +137,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               )}
             </div>
             {content && (
-              <div className="prose lg:prose-xl max-w-none">
+              <div className="prose lg:prose-xl max-w-none blog-content">
                 {documentToReactComponents(content as unknown as Document, renderOptions)}
               </div>
             )}

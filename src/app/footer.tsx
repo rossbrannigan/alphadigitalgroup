@@ -191,6 +191,7 @@ const Footer: React.FC = () => {
               <li><a href="/about-us" className="text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
               <li><a href="/case-studies" className="text-gray-400 hover:text-white transition-colors duration-300">Case Studies</a></li>
               <li><a href="/blog" className="text-gray-400 hover:text-white transition-colors duration-300">Blog</a></li>
+              <li><a href="/news/2024/crowdstrike-outage" className="text-gray-400 hover:text-white transition-colors duration-300">News</a></li>
               <li><a href="https://alpha-digital-group.breezy.hr/" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</a></li>
             </ul>
           </div>
