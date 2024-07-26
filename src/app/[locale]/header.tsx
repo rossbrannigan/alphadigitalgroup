@@ -168,7 +168,7 @@ const Header: React.FC = () => {
                       {languages.map((lang) => (
                         <Link
                           key={lang.code}
-                          href={`http://localhost:3000/${lang.code}`}
+                          href={`/${lang.code}`}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           {lang.name}
