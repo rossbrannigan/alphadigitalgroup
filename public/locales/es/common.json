@@ -1,5 +1,64 @@
 {
-    "welcome": "Bienvenido a Alpha Digital Group",
-    "description": "Ofrecemos servicios de consultoría comercial, de marketing y digital."
+  "Home": {
+    "title": "Consultoría de Gestión Global | Alpha Digital Group",
+    "metaDescription": "Desbloquea posibilidades infinitas con los servicios de consultoría de gestión global de Alpha Digital Group. Impulsa tu viaje digital con nuestro liderazgo en productos digitales, marketing digital y gestión de aviación.",
+    "slider": {
+      "heading": "Empodera Tu Viaje Digital",
+      "subheading": "Desbloquea posibilidades infinitas con Alpha Digital Group.",
+      "cta": "Comienza Ahora",
+      "imageAlt": "Transformación Digital"
+    },
+    "brands": {
+      "heading": "Ellos Lo Entienden",
+      "subheading": "Descubre algunos de nuestros socios de confianza"
+    },
+    "list": {
+      "heading": "DESBLOQUEA EL POTENCIAL DE CRECIMIENTO",
+      "subheading": "Maximiza los ingresos y la transformación del negocio",
+      "item1": {
+        "title": "Asesoría Estratégica",
+        "description": "Nuestros consultores experimentados brindan orientación experta en estrategias comerciales, transformación digital y excelencia operativa para impulsar el crecimiento sostenible y la rentabilidad de tu negocio."
+      },
+      "item2": {
+        "title": "Soluciones Digitales",
+        "description": "Aprovecha nuestra experiencia digital de vanguardia para mejorar la experiencia del cliente, optimizar procesos y desbloquear nuevas fuentes de ingresos a través de soluciones digitales innovadoras adaptadas a tus necesidades únicas."
+      },
+      "item3": {
+        "title": "Liderazgo Interino",
+        "description": "Obtén líderes experimentados que pueden intervenir sin problemas y dirigir iniciativas críticas, gestionar transiciones y proporcionar orientación práctica para mantener tu organización funcionando sin problemas durante tiempos de cambio."
+      },
+      "imageAlt": "Servicios de transformación digital en Alpha Digital Group"
+    },
+    "features": {
+      "heading": "CAPACIDADES",
+      "subheading": "Cómo Impulsamos el Crecimiento Transformador",
+      "commercialStrategy": {
+        "title": "Estrategia Comercial",
+        "description": "Aprovecha nuestra profunda experiencia en la industria para desarrollar estrategias comerciales que optimicen las fuentes de ingresos, mejoren la experiencia del cliente y fortalezcan tu ventaja competitiva."
+      },
+      "digitalTransformation": {
+        "title": "Transformación Digital",
+        "description": "Aprovecha el poder de las tecnologías digitales para optimizar operaciones, desbloquear nuevos modelos de negocio y preparar tu organización para el futuro con nuestras soluciones integrales de transformación digital."
+      },
+      "operationalExcellence": {
+        "title": "Excelencia Operacional",
+        "description": "Maximiza la eficiencia y productividad a través de nuestro enfoque basado en datos para optimizar procesos, mejorar la utilización de recursos y promover la mejora continua en tus operaciones."
+      },
+      "interimLeadership": {
+        "title": "Liderazgo Interino",
+        "description": "Cubre las brechas críticas de liderazgo con nuestros ejecutivos experimentados, que aportan experiencia práctica y un historial probado de entrega de resultados en tiempos de cambio o transición."
+      },
+      "industrySolutions": {
+        "title": "Soluciones Específicas para la Industria",
+        "description": "Benefíciate de nuestras soluciones personalizadas que abordan los desafíos y oportunidades únicos dentro de las industrias de aerolíneas, hospitalidad y afines, asegurando una ventaja competitiva."
+      },
+      "strategicPartnerships": {
+        "title": "Asociaciones Estratégicas",
+        "description": "Extiende tus capacidades y acelera el crecimiento a través de nuestras asociaciones estratégicas con proveedores líderes de tecnología, ofreciendo integraciones fluidas y soluciones de vanguardia."
+      }
+    },
+    "whatsapp": {
+      "buttonText": "Chatear en WhatsApp"
+    }
   }
-  
+}

@@ -1,0 +1,64 @@
+{
+  "Home": {
+    "title": "Globale Managementberatung | Alpha Digital Group",
+    "metaDescription": "Entdecken Sie grenzenlose Möglichkeiten mit den globalen Managementberatungsdiensten der Alpha Digital Group. Stärken Sie Ihre digitale Reise mit unserer Führungsrolle in digitalen Produkten, digitalem Marketing und Luftfahrtmanagement.",
+    "slider": {
+      "heading": "Stärken Sie Ihre digitale Reise",
+      "subheading": "Entdecken Sie grenzenlose Möglichkeiten mit der Alpha Digital Group.",
+      "cta": "Loslegen",
+      "imageAlt": "Digitale Transformation"
+    },
+    "brands": {
+      "heading": "Diese Leute verstehen es",
+      "subheading": "Schauen Sie sich einige unserer vertrauenswürdigen Partner an"
+    },
+    "list": {
+      "heading": "WACHSTUMSPOTENZIAL ERSCHLIESSEN",
+      "subheading": "Maximieren Sie den Umsatz und die Geschäftstransformation",
+      "item1": {
+        "title": "Strategische Beratung",
+        "description": "Unsere erfahrenen Berater bieten fachkundige Anleitung zu kommerziellen Strategien, digitaler Transformation und operativer Exzellenz, um nachhaltiges Wachstum und Rentabilität für Ihr Unternehmen zu fördern."
+      },
+      "item2": {
+        "title": "Digitale Lösungen",
+        "description": "Nutzen Sie unser modernstes digitales Fachwissen, um Kundenerlebnisse zu verbessern, Prozesse zu rationalisieren und neue Einnahmequellen durch innovative digitale Lösungen zu erschließen, die auf Ihre einzigartigen Bedürfnisse zugeschnitten sind."
+      },
+      "item3": {
+        "title": "Interimsführung",
+        "description": "Gewinnen Sie erfahrene Führungskräfte, die nahtlos einspringen und kritische Initiativen vorantreiben, Übergänge managen und praktische Anleitung geben können, um Ihr Unternehmen in Zeiten des Wandels reibungslos am Laufen zu halten."
+      },
+      "imageAlt": "Dienstleistungen zur digitalen Transformation bei der Alpha Digital Group"
+    },
+    "features": {
+      "heading": "FÄHIGKEITEN",
+      "subheading": "Wie wir transformative Wachstum vorantreiben",
+      "commercialStrategy": {
+        "title": "Kommerzielle Strategie",
+        "description": "Nutzen Sie unser tiefes Branchenwissen, um kommerzielle Strategien zu entwickeln, die Einnahmequellen optimieren, Kundenerlebnisse verbessern und Ihre Wettbewerbsfähigkeit stärken."
+      },
+      "digitalTransformation": {
+        "title": "Digitale Transformation",
+        "description": "Nutzen Sie die Kraft digitaler Technologien, um Abläufe zu straffen, neue Geschäftsmodelle zu erschließen und Ihr Unternehmen mit unseren umfassenden Lösungen zur digitalen Transformation zukunftssicher zu machen."
+      },
+      "operationalExcellence": {
+        "title": "Operative Exzellenz",
+        "description": "Maximieren Sie Effizienz und Produktivität durch unseren datengesteuerten Ansatz zur Optimierung von Prozessen, zur Verbesserung der Ressourcennutzung und zur kontinuierlichen Verbesserung Ihrer Abläufe."
+      },
+      "interimLeadership": {
+        "title": "Interimsführung",
+        "description": "Überbrücken Sie kritische Führungslücken mit unseren erfahrenen Führungskräften, die praktische Erfahrung und nachgewiesene Erfolge bei der Bereitstellung von Ergebnissen in Zeiten des Wandels oder Übergangs mitbringen."
+      },
+      "industrySolutions": {
+        "title": "Branchenspezifische Lösungen",
+        "description": "Profitieren Sie von unseren maßgeschneiderten Lösungen, die die einzigartigen Herausforderungen und Chancen in der Luftfahrt-, Hospitality- und verwandten Branchen angehen und Ihnen einen Wettbewerbsvorteil verschaffen."
+      },
+      "strategicPartnerships": {
+        "title": "Strategische Partnerschaften",
+        "description": "Erweitern Sie Ihre Fähigkeiten und beschleunigen Sie das Wachstum durch unsere strategischen Partnerschaften mit führenden Technologieanbietern der Branche, die nahtlose Integrationen und modernste Lösungen bieten."
+      }
+    },
+    "whatsapp": {
+      "buttonText": "Auf WhatsApp chatten"
+    }
+  }
+}

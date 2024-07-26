@@ -1,10 +1,64 @@
 {
-  "title": "Global Management Consulting | Alpha Digital Group",
-  "metaDescription": "Unlock boundless possibilities with Alpha Digital Group’s global management consulting services. Empower your digital journey with our leadership in digital products, digital marketing, and aviation management.",
-  "hero": {
-    "title": "Empower Your Digital Journey",
-    "subtitle": "Unlock boundless possibilities with Alpha Digital Group.",
-    "button": "Get Started"
+  "Home": {
+    "title": "Global Management Consulting | Alpha Digital Group",
+    "metaDescription": "Unlock boundless possibilities with Alpha Digital Group's global management consulting services. Empower your digital journey with our leadership in digital products, digital marketing, and aviation management.",
+    "slider": {
+      "heading": "Empower Your Digital Journey",
+      "subheading": "Unlock boundless possibilities with Alpha Digital Group.",
+      "cta": "Get Started",
+      "imageAlt": "Digital Transformation"
+    },
+    "brands": {
+      "heading": "These Folks Get It",
+      "subheading": "Check out some of our trusted partners"
+    },
+    "list": {
+      "heading": "UNLOCK GROWTH POTENTIAL",
+      "subheading": "Maximize Revenue and Business Transformation",
+      "item1": {
+        "title": "Strategic Advisory",
+        "description": "Our seasoned consultants provide expert guidance on commercial strategies, digital transformation, and operational excellence to drive sustainable growth and profitability for your business."
+      },
+      "item2": {
+        "title": "Digital Solutions",
+        "description": "Leverage our cutting-edge digital expertise to enhance customer experiences, streamline processes, and unlock new revenue streams through innovative digital solutions tailored to your unique needs."
+      },
+      "item3": {
+        "title": "Interim Leadership",
+        "description": "Gain experienced leaders who can seamlessly step in and drive critical initiatives, manage transitions, and provide hands-on guidance to keep your organization running smoothly during times of change."
+      },
+      "imageAlt": "Digital transformation services at Alpha Digital Group"
+    },
+    "features": {
+      "heading": "CAPABILITIES",
+      "subheading": "How We Drive Transformative Growth",
+      "commercialStrategy": {
+        "title": "Commercial Strategy",
+        "description": "Leverage our deep industry expertise to develop commercial strategies that optimize revenue streams, enhance customer experiences, and fortify your competitive edge."
+      },
+      "digitalTransformation": {
+        "title": "Digital Transformation",
+        "description": "Embrace the power of digital technologies to streamline operations, unlock new business models, and future-proof your organization with our comprehensive digital transformation solutions"
+      },
+      "operationalExcellence": {
+        "title": "Operational Excellence",
+        "description": "Maximize efficiency and productivity through our data-driven approach to optimizing processes, enhancing resource utilization, and driving continuous improvement across your operations."
+      },
+      "interimLeadership": {
+        "title": "Interim Leadership",
+        "description": "Bridge critical leadership gaps with our seasoned executives who bring hands-on experience and a proven track record of delivering results in times of change or transition."
+      },
+      "industrySolutions": {
+        "title": "Industry-Specific Solutions",
+        "description": "Benefit from our tailored solutions that address the unique challenges and opportunities within the airline, hospitality, and related industries, ensuring a competitive advantage."
+      },
+      "strategicPartnerships": {
+        "title": "Strategic Partnerships",
+        "description": "Extend your capabilities and accelerate growth through our strategic partnerships with industry-leading technology providers, offering seamless integrations and cutting-edge solutions."
+      }
+    },
+    "whatsapp": {
+      "buttonText": "Chat on WhatsApp"
+    }
   }
-  // Add more translations as needed
 }

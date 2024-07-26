@@ -1,7 +1,5 @@
-  // next-sitemap.config.js
-
-  /** @type {import('next-sitemap').IConfig} */
-  module.exports = {
-    siteUrl: 'https://www.alphadigitalgroup.co',
-    sitemapSize: 5000,
-  };
+/** @type {import('next-sitemap').IConfig} */
+export default {
+  siteUrl: 'https://www.alphadigitalgroup.co',
+  sitemapSize: 5000,
+};

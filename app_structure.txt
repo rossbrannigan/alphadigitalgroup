@@ -47,7 +47,9 @@ alphadigitalgroup
 │   ├── stories
 │   │   ├── assets
 ├── package.json
+├── next.config.js
 ├── next.config.mjs
+├── next-int.config.ts
 ├── tailwind.config.ts
 ├── tailwind.config.js
 ├── i18n.js

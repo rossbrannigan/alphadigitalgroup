@@ -1,8 +1,8 @@
 // pages/_document.tsx
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from "../lib/gtag";
-import Header from "../src/app/header"; // Adjust the import path as needed
-import Footer from "../src/app/footer"; // Adjust the import path as needed
+import Header from "../src/app/[locale]/header"; // Adjust the import path as needed
+import Footer from "../src/app/[locale]/footer"; // Adjust the import path as needed
 
 const isProduction = process.env.NODE_ENV === "production";
 

@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Impact of Personalization on Conversion and Ancillary Attachment</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white">
+  <div class="container mx-auto my-8">
+    <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Alpha Digital Group Logo" class="mb-4" style="max-width: 200px;">
+    <h1 class="text-3xl font-bold mb-4 text-gray-800">The Impact of Personalization on Conversion and Ancillary Attachment</h1>
+    <div class="w-full bg-white shadow-lg rounded-lg p-6">
+      <div id="chart-container"></div>
+      <p class="text-gray-600 mt-4">
+        According to a recent study by McKinsey & Company, airlines that leverage customer and pricing APIs to deliver personalized offers can see a significant uplift in conversion rates and ancillary attachment compared to generic, one-size-fits-all experiences.
+      </p>
+      <p class="text-gray-600 mt-2">
+        The chart below illustrates the potential impact of personalization, showing a 39% increase in conversion rates and a 41% increase in ancillary attachment when personalized offers are provided.
+      </p>
+      <p class="text-gray-600 mt-2">
+        These findings are consistent with industry research, which has consistently shown that personalization can drive substantial improvements in key performance metrics for airlines. By leveraging customer data and advanced pricing algorithms, carriers can deliver highly relevant and compelling offers that resonate with individual travelers.
+      </p>
+      <p class="text-gray-600 mt-2">
+        Sources:
+        <ul class="list-disc list-inside">
+          <li>McKinsey & Company, "Understanding the Pandemic’s Impact on the Aviation Value Chain" (2023)</li>
+          <li>IATA, "Modern Airline Retailing: Insights on Customer Personalization" (2023)</li>
+        </ul>
+      </p>
+    </div>
+    <p class="text-gray-600 mt-4 text-center">&copy; Alpha Digital Group 2024</p>
+  </div>
+
+  <script>
+    // Set up the chart dimensions
+    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const width = 800 - margin.left - margin.right;
+    const height = 500 - margin.top - margin.bottom;
+
+    // Create the SVG container
+    const svg = d3.select("#chart-container")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Add a light grey background
+    svg.append("rect")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("fill", "#f0f0f0");
+
+    // Define the data
+    const data = [
+      { metric: "Conversion Rate", personalizedValue: 0.25, genericValue: 0.18, uplift: 0.07 },
+      { metric: "Ancillary Attachment", personalizedValue: 0.45, genericValue: 0.32, uplift: 0.13 }
+    ];
+
+    // Set up the scales
+    const x = d3.scaleBand()
+      .domain(data.map(d => d.metric))
+      .range([0, width])
+      .padding(0.4);
+
+    const y = d3.scaleLinear()
+      .domain([0, d3.max(data, d => d.personalizedValue) * 1.2])
+      .nice()
+      .range([height, 0]);
+
+    // Add the axes
+    svg.append("g")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x));
+
+    svg.append("g")
+      .call(d3.axisLeft(y));
+
+    // Create the bars
+    svg.selectAll(".bar")
+      .data(data)
+      .enter().append("g")
+      .attr("transform", d => `translate(${x(d.metric)},0)`)
+      .selectAll("rect")
+      .data(d => [{value: d.personalizedValue, color: "#bdfe02"}, {value: d.genericValue, color: "#9232ea"}])
+      .enter().append("rect")
+      .attr("x", (d, i) => i * (x.bandwidth() / 2))
+      .attr("y", d => y(d.value))
+      .attr("width", x.bandwidth() / 2)
+      .attr("height", d => height - y(d.value))
+      .attr("fill", d => d.color);
+
+    // Add the labels
+    svg.selectAll(".bar")
+      .data(data)
+      .enter().append("g")
+      .attr("transform", d => `translate(${x(d.metric)},0)`)
+      .selectAll("text")
+      .data(d => [{value: d.personalizedValue, color: "#5a5a00", xPos: x.bandwidth() / 4}, {value: d.genericValue, color: "#9232ea", xPos: 3 * x.bandwidth() / 4}])
+      .enter().append("text")
+      .text(d => d.value.toFixed(2))
+      .attr("x", d => d.xPos)
+      .attr("y", d => y(d.value) - 5)
+      .attr("fill", d => d.color)
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14);
+
+    // Add the uplift labels
+    svg.selectAll(".bar")
+      .data(data)
+      .enter().append("g")
+      .attr("transform", d => `translate(${x(d.metric)},0)`)
+      .append("text")
+      .text(d => `+${(d.uplift * 100).toFixed(0)}%`)
+      .attr("x", x.bandwidth() / 2)
+      .attr("y", d => y(d.genericValue) - 15)
+      .attr("fill", "#0072C6")
+      .attr("text-anchor", "middle")
+      .attr("font-size", 14)
+      .attr("font-weight", "bold");
+
+    // Add the x-axis label
+    svg.append("text")
+      .attr("x", width / 2)
+      .attr("y", height + margin.bottom - 10)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#6b7280")
+      .attr("font-size", 16)
+      .text("Metric");
+
+    // Add the y-axis label
+    svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("x", -height / 2)
+      .attr("y", -margin.left + 15)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#6b7280")
+      .attr("font-size", 16)
+      .text("Value");
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Evolution of Airline Pricing Models</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-6xl mx-auto">
+    <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Alpha Digital Group Logo" class="w-48 mb-6">
+    <h1 class="text-2xl font-bold mb-6 text-gray-800">The Evolution of Airline Pricing Models</h1>
+    <div class="bg-white shadow-lg rounded-lg p-4 overflow-x-auto">
+      <div id="timeline-container" style="width: 100%; height: 500px;"></div>
+    </div>
+    <p class="text-gray-600 mt-6">&copy; Alpha Digital Group 2024</p>
+  </div>
+
+  <script>
+    const container = document.getElementById('timeline-container');
+    const width = container.clientWidth;
+    const height = 500;
+
+    const svg = d3.select("#timeline-container")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+    const margin = {top: 20, right: 20, bottom: 20, left: 20};
+    const chartWidth = width - margin.left - margin.right;
+    const chartHeight = height - margin.top - margin.bottom;
+
+    const chart = svg.append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    chart.append("rect")
+      .attr("width", chartWidth)
+      .attr("height", chartHeight)
+      .attr("fill", "#f0f0f0");
+
+    const data = [
+      { year: 1970, title: "Static Pricing", description: "Airlines used fixed, opaque pricing models with limited flexibility.", source: "Source: Airline Economics by Peter P. Belobaba", icon: "M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" },
+      { year: 1990, title: "Yield Management", description: "Airlines implemented more dynamic pricing strategies based on demand and capacity.", source: "Source: Journal of Revenue and Pricing Management", icon: "M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" },
+      { year: 2010, title: "Ancillary Revenue", description: "Airlines started bundling and unbundling services to generate additional revenue.", source: "Source: CAPA - Centre for Aviation", icon: "M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" },
+      { year: 2020, title: "Personalized Pricing", description: "Airlines leverage customer and pricing APIs to deliver highly personalized offers.", source: "Source: Skift Research Report", icon: "M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" }
+    ];
+
+    const boxWidth = chartWidth / data.length - 10;
+    const boxSpacing = (chartWidth - boxWidth * data.length) / (data.length - 1);
+
+    const timelineItems = chart.selectAll(".timeline-item")
+      .data(data)
+      .enter().append("g")
+      .attr("class", "timeline-item")
+      .attr("transform", (d, i) => `translate(${i * (boxWidth + boxSpacing)}, 0)`);
+
+    timelineItems.append("rect")
+      .attr("x", 0)
+      .attr("y", 30)
+      .attr("width", boxWidth)
+      .attr("height", chartHeight - 40)
+      .attr("fill", "#fff")
+      .attr("stroke", "#9232ea")
+      .attr("stroke-width", 1)
+      .attr("rx", 10)
+      .attr("ry", 10);
+
+    timelineItems.append("text")
+      .text(d => d.year)
+      .attr("x", boxWidth / 2)
+      .attr("y", 20)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#9232ea")
+      .attr("font-size", "14px")
+      .attr("font-weight", "bold");
+
+    timelineItems.append("path")
+      .attr("d", d => d.icon)
+      .attr("fill", "#9232ea")
+      .attr("transform", "translate(10, 50) scale(0.7)");
+
+    timelineItems.append("text")
+      .text(d => d.title)
+      .attr("x", 40)
+      .attr("y", 65)
+      .attr("fill", "#9232ea")
+      .attr("font-size", "14px")
+      .attr("font-weight", "bold");
+
+    timelineItems.append("text")
+      .text(d => d.description)
+      .attr("x", 10)
+      .attr("y", 85)
+      .attr("fill", "#6b7280")
+      .attr("font-size", "11px")
+      .call(wrapText, boxWidth - 20);
+
+    timelineItems.each(function(d, i) {
+      const item = d3.select(this);
+      item.append("image")
+        .attr("xlink:href", [
+          "https://blog.ibsplc.com/images/easyblog_articles/258/b2ap3_large_a-comparison-of-static-and-dynamic-pricing.jpg",
+          "https://blog.waalaxy.com/wp-content/uploads/2022/12/ILLU-Yield-Management-4.png.webp",
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzBihufhu_hYTpDH5GPbSxR8fV4_Pmpgb3V_5i15WhCZXTZWVDD6A62YY1nw1KQSRRjm5vJqoDURfdYBF6AyK-FJAkezUOGzGn7PiNEBMutuJ18j6LeCYruAIXCAAF3DVcuqA0ZiqYZL6F/s1600/Spirit+Graphic.jpg",
+          "https://aegve.org/wp-content/uploads/2018/01/puja.jpg"
+        ][i])
+        .attr("x", 10)
+        .attr("y", 160)
+        .attr("width", boxWidth - 20)
+        .attr("height", 140)
+        .attr("preserveAspectRatio", "xMidYMid meet");
+    });
+
+    timelineItems.append("text")
+      .text(d => d.source)
+      .attr("x", 10)
+      .attr("y", chartHeight - 20)
+      .attr("fill", "#6b7280")
+      .attr("font-size", "8px")
+      .style("font-style", "italic")
+      .call(wrapText, boxWidth - 20);
+
+    function wrapText(text, width) {
+      text.each(function() {
+        let text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 1.1,
+            y = text.attr("y"),
+            dy = 0,
+            tspan = text.text(null).append("tspan").attr("x", text.attr("x")).attr("y", y).attr("dy", dy + "em");
+        while (word = words.pop()) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (tspan.node().getComputedTextLength() > width) {
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan").attr("x", text.attr("x")).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fragmented Airline Booking Journey</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-8">
+    <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Alpha Digital Group Logo" class="mb-4 h-12">
+    <h1 class="text-3xl font-bold mb-4">The Fragmented Airline Booking Journey</h1>
+    <div class="w-full h-[500px] bg-white shadow-lg rounded-lg p-6 relative">
+      <div id="graph-container"></div>
+      <div class="absolute bottom-16 left-6 right-6 text-sm w-1/3 p-4" style="background-color: rgba(189,255,3,255); border: 2px solid rgba(147,51,234,255);">
+        <h2 class="font-bold mb-2 text-base">The Case for Unified Digital Retail Strategy</h2>
+        <p>
+          In the context of digital retailing, this journey illustrates the complexity and fragmentation of the customer experience. By unifying customer, pricing, and order IDs into a cohesive digital retail strategy, businesses can significantly enhance commercial performance. This approach enables advanced personalization, leading to improved customer satisfaction and increased revenue through tailored offerings and streamlined processes.
+        </p>
+      </div>
+      <p class="absolute bottom-6 left-0 right-0 text-center text-xs text-gray-600">&copy; Alpha Digital Group 2024</p>
+    </div>
+  </div>
+  <script>
+    // Set up the graph dimensions
+    const width = 800;
+    const height = 400;
+
+    // Create the SVG container
+    const svg = d3.select("#graph-container")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", `0 0 ${width} ${height}`);
+
+    // Define the data
+    const data = [
+      { label: "Search", x: 50, y: 50, icon: 'search' },
+      { label: "Compare", x: 200, y: 100, icon: 'bar-chart-2' },
+      { label: "Select", x: 350, y: 150, icon: 'check-square' },
+      { label: "Book", x: 500, y: 200, icon: 'book-open' },
+      { label: "Payment", x: 650, y: 250, icon: 'credit-card' },
+      { label: "Confirmation", x: 750, y: 300, icon: 'check-circle' }
+    ];
+
+    // Draw the connecting lines
+    const line = d3.line()
+      .x((d) => d.x)
+      .y((d) => d.y);
+
+    svg.append("path")
+      .attr("d", line(data))
+      .attr("fill", "none")
+      .attr("stroke", "rgba(147,51,234,255)")
+      .attr("stroke-width", 2)
+      .attr("stroke-dasharray", "5,5");
+
+    // Create the nodes
+    const nodes = svg.selectAll("g")
+      .data(data)
+      .enter().append("g")
+      .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+
+    // Draw the background circles
+    nodes.append("circle")
+      .attr("r", 30)
+      .attr("fill", "rgba(189,255,3,255)")
+      .attr("stroke", "rgba(147,51,234,255)")
+      .attr("stroke-width", 2);
+
+    // Draw the smaller green circles with purple border for icons
+    nodes.append("circle")
+      .attr("r", 20)
+      .attr("fill", "rgba(189,255,3,255)")
+      .attr("stroke", "rgba(147,51,234,255)")
+      .attr("stroke-width", 2);
+
+    // Add the icons
+    nodes.each(function(d) {
+      const icon = feather.icons[d.icon].toSvg({ 
+        class: 'text-purple-600', 
+        width: 24, 
+        height: 24 
+      });
+      const g = d3.select(this);
+      g.html(g.html() + icon);
+      g.select('svg')
+        .attr('x', -12)
+        .attr('y', -12);
+    });
+
+    // Add the labels
+    nodes.append("text")
+      .text((d) => d.label)
+      .attr("fill", "rgba(147,51,234,255)")
+      .attr("font-size", 14)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .attr("y", 45);
+
+    // Initialize Feather Icons
+    feather.replace();
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Anatomy of an Order ID</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-8">
+    <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Alpha Digital Group Logo" class="mb-4 h-12">
+    <h1 class="text-3xl font-bold mb-4">The Anatomy of an Order ID</h1>
+    <div class="w-full bg-white shadow-lg rounded-lg p-6 relative">
+      <div id="infographic-container" class="flex justify-center"></div>
+      <div class="bg-gray-100 p-4 rounded-lg mt-2">
+        <h2 class="font-bold mb-2 text-base text-purple-600">The Importance of Order ID Components</h2>
+        <p class="text-sm">
+          Understanding the components of an Order ID is crucial in digital retail strategy. Each element provides valuable information that can be leveraged for personalization, analytics, and improved customer experience. By unifying these components, businesses can create a more cohesive and efficient booking process.
+        </p>
+      </div>
+      <p class="mt-2 text-center text-xs text-gray-600">&copy; Alpha Digital Group 2024</p>
+    </div>
+  </div>
+  <script>
+    // Set up the infographic dimensions
+    const width = 800;
+    const height = 340;
+    // Create the SVG container
+    const svg = d3.select("#infographic-container")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", `0 0 ${width} ${height}`);
+    // Define the data for the order ID components
+    const data = [
+      { label: "Airline", value: "ABC Airlines", x: 0, y: 0 },
+      { label: "Flight Number", value: "123", x: 400, y: 0 },
+      { label: "Booking Date", value: "2023-06-15", x: 0, y: 85 },
+      { label: "Passenger Name", value: "John Doe", x: 400, y: 85 },
+      { label: "Ticket Number", value: "12345678", x: 0, y: 170 },
+      { label: "Fare Class", value: "Economy", x: 400, y: 170 },
+      { label: "Payment Type", value: "Visa", x: 0, y: 255 },
+      { label: "Total Amount", value: "$500", x: 400, y: 255 }
+    ];
+    // Create the order ID components
+    const components = svg.selectAll("g")
+      .data(data)
+      .enter().append("g")
+      .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+    // Draw the order ID components
+    components.append("rect")
+      .attr("width", 380)
+      .attr("height", 70)
+      .attr("fill", "rgba(189,255,3,255)")
+      .attr("stroke", "rgba(147,51,234,255)")
+      .attr("stroke-width", 2)
+      .attr("rx", 8)
+      .attr("ry", 8);
+    components.append("text")
+      .text((d) => d.label)
+      .attr("fill", "rgba(147,51,234,255)")
+      .attr("font-size", 16)
+      .attr("font-weight", "bold")
+      .attr("x", 20)
+      .attr("y", 25)
+      .attr("dominant-baseline", "middle");
+    components.append("text")
+      .text((d) => d.value)
+      .attr("fill", "rgba(147,51,234,255)")
+      .attr("font-size", 16)
+      .attr("x", 20)
+      .attr("y", 50)
+      .attr("dominant-baseline", "middle");
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Breakdown of Revenue Sources for Airlines Embracing Digital Retailing</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .brand-bg-1 { background-color: rgba(189,255,3,255); }
+    .brand-bg-2 { background-color: rgba(147,51,234,255); }
+    .brand-text-1 { color: rgba(189,255,3,255); }
+    .brand-text-2 { color: rgba(147,51,234,255); }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-8">
+    <div class="flex items-center mb-4">
+      <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Company Logo" class="h-12 mr-4">
+      <h1 class="text-3xl font-bold brand-text-2">The Breakdown of Revenue Sources for Airlines Embracing Digital Retailing</h1>
+    </div>
+    <div class="w-full bg-white shadow-lg rounded-lg p-6">
+      <div id="chart-container" class="mb-6"></div>
+      <p class="text-gray-700">
+        This pie chart represents hypothetical data illustrating the potential impact of digital retailing strategies on airline revenues.
+        <strong>Base Fares</strong> make up the largest portion, followed by <strong>Ancillary Revenue</strong> from services like baggage fees and seat selection.
+        <strong>Personalized Offers</strong>, tailored to individual customer preferences, also contribute significantly to the overall revenue.
+      </p>
+      <p class="text-gray-700 mt-4">
+        Real-life examples of airlines successfully implementing digital retailing strategies include:
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>Delta Air Lines:</strong> Investing in technology for dynamic pricing and personalized offers has led to significant increases in ancillary revenues.
+          </li>
+          <li>
+            <strong>Lufthansa:</strong> Offering a variety of ancillary services through digital platforms has substantially raised their ancillary revenues.
+          </li>
+          <li>
+            <strong>Ryanair:</strong> Comprehensive digital retailing strategies have consistently resulted in high ancillary revenues, crucial for their profitability.
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Set up the chart dimensions
+    const width = 600;
+    const height = 500;
+
+    // Create the SVG container
+    const svg = d3.select("#chart-container")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", `0 0 ${width} ${height}`);
+
+    // Define the data for the pie chart
+    const data = [
+      { label: "Base Fares", value: 50, icon: "fa-plane" },
+      { label: "Ancillary Revenue", value: 30, icon: "fa-suitcase-rolling" },
+      { label: "Personalized Offers", value: 20, icon: "fa-gift" }
+    ];
+
+    // Create the pie chart
+    const pie = d3.pie()
+      .value((d) => d.value);
+
+    const arc = d3.arc()
+      .outerRadius(height / 2 - 50)
+      .innerRadius(height / 2 - 100);
+
+    const slices = svg.selectAll(".slice")
+      .data(pie(data))
+      .enter().append("g")
+      .attr("class", "slice")
+      .attr("transform", `translate(${width / 2}, ${height / 2 + 30})`); // Moved down by 30px
+
+    slices.append("path")
+      .attr("d", arc)
+      .attr("fill", (d, i) => ["rgba(189,255,3,255)", "rgba(147,51,234,255)", "#9ca3af"][i]);
+
+    // Append icons and text
+    slices.append("text")
+      .html((d) => `<tspan><i class="fas ${d.data.icon}" style="color: black;"></i></tspan><tspan dx="5">${d.data.label} (${d.data.value}%)</tspan>`)
+      .attr("transform", (d) => `translate(${arc.centroid(d)})`)
+      .attr("text-anchor", "middle")
+      .attr("fill", "#000")
+      .attr("font-size", 16);
+
+    // Add the chart title
+    svg.append("text")
+      .attr("x", width / 2)
+      .attr("y", 50)
+      .attr("text-anchor", "middle")
+      .attr("fill", "rgba(147,51,234,255)")
+      .attr("font-size", 18)
+      .attr("font-weight", "bold")
+      .text("Revenue Sources");
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Unified Digital Retailing Model</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .flowchart-container {
+      background-color: rgba(189,255,3,255);
+      border: 2px solid rgba(147,51,234,255);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .node rect {
+      fill: rgba(147,51,234,255);
+    }
+    .link {
+      stroke: rgba(147,51,234,255);
+    }
+    .explanation-container {
+      background-color: #f3f4f6; /* light grey */
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid rgba(147,51,234,255);
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-8">
+    <div class="mb-6 flex items-center">
+      <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Company Logo" style="max-width: 200px; margin-right: 20px;">
+      <h1 class="text-3xl font-bold">The Unified Digital Retailing Model</h1>
+    </div>
+    <div class="w-full bg-white shadow-lg rounded-lg p-6">
+      <div class="flowchart-container mb-6">
+        <h2 class="text-lg font-bold mb-4 text-center">Key to Hyper Personalization</h2>
+        <div id="flowchart-container"></div>
+      </div>
+      <div class="explanation-container">
+        <h2 class="text-lg font-bold mb-4 text-center">Key to Hyper Personalization</h2>
+        <p>
+          The unified digital retail strategy approach leverages various APIs, such as customer and pricing APIs, to achieve better revenue, lower costs, and optimal customer experience, enabling hyper-personalization.
+        </p>
+      </div>
+      <p class="text-center mt-4">&copy; Alpha Digital Group 2024</p>
+    </div>
+  </div>
+
+  <script>
+    // Set up the flowchart dimensions
+    const width = 800;
+    const height = 500;
+
+    // Create the SVG container
+    const svg = d3.select("#flowchart-container")
+      .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", `0 0 ${width} ${height}`);
+
+    // Define the data for the flowchart
+    const data = [
+      { label: "Customer", x: 50, y: 50, type: "node", icon: "👤" },
+      { label: "Order ID", x: 300, y: 50, type: "node", icon: "🆔" },
+      { label: "Customer APIs", x: 550, y: 50, type: "node", icon: "🔗" },
+      { label: "Pricing APIs", x: 550, y: 300, type: "node", icon: "💲" },
+      { label: "Personalized Offers", x: 300, y: 300, type: "node", icon: "🎁" },
+      { source: 0, target: 1, type: "link" },
+      { source: 1, target: 2, type: "link" },
+      { source: 1, target: 3, type: "link" },
+      { source: 2, target: 4, type: "link" },
+      { source: 3, target: 4, type: "link" }
+    ];
+
+    // Create the links first (behind the boxes)
+    const links = svg.selectAll(".link")
+      .data(data.filter((d) => d.type === "link"))
+      .enter().append("path")
+      .attr("class", "link")
+      .attr("d", (d) => {
+        const source = data[d.source];
+        const target = data[d.target];
+        return `M${source.x + 75},${source.y + 40} C${(source.x + target.x) / 2},${source.y + 40} ${(source.x + target.x) / 2},${target.y + 40} ${target.x + 75},${target.y + 40}`;
+      })
+      .attr("fill", "none")
+      .attr("stroke", "rgba(147,51,234,255)")
+      .attr("stroke-width", 2);
+
+    // Create the flowchart nodes
+    const nodes = svg.selectAll(".node")
+      .data(data.filter((d) => d.type === "node"))
+      .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", (d) => `translate(${d.x}, ${d.y})`);
+
+    nodes.append("rect")
+      .attr("width", 150)
+      .attr("height", 80)
+      .attr("rx", 8)
+      .attr("ry", 8)
+      .attr("fill", "rgba(147,51,234,255)");
+
+    nodes.append("text")
+      .text((d) => `${d.icon} ${d.label}`)
+      .attr("fill", "#fff")
+      .attr("font-size", 16)
+      .attr("font-weight", "bold")
+      .attr("x", 75)
+      .attr("y", 40)
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .each(function(d) {
+        // Adjust the font size if the text is too long
+        let text = d3.select(this);
+        while (text.node().getComputedTextLength() > 140) {
+          let fontSize = parseFloat(text.style("font-size"));
+          text.style("font-size", (fontSize - 1) + "px");
+        }
+      });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Adoption of Airline Digital Retailing Solutions</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://d3js.org/d3-geo.v2.min.js"></script>
+  <script src="https://d3js.org/topojson.v3.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    #map-container { height: 60vh; }
+    .country { transition: fill 0.3s; cursor: pointer; }
+    .country:hover { fill: #4b5563; }
+    .tooltip {
+      position: absolute;
+      background-color: #1f2937;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .region-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 5px;
+      border: 2px solid;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto my-8">
+    <div class="flex items-center mb-6">
+      <img src="https://alphadigitalgroup.co/company-logo.svg" alt="Company Logo" style="max-width: 200px; margin-right: 20px;">
+      <h1 class="text-3xl font-bold">Global Adoption of Airline Digital Retailing Solutions</h1>
+    </div>
+    <div id="map-container" class="w-full shadow-lg rounded-lg relative mb-8"></div>
+    <div id="info-container" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+    <div class="tooltip"></div>
+    <div class="text-center mt-8 text-sm text-gray-600">Copyright Alpha Digital Group 2024</div>
+  </div>
+
+  <script>
+    d3.json("https://unpkg.com/world-atlas@2.0.2/countries-110m.json").then(function(data) {
+      const world = topojson.feature(data, data.objects.countries);
+      world.features = world.features.filter(d => d.properties.name !== 'Antarctica');
+
+      const width = document.getElementById('map-container').offsetWidth;
+      const height = document.getElementById('map-container').offsetHeight;
+      const projection = d3.geoEquirectangular().fitSize([width, height], world);
+
+      const svg = d3.select("#map-container")
+        .append("svg")
+        .attr("width", "100%")
+        .attr("height", "100%")
+        .attr("viewBox", `0 0 ${width} ${height}`);
+
+      const regions = [
+        {
+          name: "North America",
+          text: "Major US and Canadian carriers have made significant strides in digital retailing, with order ID integration, personalized pricing, and advanced customer segmentation. Some regional and low-cost airlines still lagging in adopting comprehensive digital retailing solutions.",
+          color: "#FF6B6B"
+        },
+        {
+          name: "Europe",
+          text: "Airlines in Western Europe leading the charge, with carriers like Lufthansa, Air France-KLM, and British Airways implementing advanced digital retailing platforms. Eastern European carriers making steady progress, but facing challenges in modernizing legacy systems.",
+          color: "#4ECDC4"
+        },
+        {
+          name: "Asia-Pacific",
+          text: "Carriers in China, Japan, and Singapore at the forefront of digital retailing, leveraging order IDs, customer data, and dynamic pricing to deliver tailored experiences. Airlines in India, Southeast Asia, and Australia-New Zealand making strides, but uneven adoption across the region.",
+          color: "#45B7D1"
+        },
+        {
+          name: "Middle East and Africa",
+          text: "Major Gulf carriers like Emirates and Etihad at the vanguard of digital retailing in the Middle East. African airlines generally lagging in digital transformation, constrained by infrastructure and resource limitations.",
+          color: "#FFA07A"
+        },
+        {
+          name: "South America",
+          text: "Leading airlines in Brazil and Chile embracing digital retailing, but wider adoption across the region remains limited. Significant opportunities for growth as airlines seek to catch up with global digital retailing standards.",
+          color: "#98D8C8"
+        }
+      ];
+
+      function getRegion(countryName) {
+        const regionMap = {
+          "United States": "North America", "Canada": "North America",
+          "United Kingdom": "Europe", "Germany": "Europe", "France": "Europe",
+          "China": "Asia-Pacific", "Japan": "Asia-Pacific", "Australia": "Asia-Pacific", "India": "Asia-Pacific",
+          "Brazil": "South America", "Chile": "South America",
+          "Saudi Arabia": "Middle East and Africa", "South Africa": "Middle East and Africa"
+        };
+        return regionMap[countryName] || "Other";
+      }
+
+      svg.selectAll("path")
+        .data(world.features)
+        .enter().append("path")
+        .attr("d", d3.geoPath().projection(projection))
+        .attr("fill", d => {
+          const region = getRegion(d.properties.name);
+          const regionData = regions.find(r => r.name === region);
+          return regionData ? regionData.color : "#f0f0f0";
+        })
+        .attr("class", "country")
+        .on("mouseover", function(event, d) {
+          d3.select(".tooltip")
+            .style("left", event.pageX + "px")
+            .style("top", event.pageY + 20 + "px")
+            .style("opacity", 1)
+            .text(d.properties.name);
+        })
+        .on("mouseout", () => d3.select(".tooltip").style("opacity", 0));
+
+      d3.select("#info-container").selectAll("div")
+        .data(regions)
+        .enter().append("div")
+        .attr("class", "region-box")
+        .style("border-color", d => d.color)
+        .html(d => `<strong>${d.name}</strong><p>${d.text}</p>`);
+    });
+  </script>
+</body>
+</html>

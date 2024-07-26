@@ -1,6 +1,9 @@
 import { withSentryConfig } from '@sentry/nextjs';
+import createNextIntlPlugin from 'next-intl/plugin';
 import 'dotenv/config';
 import path from 'path';
+
+const withNextIntl = createNextIntlPlugin('./next-intl.config.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -52,11 +55,6 @@ const nextConfig = {
       },
     ];
   },
-  i18n: {
-    locales: ['en', 'es'],
-    defaultLocale: 'en',
-  },
-  localePath: path.resolve('./public/locales'),
 };
 
 const sentryWebpackPluginOptions = {
@@ -69,4 +67,8 @@ const sentryWebpackPluginOptions = {
   automaticVercelMonitors: true,
 };
 
-export default withSentryConfig(nextConfig, sentryWebpackPluginOptions);
+// Apply plugins
+const configWithPlugins = withNextIntl(nextConfig);
+
+// Export the final config with Sentry
+export default withSentryConfig(configWithPlugins, sentryWebpackPluginOptions);
