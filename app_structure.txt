@@ -10,6 +10,9 @@ alphadigitalgroup
 │   ├── cypress.config.ts
 ├── lib
 │   ├── contentful.ts
+├── messages
+│   ├── en.json
+│   ├── es.json
 ├── node_modules
 ├── pages
 │   ├── _app.tsx
@@ -27,24 +30,26 @@ alphadigitalgroup
 ├── strapi
 ├── src
 │   ├── app
-│   │   ├── about-us
-│   │   │   ├── page.tsx
-│   │   │   ├── CommercialSkillsSection.tsx
-│   │   │   ├── DigitalSkillsSection.tsx
-│   │   │   ├── MarketingSkillsSection.tsx
-│   │   │   ├── OurStorySection.tsx
-│   │   ├── blog
-│   │   │   ├── [slug]
+│   │   ├── [locale]
+│   │   │   ├── about-us
 │   │   │   │   ├── page.tsx
-│   │   ├── contact
+│   │   │   │   ├── CommercialSkillsSection.tsx
+│   │   │   │   ├── DigitalSkillsSection.tsx
+│   │   │   │   ├── MarketingSkillsSection.tsx
+│   │   │   │   ├── OurStorySection.tsx
+│   │   │   ├── blog
+│   │   │   │   ├── [slug]
+│   │   │   │   │   ├── page.tsx
+│   │   │   ├── contact
+│   │   │   │   ├── page.tsx
 │   │   │   ├── page.tsx
-│   │   ├── page.tsx
-│   │   ├── header.tsx
-│   │   ├── footer.tsx
-│   │   ├── layout.tsx
-│   │   ├── globals.css
-│   ├── constants
-│   ├── stories
+│   │   │   ├── header.tsx
+│   │   │   ├── footer.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── globals.css
+│   │   │   ├── middleware.ts
+│   │   ├── constants
+│   │   ├── stories
 │   │   ├── assets
 ├── package.json
 ├── next.config.js
