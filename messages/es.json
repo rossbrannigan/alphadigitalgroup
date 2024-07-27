@@ -37,5 +37,60 @@
     "feature6Title": "Innovación Continua",
     "feature6Description": "Nos mantenemos a la vanguardia con innovaciones constantes.",
     "whatsappButton": "Chatear en WhatsApp"
+  },
+    "MarketingStrategy": {
+      "pageTitle": "Servicios de Estrategia de Marketing | Alpha Digital Group",
+      "metaDescription": "Alpha Digital Group - Servicios de Estrategia de Marketing Integrales",
+      "introTitle": "Servicios de Estrategia de Marketing",
+      "introText": "En Alpha Digital Group, nos especializamos en desarrollar estrategias de marketing integrales que impulsen el crecimiento, la participación y el ROI. Nuestro equipo de expertos combina conocimientos basados en datos con experiencia en la industria para crear estrategias personalizadas que se alineen con los objetivos de su negocio y su público objetivo.",
+      "servicesTitle": "Nuestros Servicios de Estrategia de Marketing",
+      "services": {
+        "marketResearch": {
+          "title": "Investigación de Mercado",
+          "description": "Realizamos investigaciones exhaustivas para comprender a su público objetivo, competidores y tendencias del mercado."
+        },
+        "brandPositioning": {
+          "title": "Posicionamiento de Marca",
+          "description": "Desarrollamos una identidad de marca única y una estrategia de posicionamiento para diferenciarlo en el mercado."
+        },
+        "marketingMix": {
+          "title": "Optimización del Mix de Marketing",
+          "description": "Creamos la mezcla óptima de canales y tácticas de marketing para alcanzar sus objetivos de manera eficiente."
+        },
+        "customerJourney": {
+          "title": "Mapeo del Viaje del Cliente",
+          "description": "Analizamos y optimizamos cada punto de contacto en el viaje de su cliente para mejorar las conversiones."
+        }
+      },
+      "expertiseTitle": "Expertise en Estrategias de Marketing",
+      "expertiseIntro": "En Alpha Digital Group, nos enorgullecemos de nuestra experiencia integral en diversas disciplinas de marketing:",
+      "expertiseItem1": "Marketing Digital",
+      "expertiseItem2": "Marketing de Contenidos",
+      "expertiseItem3": "Marketing en Redes Sociales",
+      "expertiseItem4": "Marketing por Correo Electrónico",
+      "expertiseItem5": "Optimización en Motores de Búsqueda (SEO)",
+      "expertiseItem6": "Publicidad de Pago por Clic (PPC)",
+      "expertiseItem7": "Marketing de Influencers",
+      "expertiseOutro": "Desarrollamos estrategias de marketing personalizadas para cada industria, asegurando que su plan se alinee perfectamente con los objetivos específicos de su negocio y su público objetivo.",
+      "processTitle": "Nuestro Proceso de Estrategia de Marketing",
+      "processItem1": "Análisis de Situación: Comprender su posición actual en el mercado y los objetivos comerciales",
+      "processItem2": "Definición de la Audiencia Objetivo: Identificar y segmentar a sus clientes ideales",
+      "processItem3": "Análisis Competitivo: Evaluar las fortalezas y debilidades de sus competidores",
+      "processItem4": "Análisis SWOT: Evaluar sus Fortalezas, Debilidades, Oportunidades y Amenazas",
+      "processItem5": "Desarrollo de Estrategia: Crear una estrategia de marketing integral alineada con sus objetivos",
+      "processItem6": "Planificación Táctica: Detallar actividades y campañas de marketing específicas",
+      "processItem7": "Asignación de Presupuesto: Distribuir los recursos entre canales y iniciativas de marketing",
+      "processItem8": "Implementación: Ejecutar la estrategia de marketing en diversos canales",
+      "processItem9": "Medición y Optimización: Monitorear continuamente el rendimiento y refinar la estrategia",
+      "toolsTitle": "Herramientas de Estrategia de Marketing que Usamos",
+      "toolsIntro": "Utilizamos una variedad de herramientas sofisticadas para desarrollar e implementar estrategias de marketing efectivas:",
+      "toolAnalytics": "Google Analytics para el análisis del rendimiento del sitio web y el comportamiento del usuario",
+      "toolHubspot": "Hubspot para marketing inbound y CRM",
+      "toolSemrush": "SEMrush para SEO y análisis de competidores",
+      "toolHootsuite": "Hootsuite para la gestión de redes sociales y análisis",
+      "ctaTitle": "¿Listo para Elevar su Estrategia de Marketing?",
+      "ctaText": "Vamos a crear un plan integral que impulse el crecimiento de su negocio.",
+      "ctaButton": "Contáctenos Hoy Mismo"
+    }
   }
-}
+  

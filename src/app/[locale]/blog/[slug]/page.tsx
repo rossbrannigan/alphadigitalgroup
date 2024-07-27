@@ -8,7 +8,6 @@ import { BLOCKS, Document } from '@contentful/rich-text-types';
 import contentfulClient from '../../../../../lib/contentful';
 import { Entry, Asset, EntryFields, EntrySkeletonType } from 'contentful';
 
-// Define the AuthorFields interface with the necessary properties
 interface AuthorFields extends EntrySkeletonType {
   fields: {
     name?: EntryFields.Symbol;
@@ -25,6 +24,8 @@ interface BlogPostFields extends EntrySkeletonType {
     videoGallery?: Asset[];
     relatedBlogPosts?: Entry<BlogPostFields>[];
     slug?: EntryFields.Symbol;
+    metaDescription?: EntryFields.Symbol; // Add meta description field
+    keywords?: EntryFields.Symbol; // Add keywords field
   };
 }
 
@@ -76,15 +77,25 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: 'The requested blog post could not be found.',
     };
   }
-  const { title = 'Untitled Post' } = post.fields;
+  
+  const { title = 'Untitled Post', metaDescription, keywords } = post.fields;
+
+  const safeMetaDescription = typeof metaDescription === 'string' ? metaDescription : undefined;
+
   return {
     title: `${title} | Alpha Digital Group Blog`,
-    description: `Read about ${title} on Alpha Digital Group Blog`,
+    description: safeMetaDescription || `Read about ${title} on Alpha Digital Group Blog`,
+    keywords: Array.isArray(keywords) ? keywords.join(', ') : typeof keywords === 'string' ? keywords : '',
     openGraph: {
       title: `${title} | Alpha Digital Group Blog`,
-      description: `Read about ${title} on Alpha Digital Group Blog`,
+      description: safeMetaDescription || `Read about ${title} on Alpha Digital Group Blog`,
       type: 'article',
       url: `https://www.alphadigitalgroup.co/blog/${params.slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Alpha Digital Group Blog`,
+      description: safeMetaDescription || `Read about ${title} on Alpha Digital Group Blog`,
     },
   };
 }
@@ -151,6 +162,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                         src={video.fields.file.url}
                         allowFullScreen
                         className="w-full h-full"
+                        title={`Video ${index + 1}`}
                       ></iframe>
                     </div>
                   ))}

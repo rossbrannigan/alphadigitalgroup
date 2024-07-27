@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { FiMenu, FiX, FiChevronDown, FiSearch, FiDollarSign, FiBarChart2, FiMonitor, FiArrowRight, FiTrendingUp, FiPackage, FiCpu, FiDatabase, FiRefreshCw, FiGlobe } from "react-icons/fi";
@@ -10,6 +10,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const languages = [
     { code: 'ar', name: 'العربية' },
@@ -20,6 +21,18 @@ const Header: React.FC = () => {
     { code: 'id', name: 'Bahasa Indonesia' },
     { code: 'th', name: 'ไทย' },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.pageYOffset;
+      const scrollPercentage = (currentScroll / totalScroll) * 100;
+      setScrollProgress(scrollPercentage);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -220,7 +233,15 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
+<div className="absolute bottom-0 left-0 w-full h-2 bg-purple-200 z-10">
+  <div 
+    className="h-full bg-purple-600 transition-all duration-300 ease-out"
+    style={{ width: `${scrollProgress}%` }}
+  ></div>
+</div>
       </header>
+
+
     </>
   );
 };

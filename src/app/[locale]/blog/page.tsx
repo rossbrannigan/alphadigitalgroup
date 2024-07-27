@@ -82,6 +82,7 @@ const Sidebar: React.FC<{ blogPosts: BlogPost[], allTags: string[] }> = ({ blogP
                     alt={post.title}
                     fill
                     style={{ objectFit: "cover" }}
+                    loading="lazy"
                   />
                 </div>
               )}
@@ -124,11 +125,40 @@ export default async function BlogPage() {
     );
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Alpha Digital Group Blog",
+    "description": "Latest insights and articles from Alpha Digital Group on digital marketing, commerce, and technology",
+    "url": "https://www.alphadigitalgroup.co/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Alpha Digital Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.alphadigitalgroup.co/logo.png"
+      }
+    },
+    "blogPost": blogPosts.map(post => ({
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "datePublished": post.date,
+      "author": {
+        "@type": "Person",
+        "name": post.author.name
+      },
+      "image": post.featuredImage,
+      "url": `https://www.alphadigitalgroup.co/blog/${post.slug}`
+    }))
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        <title>Elevate Your Digital, Commercial, and Marketing Expertise: Explore the Alpha Digital Group Blog</title>
-        <meta name="description" content="Latest insights and articles from Alpha Digital Group" />
+        <title>Digital Marketing Insights | Alpha Digital Group Blog</title>
+        <meta name="description" content="Explore expert insights on digital marketing, e-commerce strategies, and technology trends from Alpha Digital Group. Stay ahead in the digital landscape with our latest articles and tips." />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Head>
 
       <Script id="google-analytics-script" src={`https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6`} strategy="afterInteractive" />
@@ -172,13 +202,14 @@ export default async function BlogPage() {
                     alt={post.title}
                     fill
                     style={{ objectFit: "cover" }}
+                    loading="lazy"
                   />
                 </div>
               )}
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                <h2 className="text-xl font-semibold mb-2 text-gray-900">
                   <Link href={`/blog/${post.slug}`} className="hover:text-purple-600">{post.title}</Link>
-                </h3>
+                </h2>
                 <div className="flex items-center mb-4">
                   <Image
                     src={post.author.image}
@@ -186,6 +217,7 @@ export default async function BlogPage() {
                     width={32}
                     height={32}
                     className="rounded-full mr-3"
+                    loading="lazy"
                   />
                   <div>
                     <p className="text-gray-800 text-sm font-medium">{post.author.name}</p>

@@ -37,5 +37,60 @@
     "feature6Title": "Kemitraan Strategis",
     "feature6Description": "Perluas kemampuan Anda dan percepat pertumbuhan melalui kemitraan strategis kami dengan penyedia teknologi terkemuka, menawarkan integrasi yang mulus dan solusi mutakhir.",
     "whatsappButton": "Chat di WhatsApp"
+  },
+    "MarketingStrategy": {
+      "pageTitle": "Layanan Strategi Pemasaran | Alpha Digital Group",
+      "metaDescription": "Alpha Digital Group - Layanan Strategi Pemasaran yang Komprehensif",
+      "introTitle": "Layanan Strategi Pemasaran",
+      "introText": "Di Alpha Digital Group, kami mengkhususkan diri dalam mengembangkan strategi pemasaran komprehensif yang mendorong pertumbuhan, keterlibatan, dan ROI. Tim ahli kami menggabungkan wawasan berbasis data dengan keahlian industri untuk merancang strategi yang disesuaikan dengan tujuan bisnis dan audiens target Anda.",
+      "servicesTitle": "Layanan Strategi Pemasaran Kami",
+      "services": {
+        "marketResearch": {
+          "title": "Riset Pasar",
+          "description": "Kami melakukan riset mendalam untuk memahami audiens target, pesaing, dan tren pasar Anda."
+        },
+        "brandPositioning": {
+          "title": "Posisi Merek",
+          "description": "Kami mengembangkan identitas merek yang unik dan strategi posisi untuk membedakan Anda di pasar."
+        },
+        "marketingMix": {
+          "title": "Optimasi Campuran Pemasaran",
+          "description": "Kami menciptakan campuran saluran dan taktik pemasaran yang optimal untuk mencapai tujuan Anda secara efisien."
+        },
+        "customerJourney": {
+          "title": "Pemetaan Perjalanan Pelanggan",
+          "description": "Kami menganalisis dan mengoptimalkan setiap titik kontak dalam perjalanan pelanggan Anda untuk meningkatkan konversi."
+        }
+      },
+      "expertiseTitle": "Keahlian Strategi Pemasaran",
+      "expertiseIntro": "Di Alpha Digital Group, kami membanggakan keahlian komprehensif kami dalam berbagai disiplin pemasaran:",
+      "expertiseItem1": "Pemasaran Digital",
+      "expertiseItem2": "Pemasaran Konten",
+      "expertiseItem3": "Pemasaran Media Sosial",
+      "expertiseItem4": "Pemasaran Email",
+      "expertiseItem5": "Optimisasi Mesin Pencari (SEO)",
+      "expertiseItem6": "Iklan Bayar Per Klik (PPC)",
+      "expertiseItem7": "Pemasaran Influencer",
+      "expertiseOutro": "Kami mengembangkan strategi pemasaran yang disesuaikan untuk setiap industri, memastikan bahwa rencana Anda selaras dengan tujuan bisnis spesifik dan audiens target Anda.",
+      "processTitle": "Proses Strategi Pemasaran Kami",
+      "processItem1": "Analisis Situasi: Memahami posisi pasar saat ini dan tujuan bisnis Anda",
+      "processItem2": "Definisi Audiens Target: Mengidentifikasi dan membagi segmen pelanggan ideal Anda",
+      "processItem3": "Analisis Kompetitif: Menilai kekuatan dan kelemahan pesaing Anda",
+      "processItem4": "Analisis SWOT: Mengevaluasi Kekuatan, Kelemahan, Peluang, dan Ancaman Anda",
+      "processItem5": "Pengembangan Strategi: Merancang strategi pemasaran komprehensif yang selaras dengan tujuan Anda",
+      "processItem6": "Perencanaan Taktis: Merinci aktivitas dan kampanye pemasaran spesifik",
+      "processItem7": "Alokasi Anggaran: Membagi sumber daya di berbagai saluran dan inisiatif pemasaran",
+      "processItem8": "Implementasi: Melaksanakan strategi pemasaran di berbagai saluran",
+      "processItem9": "Pengukuran dan Optimasi: Terus memantau kinerja dan menyempurnakan strategi",
+      "toolsTitle": "Alat Strategi Pemasaran yang Kami Gunakan",
+      "toolsIntro": "Kami memanfaatkan berbagai alat canggih untuk mengembangkan dan menerapkan strategi pemasaran yang efektif:",
+      "toolAnalytics": "Google Analytics untuk analisis kinerja situs web dan perilaku pengguna",
+      "toolHubspot": "Hubspot untuk pemasaran inbound dan CRM",
+      "toolSemrush": "SEMrush untuk SEO dan analisis pesaing",
+      "toolHootsuite": "Hootsuite untuk manajemen media sosial dan analitik",
+      "ctaTitle": "Siap untuk Meningkatkan Strategi Pemasaran Anda?",
+      "ctaText": "Mari buat rencana komprehensif yang mendorong pertumbuhan bisnis Anda.",
+      "ctaButton": "Hubungi Kami Hari Ini"
+    }
   }
-}
+  
