@@ -27,10 +27,14 @@ export default function RootLayout({
         <GoogleTagManager gtmId="G-25Y0G3QQE6"/>
         <GoogleAnalytics gaId="G-25Y0G3QQE6" />
       </head>
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body className={`${inter.className} layout-body`}>
+        <div className="layout-wrapper">
+          <Header />
+          <main className="main-content">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -91,6 +91,127 @@
       "ctaTitle": "¿Listo para Elevar su Estrategia de Marketing?",
       "ctaText": "Vamos a crear un plan integral que impulse el crecimiento de su negocio.",
       "ctaButton": "Contáctenos Hoy Mismo"
+    },
+  "Header": {
+    "pageTitle": "Alpha Digital Group - Servicios de Marketing Digital",
+    "pageDescription": "Servicios expertos de marketing digital que incluyen SEO, SEM, marketing en redes sociales y más. Mejora tu presencia en línea con Alpha Digital Group.",
+    "pageKeywords": "marketing digital, SEO, SEM, marketing en redes sociales, estrategia de marca, optimización de ingresos, estrategia digital, IA, estrategia de datos, transformación digital",
+    "services": "Servicios",
+    "industries": "Industrias",
+    "aboutUs": "Sobre nosotros",
+    "blog": "Blog",
+    "language": "Idioma",
+    "contactUs": "Contáctanos",
+    "marketingStrategy": "Estrategia de Marketing",
+    "marketingStrategyDesc": "Desarrollar estrategias de marketing integrales",
+    "brandStrategy": "Estrategia de Marca",
+    "mediaPlanning": "Planificación de Medios",
+    "sem": "SEM",
+    "socialMedia": "Redes Sociales",
+    "seo": "SEO",
+    "commercialStrategy": "Estrategia Comercial",
+    "interimLeadership": "Liderazgo Interino",
+    "digitalStrategy": "Estrategia Digital",
+    "demandRevenue": "Generación de Demanda e Ingresos",
+    "companyPackages": "Paquetes Corporativos"
+  },
+  "ServicesPage": {
+    "pageTitle": "Alpha Digital Group | Expertos Globales en Estrategia Comercial, de Marketing y Digital",
+    "metaDescription": "Alpha Digital Group - Consultoría de gestión global",
+    "introTitle": "Nuestros Servicios",
+    "introText": "En Alpha Digital Group, ofrecemos una amplia gama de servicios para ayudar a tu negocio a prosperar en el competitivo mercado actual. Nuestra experiencia abarca varios dominios, garantizando un soporte integral para tus necesidades estratégicas. Explora nuestros servicios a continuación:",
+    "marketingStrategy": {
+      "title": "Estrategia de Marketing",
+      "description": "Alpha Digital Group desarrolla estrategias de marketing integrales adaptadas para mejorar la visibilidad de la marca y fomentar la participación del cliente. Nuestro enfoque se basa en conocimientos basados en datos y metodologías innovadoras, asegurando una ejecución efectiva de campañas y resultados medibles.",
+      "marketResearch": {
+        "title": "Investigación de Mercado",
+        "description": "Realización de análisis de mercado exhaustivos para identificar tendencias, oportunidades y preferencias del consumidor, proporcionando una base para la toma de decisiones estratégicas."
+      },
+      "audienceSegmentation": {
+        "title": "Segmentación de Audiencia",
+        "description": "Segmentación de audiencias objetivo según demografía, comportamientos y preferencias para entregar mensajes personalizados y optimizar el rendimiento de las campañas."
+      },
+      "contentMarketing": {
+        "title": "Marketing de Contenidos",
+        "description": "Creación de contenido atractivo y relevante que resuene con tu audiencia, fomentando la participación, construyendo la autoridad de la marca y apoyando los esfuerzos de SEO."
+      },
+      "campaignManagement": {
+        "title": "Gestión de Campañas",
+        "description": "Planificación, ejecución y optimización de campañas de marketing a través de varios canales para maximizar el alcance, la participación y las tasas de conversión."
+      },
+      "performanceAnalytics": {
+        "title": "Analítica de Rendimiento",
+        "description": "Utilización de análisis avanzados para medir la efectividad de las campañas, rastrear indicadores clave de rendimiento (KPI) y perfeccionar estrategias para una mejora continua."
+      }
+    },
+    "brandStrategy": {
+      "title": "Estrategia de Marca",
+      "description": "Una fuerte estrategia de marca es esencial para establecer una identidad distintiva y fomentar la lealtad del cliente. En Alpha Digital Group, nos especializamos en crear estrategias de marca integrales que resuenen con tu audiencia objetivo y promuevan el crecimiento del negocio.",
+      "mediaPlanning": {
+        "title": "Planificación de Medios",
+        "description": "Planes de medios personalizados para llegar efectivamente a tu audiencia a través de varios canales, asegurando la máxima exposición y participación."
+      },
+      "sem": {
+        "title": "SEM (Marketing en Motores de Búsqueda)",
+        "description": "Campañas SEM estratégicas para mejorar la visibilidad en motores de búsqueda como Google, atrayendo tráfico relevante y conversiones."
+      },
+      "socialMedia": {
+        "title": "Redes Sociales",
+        "description": "Estrategias personalizadas de redes sociales para construir la presencia de la marca, interactuar con seguidores y fomentar interacciones comunitarias."
+      },
+      "seo": {
+        "title": "SEO (Optimización en Motores de Búsqueda)",
+        "description": "Optimización del SEO de tu sitio web para mejorar los rankings de búsqueda orgánica y atraer tráfico de calidad, llevando a mayores conversiones."
+      }
+    },
+    "commercialStrategy": {
+      "title": "Estrategia Comercial",
+      "description": "En Alpha Digital Group, nos especializamos en optimizar tu modelo de negocio y tus fuentes de ingresos para lograr un crecimiento y rentabilidad sostenibles.",
+      "revenueOptimization": {
+        "title": "Optimización de Ingresos",
+        "description": "Implementación de estrategias para maximizar la generación de ingresos a través de una asignación eficiente de recursos y modelos de precios estratégicos."
+      },
+      "pricingStrategy": {
+        "title": "Estrategia de Precios",
+        "description": "Desarrollo de estrategias de precios personalizadas que equilibran competitividad y rentabilidad, asegurando una óptima posición en el mercado."
+      },
+      "marketExpansion": {
+        "title": "Expansión de Mercado",
+        "description": "Iniciativas estratégicas para ingresar a nuevos mercados o expandir tu presencia, aprovechando conocimientos del mercado y oportunidades de crecimiento."
+      }
+    },
+    "interimLeadership": {
+      "title": "Liderazgo Interino",
+      "description": "En Alpha Digital Group, ofrecemos soporte de liderazgo experto durante transiciones críticas para asegurar la continuidad y el éxito.",
+      "cmo": {
+        "title": "Servicios de CMO",
+        "description": "Servicios de Director de Marketing interino para impulsar estrategias de marketing y mejorar la visibilidad de la marca."
+      },
+      "cdo": {
+        "title": "Servicios de CDO",
+        "description": "Servicios de Director Digital interino para supervisar iniciativas de transformación digital y la ejecución de estrategias digitales."
+      },
+      "cro": {
+        "title": "Servicios de CRO",
+        "description": "Servicios de Director de Ingresos interino para optimizar las fuentes de ingresos y mejorar la rentabilidad mediante la gestión estratégica de ingresos."
+      }
+    },
+    "digitalStrategy": {
+      "title": "Estrategia Digital",
+      "description": "Alpha Digital Group capacita a las empresas para navegar el panorama digital con confianza, aprovechando estrategias y tecnologías de vanguardia.",
+      "aiStrategy": {
+        "title": "Estrategia de IA",
+        "description": "Implementación de soluciones de inteligencia artificial para mejorar la eficiencia operativa, la experiencia del cliente y los procesos de toma de decisiones."
+      },
+      "dataStrategy": {
+        "title": "Estrategia de Datos",
+        "description": "Desarrollo de estrategias de datos robustas para aprovechar conocimientos valiosos, optimizar procesos y promover decisiones comerciales informadas."
+      },
+      "digitalTransformation": {
+        "title": "Transformación Digital",
+        "description": "Facilitación de transformaciones digitales integrales para adaptarse a las demandas cambiantes del mercado, mejorar la agilidad y fomentar la innovación."
+      }
     }
   }
+}
   

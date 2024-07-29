@@ -3,14 +3,18 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
-import { FiMenu, FiX, FiChevronDown, FiSearch, FiDollarSign, FiBarChart2, FiMonitor, FiArrowRight, FiTrendingUp, FiPackage, FiCpu, FiDatabase, FiRefreshCw, FiGlobe } from "react-icons/fi";
+import { FiMenu, FiX, FiChevronDown, FiSearch, FiDollarSign, FiBarChart2, FiMonitor, FiArrowRight, FiTrendingUp, FiPackage, FiGlobe } from "react-icons/fi";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  const pathname = usePathname();
+  const locale = pathname ? pathname.split('/')[1] : 'en'; // Default to 'en' if pathname is null
 
   const languages = [
     { code: 'ar', name: 'العربية' },
@@ -34,6 +38,10 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const LocaleLink: React.FC<{ href: string; children: React.ReactNode; className?: string }> = ({ href, children, className }) => (
+    <Link href={`/${locale}${href}`} className={className}>{children}</Link>
+  );
+
   return (
     <>
       <Head>
@@ -56,83 +64,83 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
             <div>
-              <a href="/">
+              <LocaleLink href="/">
                 <Image src="/company-logo.svg" alt="Alpha Digital Group Logo" width={150} height={90} />
-              </a>
+              </LocaleLink>
             </div>
             {/* Services Navigation */}
             <nav className="hidden lg:block">
               <ul className="flex space-x-6">
                 <li className="relative group">
                   <button className="text-lg text-purple-800 hover:text-black transition-colors duration-300 flex items-center focus:outline-none">
-                    <a href="/services">Services</a> <FiChevronDown className="ml-1" />
+                    <LocaleLink href="/services">Services</LocaleLink> <FiChevronDown className="ml-1" />
                   </button>
                   <div className="absolute left-3/4 transform -translate-x-1/2 mt-8 w-screen max-w-7xl bg-white shadow-lg rounded-md py-8 px-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                       <div>
-                        <a href="/services/marketing" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <LocaleLink href="/services/marketing" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiSearch className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Marketing Strategy</h3>
                             <p className="text-sm text-gray-600">Develop comprehensive marketing strategies</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/services/marketing/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</a></li>
-                              <li><a href="/services/marketing/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</a></li>
-                              <li><a href="/services/marketing/search-engine-marketing" className="text-sm text-purple-600 hover:underline">SEM</a></li>
-                              <li><a href="services/marketing/social-media-marketing" className="text-sm text-purple-600 hover:underline">Social Media</a></li>
-                              <li><a href="/services/marketing/seo" className="text-sm text-purple-600 hover:underline">SEO</a></li>
+                              <li><LocaleLink href="/services/marketing/brand-strategy" className="text-sm text-purple-600 hover:underline">Brand Strategy</LocaleLink></li>
+                              <li><LocaleLink href="/services/marketing/media-planning" className="text-sm text-purple-600 hover:underline">Media Planning</LocaleLink></li>
+                              <li><LocaleLink href="/services/marketing/search-engine-marketing" className="text-sm text-purple-600 hover:underline">SEM</LocaleLink></li>
+                              <li><LocaleLink href="/services/marketing/social-media-marketing" className="text-sm text-purple-600 hover:underline">Social Media</LocaleLink></li>
+                              <li><LocaleLink href="/services/marketing/seo" className="text-sm text-purple-600 hover:underline">SEO</LocaleLink></li>
                             </ul>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                       <div>
-                        <a href="/services/commercial" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <LocaleLink href="/services/commercial" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiDollarSign className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Commercial Strategy</h3>
                             <p className="text-sm text-gray-600">Optimize your business model and revenue streams</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/services/commercial/revenue-optimization" className="text-sm text-purple-600 hover:underline">Revenue Optimization</a></li>
-                              <li><a href="/services/commercial/revenue-management" className="text-sm text-purple-600 hover:underline">Revenue Management</a></li>
-                              <li><a href="services/commercial/pricing-strategy" className="text-sm text-purple-600 hover:underline">Pricing Strategy</a></li>
-                              <li><a href="services/commercial/market-expansion" className="text-sm text-purple-600 hover:underline">Market Expansion</a></li>
-                              <li><a href="services/commercial/market-launch" className="text-sm text-purple-600 hover:underline">Market Launch</a></li>
+                              <li><LocaleLink href="/services/commercial/revenue-optimization" className="text-sm text-purple-600 hover:underline">Revenue Optimization</LocaleLink></li>
+                              <li><LocaleLink href="/services/commercial/revenue-management" className="text-sm text-purple-600 hover:underline">Revenue Management</LocaleLink></li>
+                              <li><LocaleLink href="/services/commercial/pricing-strategy" className="text-sm text-purple-600 hover:underline">Pricing Strategy</LocaleLink></li>
+                              <li><LocaleLink href="/services/commercial/market-expansion" className="text-sm text-purple-600 hover:underline">Market Expansion</LocaleLink></li>
+                              <li><LocaleLink href="/services/commercial/market-launch" className="text-sm text-purple-600 hover:underline">Market Launch</LocaleLink></li>
                             </ul>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                       <div>
-                        <a href="/services/interim-leadership" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <LocaleLink href="/services/interim-leadership" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiBarChart2 className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Interim Leadership</h3>
                             <p className="text-sm text-gray-600">Expert leadership support for critical transitions</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/services/interim-leadership/interim-cmo" className="text-sm text-purple-600 hover:underline">CMO Services</a></li>
-                              <li><a href="/services/interim-leadership/interim-cdo" className="text-sm text-purple-600 hover:underline">CDO Services</a></li>
-                              <li><a href="/services/interim-leadership/interim-cco" className="text-sm text-purple-600 hover:underline">CCO Services</a></li>
-                              <li><a href="/services/interim-leadership/interim-ceo" className="text-sm text-purple-600 hover:underline">CEO Services</a></li>
+                              <li><LocaleLink href="/services/interim-leadership/interim-cmo" className="text-sm text-purple-600 hover:underline">CMO Services</LocaleLink></li>
+                              <li><LocaleLink href="/services/interim-leadership/interim-cdo" className="text-sm text-purple-600 hover:underline">CDO Services</LocaleLink></li>
+                              <li><LocaleLink href="/services/interim-leadership/interim-cco" className="text-sm text-purple-600 hover:underline">CCO Services</LocaleLink></li>
+                              <li><LocaleLink href="/services/interim-leadership/interim-ceo" className="text-sm text-purple-600 hover:underline">CEO Services</LocaleLink></li>
                             </ul>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                       <div>
-                        <a href="/services/digital" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                        <LocaleLink href="/services/digital" className="flex items-start p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                           <FiMonitor className="text-purple-600 text-3xl mr-3 mt-1" />
                           <div>
                             <h3 className="font-bold text-gray-800">Digital Strategy</h3>
                             <p className="text-sm text-gray-600">Navigate the digital landscape with confidence</p>
                             <ul className="mt-2 space-y-1">
-                              <li><a href="/services/digital/ai-strategy" className="text-sm text-purple-600 hover:underline">AI Strategy</a></li>
-                              <li><a href="/services/digital/data-strategy" className="text-sm text-purple-600 hover:underline">Data Strategy</a></li>
-                              <li><a href="/services/digital/digital-transformation" className="text-sm text-purple-600 hover:underline">Digital Transformation</a></li>
-                              <li><a href="/services/digital/ecommerce" className="text-sm text-purple-600 hover:underline">E-commerce</a></li>
+                              <li><LocaleLink href="/services/digital/ai-strategy" className="text-sm text-purple-600 hover:underline">AI Strategy</LocaleLink></li>
+                              <li><LocaleLink href="/services/digital/data-strategy" className="text-sm text-purple-600 hover:underline">Data Strategy</LocaleLink></li>
+                              <li><LocaleLink href="/services/digital/digital-transformation" className="text-sm text-purple-600 hover:underline">Digital Transformation</LocaleLink></li>
+                              <li><LocaleLink href="/services/digital/ecommerce" className="text-sm text-purple-600 hover:underline">E-commerce</LocaleLink></li>
                             </ul>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                       <div className="md:col-span-2 mt-6">
-                        <a href="#demand-revenue" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <LocaleLink href="#demand-revenue" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
                           <div className="bg-brand-green p-6 h-full flex flex-col justify-between">
                             <div>
                               <FiTrendingUp className="text-purple-800 text-4xl mb-4" />
@@ -143,10 +151,10 @@ const Header: React.FC = () => {
                               Learn more <FiArrowRight className="ml-2 transform group-hover:translate-x-2 transition-transform duration-300" />
                             </div>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                       <div className="md:col-span-2 mt-6">
-                        <a href="/services/packages" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
+                        <LocaleLink href="/services/packages" className="group block rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
                           <div className="bg-brand-green p-6 h-full flex flex-col justify-between">
                             <div>
                               <FiPackage className="text-purple-800 text-4xl mb-4" />
@@ -157,14 +165,14 @@ const Header: React.FC = () => {
                               Explore packages <FiArrowRight className="ml-2 transform group-hover:translate-x-2 transition-transform duration-300" />
                             </div>
                           </div>
-                        </a>
+                        </LocaleLink>
                       </div>
                     </div>
                   </div>
                 </li>
-                <li><a href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-                <li><a href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
-                <li><a href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</a></li>
+                <li><LocaleLink href="/industries" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Industries</LocaleLink></li>
+                <li><LocaleLink href="/about-us" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">About Us</LocaleLink></li>
+                <li><LocaleLink href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</LocaleLink></li>
                 
                 {/* Language Selection Dropdown */}
                 <li className="relative">
@@ -181,7 +189,7 @@ const Header: React.FC = () => {
                       {languages.map((lang) => (
                         <Link
                           key={lang.code}
-                          href={`/${lang.code}`}
+                          href={`/${lang.code}${pathname ? pathname.substring(3) : ''}`}
                           className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                         >
                           {lang.name}
@@ -191,7 +199,7 @@ const Header: React.FC = () => {
                   )}
                 </li>
                 
-                <li><a href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</a></li>
+                <li><LocaleLink href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</LocaleLink></li>
               </ul>
             </nav>
             {/* Hamburger Menu */}

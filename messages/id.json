@@ -91,6 +91,127 @@
       "ctaTitle": "Siap untuk Meningkatkan Strategi Pemasaran Anda?",
       "ctaText": "Mari buat rencana komprehensif yang mendorong pertumbuhan bisnis Anda.",
       "ctaButton": "Hubungi Kami Hari Ini"
+    },
+    "Header": {
+    "pageTitle": "Alpha Digital Group - Layanan Pemasaran Digital",
+    "pageDescription": "Layanan pemasaran digital ahli termasuk SEO, SEM, pemasaran media sosial, dan banyak lagi. Tingkatkan kehadiran online Anda dengan Alpha Digital Group.",
+    "pageKeywords": "pemasaran digital, SEO, SEM, pemasaran media sosial, strategi merek, optimasi pendapatan, strategi digital, AI, strategi data, transformasi digital",
+    "services": "Layanan",
+    "industries": "Industri",
+    "aboutUs": "Tentang Kami",
+    "blog": "Blog",
+    "language": "Bahasa",
+    "contactUs": "Hubungi Kami",
+    "marketingStrategy": "Strategi Pemasaran",
+    "marketingStrategyDesc": "Mengembangkan strategi pemasaran yang komprehensif",
+    "brandStrategy": "Strategi Merek",
+    "mediaPlanning": "Perencanaan Media",
+    "sem": "SEM",
+    "socialMedia": "Media Sosial",
+    "seo": "SEO",
+    "commercialStrategy": "Strategi Komersial",
+    "interimLeadership": "Kepemimpinan Interim",
+    "digitalStrategy": "Strategi Digital",
+    "demandRevenue": "Permintaan dan Peningkatan Pendapatan",
+    "companyPackages": "Paket Perusahaan"
+  },
+  "ServicesPage": {
+    "pageTitle": "Alpha Digital Group | Ahli Strategi Komersial, Pemasaran & Digital Global",
+    "metaDescription": "Alpha Digital Group - Konsultasi manajemen global",
+    "introTitle": "Layanan Kami",
+    "introText": "Di Alpha Digital Group, kami menawarkan berbagai layanan untuk membantu bisnis Anda berkembang di pasar yang kompetitif saat ini. Keahlian kami mencakup berbagai bidang, memastikan dukungan komprehensif untuk kebutuhan strategis Anda. Jelajahi layanan kami di bawah ini:",
+    "marketingStrategy": {
+      "title": "Strategi Pemasaran",
+      "description": "Alpha Digital Group mengembangkan strategi pemasaran yang komprehensif yang disesuaikan untuk meningkatkan visibilitas merek dan mendorong keterlibatan pelanggan. Pendekatan kami didasarkan pada wawasan berbasis data dan metodologi inovatif, memastikan pelaksanaan kampanye yang efektif dan hasil yang terukur.",
+      "marketResearch": {
+        "title": "Riset Pasar",
+        "description": "Melakukan analisis pasar yang mendalam untuk mengidentifikasi tren, peluang, dan preferensi konsumen, memberikan dasar untuk pengambilan keputusan strategis."
+      },
+      "audienceSegmentation": {
+        "title": "Segmentasi Audiens",
+        "description": "Memisahkan audiens target berdasarkan demografi, perilaku, dan preferensi untuk menyampaikan pesan yang dipersonalisasi dan mengoptimalkan kinerja kampanye."
+      },
+      "contentMarketing": {
+        "title": "Pemasaran Konten",
+        "description": "Menciptakan konten yang menarik dan relevan yang sesuai dengan audiens Anda, mendorong keterlibatan, membangun otoritas merek, dan mendukung upaya SEO."
+      },
+      "campaignManagement": {
+        "title": "Manajemen Kampanye",
+        "description": "Merencanakan, melaksanakan, dan mengoptimalkan kampanye pemasaran di berbagai saluran untuk memaksimalkan jangkauan, keterlibatan, dan tingkat konversi."
+      },
+      "performanceAnalytics": {
+        "title": "Analitik Kinerja",
+        "description": "Memanfaatkan analitik lanjutan untuk mengukur efektivitas kampanye, melacak indikator kinerja utama (KPI), dan menyempurnakan strategi untuk perbaikan berkelanjutan."
+      }
+    },
+    "brandStrategy": {
+      "title": "Strategi Merek",
+      "description": "Strategi merek yang kuat sangat penting untuk membangun identitas yang berbeda dan mendorong loyalitas pelanggan. Di Alpha Digital Group, kami mengkhususkan diri dalam merancang strategi merek yang komprehensif yang sesuai dengan audiens target Anda dan mendorong pertumbuhan bisnis.",
+      "mediaPlanning": {
+        "title": "Perencanaan Media",
+        "description": "Rencana media yang disesuaikan untuk mencapai audiens Anda secara efektif di berbagai saluran, memastikan eksposur dan keterlibatan maksimal."
+      },
+      "sem": {
+        "title": "SEM (Pemasaran Mesin Pencari)",
+        "description": "Kampanye SEM strategis untuk meningkatkan visibilitas di mesin pencari seperti Google, mendorong lalu lintas yang relevan dan konversi."
+      },
+      "socialMedia": {
+        "title": "Media Sosial",
+        "description": "Strategi media sosial yang disesuaikan untuk membangun kehadiran merek, berinteraksi dengan pengikut, dan mendorong interaksi komunitas."
+      },
+      "seo": {
+        "title": "SEO (Optimisasi Mesin Pencari)",
+        "description": "Mengoptimalkan SEO situs web Anda untuk meningkatkan peringkat pencarian organik dan menarik lalu lintas berkualitas, yang mengarah pada konversi yang lebih tinggi."
+      }
+    },
+    "commercialStrategy": {
+      "title": "Strategi Komersial",
+      "description": "Di Alpha Digital Group, kami mengkhususkan diri dalam mengoptimalkan model bisnis dan aliran pendapatan Anda untuk mencapai pertumbuhan dan keuntungan yang berkelanjutan.",
+      "revenueOptimization": {
+        "title": "Optimisasi Pendapatan",
+        "description": "Menerapkan strategi untuk memaksimalkan pendapatan melalui alokasi sumber daya yang efisien dan model harga strategis."
+      },
+      "pricingStrategy": {
+        "title": "Strategi Harga",
+        "description": "Mengembangkan strategi harga yang disesuaikan yang menyeimbangkan daya saing dengan profitabilitas, memastikan posisi pasar yang optimal."
+      },
+      "marketExpansion": {
+        "title": "Ekspansi Pasar",
+        "description": "Inisiatif strategis untuk memasuki pasar baru atau memperluas jejak Anda, memanfaatkan wawasan pasar dan peluang pertumbuhan."
+      }
+    },
+    "interimLeadership": {
+      "title": "Kepemimpinan Interim",
+      "description": "Di Alpha Digital Group, kami menyediakan dukungan kepemimpinan ahli selama transisi kritis untuk memastikan kesinambungan dan kesuksesan.",
+      "cmo": {
+        "title": "Layanan CMO",
+        "description": "Layanan Chief Marketing Officer sementara untuk mendorong strategi pemasaran dan meningkatkan visibilitas merek."
+      },
+      "cdo": {
+        "title": "Layanan CDO",
+        "description": "Layanan Chief Digital Officer sementara untuk mengawasi inisiatif transformasi digital dan pelaksanaan strategi digital."
+      },
+      "cro": {
+        "title": "Layanan CRO",
+        "description": "Layanan Chief Revenue Officer sementara untuk mengoptimalkan aliran pendapatan dan meningkatkan profitabilitas melalui manajemen pendapatan strategis."
+      }
+    },
+    "digitalStrategy": {
+      "title": "Strategi Digital",
+      "description": "Alpha Digital Group memberdayakan bisnis untuk menavigasi lanskap digital dengan percaya diri, memanfaatkan strategi dan teknologi mutakhir.",
+      "aiStrategy": {
+        "title": "Strategi AI",
+        "description": "Menerapkan solusi kecerdasan buatan untuk meningkatkan efisiensi operasional, pengalaman pelanggan, dan proses pengambilan keputusan."
+      },
+      "dataStrategy": {
+        "title": "Strategi Data",
+        "description": "Mengembangkan strategi data yang kuat untuk memanfaatkan wawasan berharga, mengoptimalkan proses, dan mendorong keputusan bisnis yang terinformasi."
+      },
+      "digitalTransformation": {
+        "title": "Transformasi Digital",
+        "description": "Memfasilitasi transformasi digital yang komprehensif untuk beradaptasi dengan tuntutan pasar yang berkembang, meningkatkan kelincahan, dan mendorong inovasi."
+      }
     }
   }
+}
   

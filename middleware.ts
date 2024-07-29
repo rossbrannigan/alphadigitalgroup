@@ -3,9 +3,12 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
+const locales = ['en', 'es', 'de', 'hi', 'th', 'id', 'ar'];
+const defaultLocale = 'en';
+
 const nextIntlMiddleware = createMiddleware({
-  locales: ['en', 'es', 'de', 'hi', 'th', 'id', 'ar'],
-  defaultLocale: 'en'
+  locales,
+  defaultLocale
 });
 
 export default function middleware(request: NextRequest) {
@@ -19,8 +22,8 @@ export default function middleware(request: NextRequest) {
     return;
   }
 
-  if (!pathname.startsWith('/en') && !pathname.startsWith('/es') && !pathname.startsWith('/de') && !pathname.startsWith('/hi') && !pathname.startsWith('/th') && !pathname.startsWith('/id') && !pathname.startsWith('/ar')) {
-    return NextResponse.redirect(new URL(`/en${pathname}`, request.url));
+  if (!locales.some(locale => pathname.startsWith(`/${locale}`))) {
+    return NextResponse.redirect(new URL(`/${defaultLocale}${pathname}`, request.url));
   }
 
   return nextIntlMiddleware(request);

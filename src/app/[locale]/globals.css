@@ -1,3 +1,5 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,12 +28,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.layout-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the layout takes up at least the full height of the viewport */
+}
+
+.main-content {
+  flex: 1; /* Allows the main content to take up available space and push footer to bottom */
 }
 
 /* Blog content styles */
