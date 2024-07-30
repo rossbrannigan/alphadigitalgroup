@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { FiMenu, FiX, FiChevronDown, FiSearch, FiDollarSign, FiBarChart2, FiMonitor, FiArrowRight, FiTrendingUp, FiPackage, FiGlobe } from "react-icons/fi";
+import { FaGlobeEurope, FaGlobeAsia, FaFlagUsa, FaFlag, FaMap } from 'react-icons/fa';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 
@@ -175,29 +176,69 @@ const Header: React.FC = () => {
                 <li><LocaleLink href="/blog" className="text-lg text-purple-800 hover:text-black transition-colors duration-300">Blog</LocaleLink></li>
                 
                 {/* Language Selection Dropdown */}
-                <li className="relative">
-                  <button
-                    onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-                    className="flex items-center text-lg text-purple-800 hover:text-black transition-colors duration-300 focus:outline-none"
-                  >
-                    <FiGlobe className="mr-1" />
-                    <span>Language</span>
-                    <FiChevronDown className={`ml-1 transform ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} />
-                  </button>
-                  {isLanguageDropdownOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
-                      {languages.map((lang) => (
-                        <Link
-                          key={lang.code}
-                          href={`/${lang.code}${pathname ? pathname.substring(3) : ''}`}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        >
-                          {lang.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </li>
+                <li className="relative group">
+  <button
+    onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
+    className="text-lg text-purple-800 hover:text-black transition-colors duration-300 flex items-center focus:outline-none"
+  >
+    <FiGlobe className="mr-1" />
+    <span>Language</span>
+    <FiChevronDown className="ml-1" />
+  </button>
+  <div className="absolute left-3/4 transform -translate-x-1/2 mt-8 w-screen max-w-2xl bg-white shadow-lg rounded-md py-8 px-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+    <div className="grid grid-cols-2 gap-6">
+      <div>
+        <h3 className="font-bold text-gray-800 mb-2 flex items-center">
+          <FaMap className="mr-2" /> Europe & Africa
+        </h3>
+        <ul className="space-y-1">
+          <li>
+            <Link href={`/de${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              Deutsch
+            </Link>
+          </li>
+          <li>
+            <Link href={`/en${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              English
+            </Link>
+          </li>
+          <li>
+            <Link href={`/es${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              Español
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-bold text-gray-800 mb-2 flex items-center">
+          <FaMap className="mr-2" /> Asia
+        </h3>
+        <ul className="space-y-1">
+          <li>
+            <Link href={`/ar${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              العربية
+            </Link>
+          </li>
+          <li>
+            <Link href={`/hi${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              हिन्दी
+            </Link>
+          </li>
+          <li>
+            <Link href={`/id${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              Bahasa Indonesia
+            </Link>
+          </li>
+          <li>
+            <Link href={`/th${pathname ? pathname.substring(3) : ''}`} className="text-sm text-purple-600 hover:underline">
+              ไทย
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</li>
                 
                 <li><LocaleLink href="/contact" className="text-lg text-white bg-purple-600 py-2 px-4 rounded-full transition-colors duration-300 hover:bg-purple-700">Contact Us</LocaleLink></li>
               </ul>

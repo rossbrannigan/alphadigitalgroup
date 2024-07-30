@@ -6,12 +6,15 @@ import { FiMessageCircle } from 'react-icons/fi';
 import './styles.css';
 import { AiOutlineLineChart, AiOutlineTool, AiOutlineRise, AiOutlineTeam, AiOutlineBank } from 'react-icons/ai';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import BrandCircle from './components/BrandCircle';  // Adjust the import path as necessary
 
 export default function Home() {
   const t = useTranslations('Home');
 
   return (
     <div className="bg-gray-100 min-h-screen">
+
       <Head>
         <title>{t('title')}</title>
         <meta name="description" content={t('metaDescription')} />
@@ -82,15 +85,27 @@ export default function Home() {
             <p className="mt-4 text-lg text-gray-600">{t('brandsSubtitle')}</p>
           </div>
           <div className="flex justify-center items-center flex-wrap gap-16">
-            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
-              <Image src="/airberlin.svg" alt="airberlin" width={120} height={120} />
-            </div>
-            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
-              <Image src="/hans.svg" alt="hans" width={100} height={100} />
-            </div>
-            <div className="w-40 h-40 flex justify-center items-center rounded-full bg-gray-100 shadow-md">
-              <Image src="/etihad.svg" alt="etihad" width={80} height={80} />
-            </div>
+            <BrandCircle 
+              src="/airberlin.svg" 
+              alt="airberlin" 
+              width={120} 
+              height={120} 
+              hoverText={t('airberlinhoverText')}
+            />
+            <BrandCircle 
+              src="/hans.svg" 
+              alt="hans" 
+              width={100} 
+              height={100} 
+              hoverText={t('hanshoverText')}
+            />
+            <BrandCircle 
+              src="/etihad.svg" 
+              alt="etihad" 
+              width={80} 
+              height={80} 
+              hoverText={t('etihadhoverText')}
+            />
           </div>
         </div>
       </section>
