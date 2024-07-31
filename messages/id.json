@@ -215,6 +215,40 @@
         "description": "Memfasilitasi transformasi digital yang komprehensif untuk beradaptasi dengan tuntutan pasar yang berkembang, meningkatkan kelincahan, dan mendorong inovasi."
       }
     }
+  },
+  "PackagesPage": {
+  "meta": {
+    "title": "Pemasaran Digital, Strategi Komersial & Kepemimpinan Interim | Alpha Digital Group",
+    "description": "Tingkatkan bisnis Anda dengan solusi komprehensif dari Alpha Digital Group. Dari pemasaran digital dan strategi komersial hingga kepemimpinan interim, paket kami yang disesuaikan mendorong pertumbuhan dan memaksimalkan ROI."
+  },
+  "header": {
+    "title": "Paket Layanan Kami",
+    "subtitle": "Solusi yang disesuaikan untuk meningkatkan kehadiran digital Anda, mempercepat pertumbuhan komersial, dan memberikan kepemimpinan ahli. Pilih paket yang sempurna untuk mendorong bisnis Anda ke depan."
+  },
+  "packages": {
+    "digitalMarketing": {
+      "title": "Paket Pemasaran Digital"
+    },
+    "commercialStrategy": {
+      "title": "Paket Strategi Komersial"
+    },
+    "interimLeadership": {
+      "title": "Paket Kepemimpinan Interim"
+    },
+    "digitalStrategy": {
+      "title": "Paket Strategi Digital"
+    }
+  },
+  "cta": {
+    "title": "Tidak yakin paket mana yang tepat untuk Anda?",
+    "description": "Tim ahli kami di sini untuk membantu Anda memilih solusi yang tepat untuk kebutuhan bisnis Anda. Mari buat strategi yang menghasilkan hasil.",
+    "consultantName": "Ross",
+    "buttonText": "Jadwalkan Konsultasi"
+  },
+  "common": {
+    "pricePerMonth": "/bulan",
+    "getStarted": "Mulai"
   }
+}
 }
   

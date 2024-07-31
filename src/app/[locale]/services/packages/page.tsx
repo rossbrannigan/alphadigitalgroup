@@ -17,6 +17,8 @@ interface Package {
 }
 
 const PackagesPage = () => {
+  const t = useTranslations('PackagesPage');
+
   const digitalMarketingPackages: Package[] = [
     {
       name: "Starter",
@@ -197,7 +199,7 @@ const PackagesPage = () => {
           <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col justify-between">
             <div className="p-8">
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">{pkg.name}</h3>
-              <p className="text-4xl font-bold text-[rgba(133,17,180,255)] mb-4">{pkg.price}<span className="text-lg text-gray-500">/month</span></p>
+              <p className="text-4xl font-bold text-[rgba(133,17,180,255)] mb-4">{pkg.price}<span className="text-lg text-gray-500">{t('common.pricePerMonth')}</span></p>
               <p className="text-gray-600 mb-6">{pkg.description}</p>
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, fIndex) => (
@@ -211,7 +213,7 @@ const PackagesPage = () => {
             <div className="px-8 pb-8 mt-auto">
               <Link href="/contact" passHref>
                 <button className="w-full bg-[rgba(133,17,180,255)] text-white py-3 px-4 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 transform hover:scale-105">
-                  Get Started
+                  {t('common.getStarted')}
                 </button>
               </Link>
             </div>
@@ -224,8 +226,8 @@ const PackagesPage = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
       <Head>
-        <title>Digital Marketing, Commercial Strategy & Interim Leadership | Alpha Digital Group</title>
-        <meta name="description" content="Elevate your business with Alpha Digital Group's comprehensive solutions. From digital marketing and commercial strategy to interim leadership, our tailored packages drive growth and maximize ROI." />
+        <title>{t('meta.title')}</title>
+        <meta name="description" content={t('meta.description')} />
         <link rel="icon" href="/favicon.ico" />
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-25Y0G3QQE6"></script>
@@ -249,37 +251,36 @@ const PackagesPage = () => {
 
       <main className="container mx-auto py-16 px-4 sm:px-6 lg:px-8 mt-16">
         <section className="text-center mb-16" id="intro">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">Our Service Packages</h1>
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">{t('header.title')}</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Tailored solutions to elevate your digital presence, accelerate commercial growth, and provide expert leadership. Choose the perfect package to drive your business forward.
+            {t('header.subtitle')}
           </p>
         </section>
 
-        {renderPackages(digitalMarketingPackages, "Digital Marketing Packages", <AiOutlineLineChart className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-purple-50")}
-        {renderPackages(commercialStrategyPackages, "Commercial Strategy Packages", <AiOutlineRise className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-blue-50")}
-        {renderPackages(interimLeadershipPackages, "Interim Leadership Packages", <AiOutlineTeam className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-green-50")}
-        {renderPackages(digitalStrategyPackages, "Digital Strategy Packages", <AiOutlineTool className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-yellow-50")}
+        {renderPackages(digitalMarketingPackages, t('packages.digitalMarketing.title'), <AiOutlineLineChart className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-purple-50")}
+        {renderPackages(commercialStrategyPackages, t('packages.commercialStrategy.title'), <AiOutlineRise className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-blue-50")}
+        {renderPackages(interimLeadershipPackages, t('packages.interimLeadership.title'), <AiOutlineTeam className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-green-50")}
+        {renderPackages(digitalStrategyPackages, t('packages.digitalStrategy.title'), <AiOutlineTool className="text-5xl text-[rgba(133,17,180,255)]" />, "bg-yellow-50")}
 
         <section className="mt-20 text-center bg-gradient-to-r from-[rgba(133,17,180,0.1)] to-[rgba(189,255,3,0.1)] p-12 rounded-3xl shadow-xl">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Not sure which package is right for you?</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('cta.title')}</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our team of experts is here to help you choose the perfect solution for your business needs. 
-            Let&apos;s create a strategy that drives results.
+            {t('cta.description')}
           </p>
           <div className="flex flex-col items-center">
             <div className="mb-6 relative w-48 h-48 overflow-hidden rounded-full">
               <Image
                 src="/default-avatar.png"
-                alt="Ross"
+                alt={t('cta.consultantName')}
                 layout="fill"
                 objectFit="cover"
                 className="filter grayscale"
               />
             </div>
-            <p className="text-2xl font-semibold text-gray-800 mb-6">Ross</p>
+            <p className="text-2xl font-semibold text-gray-800 mb-6">{t('cta.consultantName')}</p>
             <Link href="/contact" passHref>
               <button className="bg-[rgba(189,255,3,255)] text-gray-900 py-3 px-8 rounded-lg font-semibold hover:bg-opacity-90 transition duration-300 transform hover:scale-105 flex items-center justify-center">
-                <FiMessageCircle className="mr-2" /> Schedule a Consultation
+                <FiMessageCircle className="mr-2" /> {t('cta.buttonText')}
               </button>
             </Link>
           </div>

@@ -216,5 +216,39 @@
         "description": "Facilitating comprehensive digital transformations to adapt to evolving market demands, improve agility, and drive innovation."
       }
     }
+  },
+  "PackagesPage": {
+    "meta": {
+      "title": "Digital Marketing, Commercial Strategy & Interim Leadership | Alpha Digital Group",
+      "description": "Elevate your business with Alpha Digital Group's comprehensive solutions. From digital marketing and commercial strategy to interim leadership, our tailored packages drive growth and maximize ROI."
+    },
+    "header": {
+      "title": "Our Service Packages",
+      "subtitle": "Tailored solutions to elevate your digital presence, accelerate commercial growth, and provide expert leadership. Choose the perfect package to drive your business forward."
+    },
+    "packages": {
+      "digitalMarketing": {
+        "title": "Digital Marketing Packages"
+      },
+      "commercialStrategy": {
+        "title": "Commercial Strategy Packages"
+      },
+      "interimLeadership": {
+        "title": "Interim Leadership Packages"
+      },
+      "digitalStrategy": {
+        "title": "Digital Strategy Packages"
+      }
+    },
+    "cta": {
+      "title": "Not sure which package is right for you?",
+      "description": "Our team of experts is here to help you choose the perfect solution for your business needs. Let's create a strategy that drives results.",
+      "consultantName": "Ross",
+      "buttonText": "Schedule a Consultation"
+    },
+    "common": {
+      "pricePerMonth": "/month",
+      "getStarted": "Get Started"
+    }
   }
 }

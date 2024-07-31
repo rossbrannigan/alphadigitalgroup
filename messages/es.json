@@ -215,6 +215,40 @@
         "description": "Facilitación de transformaciones digitales integrales para adaptarse a las demandas cambiantes del mercado, mejorar la agilidad y fomentar la innovación."
       }
     }
+  },
+  "PackagesPage": {
+  "meta": {
+    "title": "Marketing Digital, Estrategia Comercial & Liderazgo Interino | Alpha Digital Group",
+    "description": "Eleva tu negocio con las soluciones integrales de Alpha Digital Group. Desde marketing digital y estrategia comercial hasta liderazgo interino, nuestros paquetes personalizados impulsan el crecimiento y maximizan el ROI."
+  },
+  "header": {
+    "title": "Nuestros Paquetes de Servicios",
+    "subtitle": "Soluciones personalizadas para elevar tu presencia digital, acelerar el crecimiento comercial y proporcionar liderazgo experto. Elige el paquete perfecto para impulsar tu negocio."
+  },
+  "packages": {
+    "digitalMarketing": {
+      "title": "Paquetes de Marketing Digital"
+    },
+    "commercialStrategy": {
+      "title": "Paquetes de Estrategia Comercial"
+    },
+    "interimLeadership": {
+      "title": "Paquetes de Liderazgo Interino"
+    },
+    "digitalStrategy": {
+      "title": "Paquetes de Estrategia Digital"
+    }
+  },
+  "cta": {
+    "title": "¿No estás seguro de qué paquete es el adecuado para ti?",
+    "description": "Nuestro equipo de expertos está aquí para ayudarte a elegir la solución perfecta para las necesidades de tu negocio. Vamos a crear una estrategia que genere resultados.",
+    "consultantName": "Ross",
+    "buttonText": "Agenda una Consulta"
+  },
+  "common": {
+    "pricePerMonth": "/mes",
+    "getStarted": "Comenzar"
   }
+}
 }
   

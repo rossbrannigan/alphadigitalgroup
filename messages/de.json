@@ -215,7 +215,40 @@
         "description": "Förderung umfassender digitaler Transformationen zur Anpassung an sich wandelnde Marktanforderungen, zur Verbesserung der Agilität und zur Förderung von Innovationen."
       }
     }
+  },
+"PackagesPage": {
+  "meta": {
+    "title": "Digitales Marketing, kommerzielle Strategie & Interim-Leadership | Alpha Digital Group",
+    "description": "Steigern Sie Ihr Geschäft mit den umfassenden Lösungen der Alpha Digital Group. Von digitalem Marketing und kommerzieller Strategie bis hin zu Interim-Leadership – unsere maßgeschneiderten Pakete fördern Wachstum und maximieren den ROI."
+  },
+  "header": {
+    "title": "Unsere Servicepakete",
+    "subtitle": "Maßgeschneiderte Lösungen, um Ihre digitale Präsenz zu stärken, das kommerzielle Wachstum zu beschleunigen und fachkundige Führung zu bieten. Wählen Sie das perfekte Paket, um Ihr Geschäft voranzutreiben."
+  },
+  "packages": {
+    "digitalMarketing": {
+      "title": "Pakete für digitales Marketing"
+    },
+    "commercialStrategy": {
+      "title": "Pakete für kommerzielle Strategie"
+    },
+    "interimLeadership": {
+      "title": "Pakete für Interim-Leadership"
+    },
+    "digitalStrategy": {
+      "title": "Pakete für digitale Strategie"
+    }
+  },
+  "cta": {
+    "title": "Nicht sicher, welches Paket das richtige für Sie ist?",
+    "description": "Unser Expertenteam hilft Ihnen, die perfekte Lösung für Ihre Geschäftsbedürfnisse auszuwählen. Lassen Sie uns eine Strategie entwickeln, die Ergebnisse liefert.",
+    "consultantName": "Ross",
+    "buttonText": "Beratung vereinbaren"
+  },
+  "common": {
+    "pricePerMonth": "/Monat",
+    "getStarted": "Jetzt starten"
   }
 }
-  
-  
+}
+
