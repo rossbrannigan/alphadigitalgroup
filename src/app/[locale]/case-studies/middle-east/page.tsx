@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Asia: React.FC = () => {
   const countries = [
-    { name: 'UAE', path: '/case-studies/asia/uae' },
-    { name: 'SaudiArabia', path: '/case-studies/asia/saudi-arabia' },
+    { name: 'UAE', path: '/case-studies/middle-east/uae' },
+    { name: 'SaudiArabia', path: '/case-studies/middle-east/saudi-arabia' },
     // Add other Asian countries as needed
   ];
 
