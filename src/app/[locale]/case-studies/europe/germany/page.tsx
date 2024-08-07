@@ -9,7 +9,7 @@ const Germany: React.FC = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Featured Topic: Mittelstand</h2>
         <p className="mb-4">
-          Explore the Mittelstand, Germany's unique enterprises that play a crucial role in the country's economy and international trade.
+          Explore the Mittelstand, Germany&apos;s unique enterprises that play a crucial role in the country&apos;s economy and international trade.
         </p>
         <Link href="/case-studies/asia/japan/sogo-shosha">
           <div className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">

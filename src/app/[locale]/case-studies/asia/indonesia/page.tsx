@@ -9,7 +9,7 @@ const Indonesia: React.FC = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">Featured Topic: </h2>
         <p className="mb-4">
-          Explore the world of ----- Indonesia's unique general trading companies that play a crucial role in the country's economy and international trade.
+          Explore the world of ----- Indonesia&apos;s unique general trading companies that play a crucial role in the country&apos;s economy and international trade.
         </p>
         <Link href="/case-studies/asia/japan/sogo-shosha">
           <div className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">

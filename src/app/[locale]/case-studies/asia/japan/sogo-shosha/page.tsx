@@ -7,12 +7,12 @@ const SogoShoshaDigitalTransformation: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-center text-black">Sōgō Shōsha: Digital Transformation in Japan's Trading Giants</h1>
+        <h1 className="text-3xl font-bold mb-6 text-center text-black">Sōgō Shōsha: Digital Transformation in Japan&apos;s Trading Giants</h1>
         
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-black">Introduction</h2>
           <p className="mb-4 text-black">
-            Sōgō shōsha, Japan's general trading companies, have long been the backbone of the country's economic might. 
+            Sōgō shōsha, Japan&apos;s general trading companies, have long been the backbone of the country&apos;s economic might. 
             These diversified conglomerates, with their vast networks and financial prowess, have traditionally focused on 
             resource procurement and trade facilitation. However, in recent years, they have been pivoting towards digital 
             business initiatives to maintain their competitive edge in an increasingly digitalized global economy.
@@ -22,9 +22,9 @@ const SogoShoshaDigitalTransformation: React.FC = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-black">The Evolution of Sōgō Shōsha</h2>
           <p className="mb-4 text-black">
-            Sōgō shōsha, literally meaning "general trading companies," emerged in the post-World War II era as key players 
-            in Japan's economic recovery and subsequent growth. The "Big Five" sōgō shōsha - Mitsubishi Corporation, Mitsui & Co., 
-            Itochu Corporation, Sumitomo Corporation, and Marubeni Corporation - have been at the forefront of Japan's 
+            Sōgō shōsha, literally meaning &quot;general trading companies,&quot; emerged in the post-World War II era as key players 
+            in Japan&apos;s economic recovery and subsequent growth. The &quot;Big Five&quot; sōgō shōsha - Mitsubishi Corporation, Mitsui & Co., 
+            Itochu Corporation, Sumitomo Corporation, and Marubeni Corporation - have been at the forefront of Japan&apos;s 
             international trade and investment activities for decades.
           </p>
         </section>
@@ -48,16 +48,16 @@ const SogoShoshaDigitalTransformation: React.FC = () => {
           <h3 className="text-xl font-semibold mt-4 mb-2 text-black">E-commerce and Digital Marketplaces</h3>
           <ul className="list-disc pl-5 mb-4 text-black">
             <li>Itochu Corporation has partnered with Chinese e-commerce giant Alibaba to develop new retail concepts in Japan.</li>
-            <li>Marubeni Corporation has launched "Nowlista," a B2B e-commerce platform for industrial materials.</li>
+            <li>Marubeni Corporation has launched &quot;Nowlista,&quot; a B2B e-commerce platform for industrial materials.</li>
           </ul>
           <h3 className="text-xl font-semibold mt-4 mb-2 text-black">Big Data and Analytics</h3>
           <ul className="list-disc pl-5 mb-4 text-black">
-            <li>Mitsubishi Corporation has established the "Digital Strategy Department" to promote the use of AI and big data across its business units.</li>
+            <li>Mitsubishi Corporation has established the &quot;Digital Strategy Department&quot; to promote the use of AI and big data across its business units.</li>
             <li>Mitsui & Co. has partnered with Preferred Networks, a leading AI company, to develop AI solutions for various industries.</li>
           </ul>
           <h3 className="text-xl font-semibold mt-4 mb-2 text-black">Internet of Things (IoT) and Smart Infrastructure</h3>
           <ul className="list-disc pl-5 mb-4 text-black">
-            <li>Sumitomo Corporation has invested in "Connected Industries," a concept that uses IoT to connect various industries and create new value.</li>
+            <li>Sumitomo Corporation has invested in &apos;Connected Industries,&apos; a concept that uses IoT to connect various industries and create new value.</li>
             <li>Marubeni Corporation has partnered with Accenture to develop smart city solutions using IoT and AI technologies.</li>
           </ul>
         </section>
@@ -68,15 +68,15 @@ const SogoShoshaDigitalTransformation: React.FC = () => {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-black">Case Study: Itochu's Digital Transformation</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-black">Case Study: Itochu&apos;s Digital Transformation</h2>
           <p className="mb-4 text-black">
             Itochu Corporation provides an excellent example of a sōgō shōsha embracing digital transformation. In 2018, 
-            the company announced its "Reinvention of Business" strategy, which placed digital transformation at its core. 
+            the company announced its &quot;Reinvention of Business&quot; strategy, which placed digital transformation at its core. 
             Some key initiatives include:
           </p>
           <ul className="list-disc pl-5 mb-4 text-black">
-            <li>Establishing the "CDO·CTO Office" to oversee digital strategy across the group.</li>
-            <li>Launching "ITOCHU Digital Acceleration" (IDA), an in-house company to promote digital businesses.</li>
+            <li>Establishing the &quot;CDO·CTO Office&quot; to oversee digital strategy across the group.</li>
+            <li>Launching &quot;ITOCHU Digital Acceleration&quot; (IDA), an in-house company to promote digital businesses.</li>
             <li>Investing in and partnering with tech startups through its $50 million corporate venture capital fund.</li>
           </ul>
         </section>
@@ -139,7 +139,7 @@ const SogoShoshaDigitalTransformation: React.FC = () => {
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4 text-black">Conclusion</h2>
           <p className="mb-4 text-black">
-            Japan's sōgō shōsha are at a critical juncture in their long history. Their ambitious digital initiatives 
+            Japan&apos;s sōgō shōsha are at a critical juncture in their long history. Their ambitious digital initiatives 
             demonstrate a clear recognition of the need to adapt to the digital age. By leveraging their vast resources, 
             global networks, and industry expertise, these trading giants are well-positioned to lead the way in digital 
             transformation, not just in Japan, but on the global stage.

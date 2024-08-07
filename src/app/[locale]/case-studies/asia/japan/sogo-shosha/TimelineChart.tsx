@@ -3,12 +3,18 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 
+type EventType = {
+  year: number;
+  event: string;
+  type: "establishment" | "economic" | "digital" | "milestone";
+};
+
 const TimelineChart: React.FC = () => {
   const ref = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     if (ref.current) {
-      const events = [
+      const events: EventType[] = [
         {year: 1858, event: "Establishment of Mitsui & Co.", type: "establishment"},
         {year: 1870, event: "Establishment of Itochu Corporation", type: "establishment"},
         {year: 1871, event: "Establishment of Mitsubishi Corporation", type: "establishment"},
@@ -57,7 +63,7 @@ const TimelineChart: React.FC = () => {
         .attr("stroke", "#811c9e")
         .attr("stroke-width", 1);
 
-      const colorScale = d3.scaleOrdinal()
+      const colorScale = d3.scaleOrdinal<string>()
         .domain(["establishment", "economic", "digital", "milestone"])
         .range(["#3b82f6", "#ef4444", "#22c55e", "#f97316"]);
 
@@ -68,7 +74,7 @@ const TimelineChart: React.FC = () => {
         .attr("cx", margin.left)
         .attr("cy", d => yScale(d.year))
         .attr("r", 5)
-        .attr("fill", d => colorScale(d.type));
+        .attr("fill", d => colorScale(d.type) as string); // Explicitly cast as string
 
       // Calculate initial text positions
       let textPositions = events.map((event, index) => {
