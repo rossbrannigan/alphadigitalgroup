@@ -25,7 +25,7 @@ const AboutUsPage: React.FC = () => {
                 Our Story
               </h2>
               <p className="mt-4 text-lg text-gray-500">
-                Test is a consultancy that offers market, digital commerce and product consulting services across industries globally. We help businesses navigate the digital landscape and achieve sustainable growth through strategic insights and practical solutions.
+                Testing is a consultancy that offers market, digital commerce and product consulting services across industries globally. We help businesses navigate the digital landscape and achieve sustainable growth through strategic insights and practical solutions.
               </p>
             </div>
           </div>
