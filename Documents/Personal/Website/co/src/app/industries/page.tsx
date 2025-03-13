@@ -42,7 +42,7 @@ const IndustriesPage: React.FC = () => {
         {/* Introductory Text */}
         <section className="mb-8" id="intro">
           <div className="px-4">
-            <h1 className="text-3xl font-semibold text-purple-800 mb-4">Welcome to Alpha Digital Group - Industries We Serve</h1>
+            <h1 className="text-3xl font-semibold text-purple-800 mb-4">Welcome to Test - Industries We Serve</h1>
             <p className="text-purple-800">
               At Alpha Digital Group, we pride ourselves on offering top-tier management consulting services tailored to various industries. With our expertise and dedication, we provide strategic guidance and innovative solutions to propel businesses forward in today&apos;s dynamic market landscape. Explore how we deliver value across a diverse range of sectors:
             </p>
