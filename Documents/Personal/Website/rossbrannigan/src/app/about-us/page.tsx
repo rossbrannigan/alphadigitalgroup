@@ -1,201 +1,167 @@
-import Image from "next/image";
-import Head from 'next/head';
-import { GoogleTagManager } from '@next/third-parties/google';
-import { GoogleAnalytics } from '@next/third-parties/google'
+import React from "react";
+import Footer from "../components/footer";
 
-const AboutPage: React.FC = () => {
+// New metadata to improve SEO
+export const metadata = {
+  title: 'About Alpha Digital Group | Digital Commerce & Product Consulting',
+  description: 'Alpha Digital Group provides market, digital commerce and product consulting services across industries globally. Learn about our founder and our approach.',
+  keywords: 'digital consulting, commerce consulting, product consulting, global consulting, Alpha Digital Group',
+}
+
+const AboutUsPage: React.FC = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
-      <Head>
-      <GoogleAnalytics gaId="G-25Y0G3QQE6" />
-      <GoogleTagManager gtmId="G-25Y0G3QQE6" /> 
-        <title>About Ross Brannigan | Alpha Digital Group</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Alpha Digital Group - Global management consulting" />
-      </Head>
-
-      {/* Header */}
-      <header className="bg-yellow-400 shadow-lg" style={{ backgroundColor: '#bdff03' }}>
-        <div className="container mx-auto py-4 flex items-center justify-between">
-          <div className="mr-4">
-            <a href="/">
-              <Image src="/company-logo.svg" alt="Alpha Digital Group Logo" width={250} height={150} />
-            </a>
-          </div>
-          <nav>
-            <ul className="flex space-x-6">
-              <li><a href="industries" className="text-purple-800 hover:text-black transition-colors duration-300">Industries</a></li>
-              <li><a href="capabilities" className="text-purple-800 hover:text-black transition-colors duration-300">Capabilities</a></li>
-              <li><a href="featured-insights" className="text-purple-800 hover:text-black transition-colors duration-300">Featured Insights</a></li>
-              <li><a href="locations" className="text-purple-800 hover:text-black transition-colors duration-300">Locations</a></li>
-              <li><a href="about-us" className="text-purple-800 hover:text-black transition-colors duration-300">About Us</a></li>
-              <li><a href="https://www.linkedin.com/company/alphadigitalgroup" className="text-purple-800 hover:text-black transition-colors duration-300">Alpha Digital Blog</a></li>
-              {/* Changed text color to white */}
-              <li><a href="/hire-us" className="text-white bg-purple-600 py-2 px-4 rounded-full hover:bg-black hover:text-yellow-400 transition-colors duration-300">Get Started</a></li>
-            </ul>
-          </nav>
+    <div className="bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+          <h1 className="text-2xl font-bold text-gray-900">About Us</h1>
         </div>
-      </header>
+      </div>
 
-      {/* Main Content */}
-      <main className="container mx-auto py-8">
-        {/* About Alpha Digital Group Section */}
-        <section className="mb-8" id="alpha-digital-group">
-          <div className="px-4 py-8 bg-white shadow-lg rounded-lg">
-            <div className="flex justify-center mb-4">
-              <div className="relative rounded-full overflow-hidden w-32 h-32">
-                <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
-                <Image src="/ross.png" alt="Ross Brannigan" layout="fill" className="object-cover" />
-              </div>
-            </div>
-            <h2 className="text-2xl font-semibold text-purple-800 mb-4">About Alpha Digital Group</h2>
-            <p className="text-purple-800">
-              Alpha Digital Group, led by Ross Brannigan, a native of Ireland, is driven by a passion for business and a visionary approach to aligning existing business models with emerging trends and digital strategies. Ross, equipped with a top-ranked MBA from IE Business School and a wealth of leadership experience at prominent international entities such as Etihad, Facebook, and Yahoo!, leads the group in empowering companies across the Middle East, Europe, and Asia to achieve their commercial objectives, enhance customer experience, and foster innovation.
-            </p>
-            <p className="text-purple-800 mt-4">
-              Proficient in English, Spanish, and German, Ross possesses a robust grasp of project and product management, underscored by his dedication to innovation, continual learning, and value creation for both clientele and businesses alike. 
-            </p>
-            <p className="text-purple-800 mt-4">
-              You can reach Ross:
-              <br />
-              📞 Phone: +66 82 836 2717
-              <br />
-              ✉️ Email: <a href="mailto:rossbrannigan@gmail.com" className="text-purple-800">rossbrannigan@gmail.com</a>
-              <br />
-              🌐 LinkedIn: <a href="https://www.linkedin.com/in/ross-brannigan/" target="_blank" rel="noopener noreferrer" className="text-purple-800">Ross Brannigan&apos;s LinkedIn Profile</a>
-            </p>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="container mx-auto flex flex-col lg:flex-row items-start justify-between">
-          {/* Logo */}
-          <div className="mb-4 lg:mb-0 lg:order-1 lg:self-start">
-            <Image
-              src="/company-logo-small.png"
-              alt="Alpha Digital Group Logo"
-              width={40}
-              height={40}
-            />
-          </div>
-          {/* Links */}
-          <div className="lg:ml-auto lg:order-3">
-            <div className="grid grid-cols-2 gap-8">
-              <div className="text-left">
-                <h3 className="text-gray-300 mb-2 text-xs font-bold">Quick Links</h3>
-                <ul className="text-gray-300">
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="industries" className="hover:text-white text-xs">
-                      Industries
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="capabilities" className="hover:text-white text-xs">
-                      Capabilities
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="featured-insights" className="hover:text-white text-xs">
-                      Featured Insights
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="locations" className="hover:text-white text-xs">
-                      Locations
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="hire-us" className="hover:text-white text-xs">
-                      Hire Us
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a href="about-us" className="hover:text-white text-xs">
-                      About Us
-                    </a>
-                  </li>
-                  <li className="mb-0.5"> {/* Reduced bottom margin */}
-                    <a
-                      href="https://www.linkedin.com/company/alphadigitalgroup"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white text-xs"
-                    >
-                      Alpha Digital Blog
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-left">
-                <h3 className="text-gray-300 mb-2 text-xs font-bold">Contact Us</h3>
-                <ul className="text-gray-300">
-                  <li className="mb-0.5 flex items-center">
-                    📞 <span className="ml-2 text-xs">+66 82 836 2713</span>
-                  </li>
-                  <li className="mb-0.5 flex items-center">
-                    ✉️ <span className="ml-2 text-xs">rossbrannigan@gmail.com</span>
-                  </li>
-<li className="mb-0.5 flex items-center">
-  📝 
-  <a href="contact" className="ml-2 text-xs hover:text-white">
-    Contact Us Form
-  </a>
-</li>
-                                    <li className="mb-2">
-                    <a
-                      href="https://www.linkedin.com/company/alphadigitalgroup"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-white text-xs"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* Subscription Box */}
-          <div className="mt-8 lg:mt-0 lg:order-2 lg:ml-auto self-start lg:ml-12">
-            <div className="bg-white shadow-lg rounded-lg p-8">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-                Subscribe to Our Newsletter
+      <div className="bg-white py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Our Story
               </h2>
-              <form data-netlify="true">
-                <div className="flex items-center">
-                  <input
-                    type="email"
-                    className="bg-gray-100 border-2 border-gray-300 rounded-l-md py-2 px-4 w-full text-black" 
-                    placeholder="Your email address"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-purple-600 text-white font-bold px-6 py-2 rounded-r-md hover:bg-purple-700 transition duration-300 ease-in-out"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
+              <p className="mt-4 text-lg text-gray-500">
+                Alpha Digital Group is a consultancy that offers market, digital commerce and product consulting services across industries globally. We help businesses navigate the digital landscape and achieve sustainable growth through strategic insights and practical solutions.
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="bg-white py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Meet the Founder
+              </h2>
+              <p className="mt-4 text-lg text-gray-500">
+                Alpha Digital Group is led by a dedicated founder with extensive experience in digital commerce and product strategy.
+              </p>
+            </div>
+            <div className="mt-10 text-center">
+              <div className="space-y-10 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-10 md:space-y-0">
+                <div className="relative">
+                  <div className="aspect-h-3 aspect-w-3 overflow-hidden rounded-md bg-gray-300">
+                    <img
+                      src="/founder.jpg"
+                      alt="Alpha Digital Group Founder"
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-bold leading-6 text-gray-900">
+                      Ross Brannigan
+                    </h3>
+                    <p className="text-base text-indigo-600">Founder & CEO</p>
+                    <p className="mt-2 text-base text-gray-500">
+                      With years of industry experience, Ross provides strategic guidance and innovative solutions to help businesses thrive in the digital age.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        {/* Divider */}
-        <hr className="border-t border-gray-600 w-full my-8" />
-        {/* Copyright text */}
-        <p className="text-xs text-gray-300 text-center lg:order-5">
-          © 2020-2024 Alpha Digital Group. All rights reserved.
-        </p>
-        {/* Powered by Ross Brannigan */}
-        <p className="text-xs text-gray-300 text-center mt-4 lg:order-6">
-          Powered by <a href="https://www.rossbrannigan.co" target="_blank" rel="noopener noreferrer" className="underline">Ross Brannigan</a>
-        </p>
-      </footer>
+      <div className="bg-white py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Our Expertise
+              </h2>
+              <p className="mt-4 text-lg text-gray-500">
+                At Alpha Digital Group, we specialize in helping businesses optimize their digital presence and operations.
+              </p>
+            </div>
+            <div className="mt-10">
+              <dl className="space-y-10 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10 md:space-y-0">
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Market Analysis
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    Comprehensive market research and competitive analysis to identify opportunities for growth.
+                  </dd>
+                </div>
+
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Digital Commerce Strategy
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    End-to-end e-commerce solutions, from platform selection to conversion optimization.
+                  </dd>
+                </div>
+
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Product Innovation
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    Guidance on product development, positioning, and go-to-market strategies.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white py-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:max-w-none">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Our Approach
+              </h2>
+              <p className="mt-4 text-lg text-gray-500">
+                We believe in a collaborative approach, working closely with our clients to deliver tailored solutions that drive real business results.
+              </p>
+            </div>
+            <div className="mt-10">
+              <dl className="space-y-10 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10 md:space-y-0">
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Client-Centric
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    Your business goals are our priority. We develop strategies that align with your vision and objectives.
+                  </dd>
+                </div>
+
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Data-Driven
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    Our recommendations are backed by thorough research and analysis, ensuring measurable results.
+                  </dd>
+                </div>
+
+                <div className="relative">
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    Sustainable Growth
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-500">
+                    We focus on long-term success, building strategies that continue to deliver value over time.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
 
-export default AboutPage;
+export default AboutUsPage;
